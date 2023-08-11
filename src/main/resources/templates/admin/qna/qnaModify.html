@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qna 수정</title>
+    <link rel="stylesheet" href="../../../static/css/admin/sideBar.css">
+    <link rel="stylesheet" href="../../../static/css/admin/qna/qnaModify.css">
+</head>
+
+<body>
+    <div>
+        <div class="info-title-box flex">
+            <div class="header-name">
+                <span>qna 관리</span>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+
+        <!-- 사이드 바 -->
+        <aside class="side-bar">
+            <ul>
+                <div class="side-bar-first">menu</div>
+                <li class="side-list">
+                    <a href="../main/adminMain.html" class="side-option">메인페이지</a>
+                </li>
+                <li class="side-list">
+                    <a href="../member/memberList.html" class="side-option">회원관리</a>
+                </li>
+                <li class="side-list">
+                    <a href="../notice/noticeList.html" class="side-option">공지사항</a>
+                </li>
+                <li class="side-list">
+                    <a href="../qna/qnaList.html" class="side-option">qna</a>
+                </li>
+                <li class="side-list">
+                    <a href="../bord/boardList.html" class="side-option">공고게시판</a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="container">
+            <div class="container-margin">
+                <!-- 헤더 -->
+                <div class="prev-button-layout">
+                    <div>
+                        <a href="memberList.html" style="color: black;">
+                            <img src="../../../static/image/prev_icon.png" class="prev-icon">
+                            <span class="prev-title">리스트로 돌아가기</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="info-flex">
+                    <!-- 내용 섹션 -->
+                    <section class="board-info-box-layout">
+                        <div class="board-info-box">
+                            <div class="board-info-title-box">
+                                <span>자주 물어보는 질문 수정하기</span>
+                            </div>
+                            <div class="info-table">
+                                <form>
+                                    <div>
+                                        <span>Q:</span>
+                                        <input type="text" class="board-title" name="noticeTitle"
+                                            placeholder="질문을 입력해주세요." autocomplete="off">
+                                    </div>
+                                    <hr class="hr-bar">
+                                    <div>
+                                        <span>A:</span>
+                                        <textarea class="board-content" name="noticeContent"
+                                            placeholder="답변을 입력해주세요."></textarea>
+                                    </div>
+                                    <hr>
+                                    <div class="submit-button">
+                                        <button class="modify-button">수정 완료</button>
+                                        <button class="delete-button">삭제</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+
+</html>
