@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+}
+
+
+:root {
+    --side-bar-width: 270px;
+    --side-bar-height: 100vh;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/*사이드 바*/
+.side-bar {
+	display: block;
+	position: fixed;
+	top: 55px;
+	bottom: 0;
+	z-index: 99;
+	width: 250px;
+	background-color: #4e4e4e;
+}
+
+.side-bar-first{
+    display: block;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.side-bar ul > li> a {
+    display: block;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.side-list:hover {
+    background-color: gray;
+}
+
+.side-list {
+    position: relative;
+    width: 250px;
+    left: -40px;
+}
+
+.side-option {
+    position: relative;
+    left: 40px;
+}
