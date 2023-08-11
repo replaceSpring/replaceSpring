@@ -3451,7 +3451,7 @@ ol, ul {
 
 /* 상단 카테고리 상세바 */
 .css-cb3w06 {
-    display: flex;
+    display: none;
     align-content: stretch;
     flex-shrink: 1;
     flex-direction: column;
@@ -3464,7 +3464,7 @@ ol, ul {
 }
 
 .css-rirn54 {
-    display: flex;
+    display: none;
     align-content: stretch;
     flex-shrink: 1;
     flex-direction: column;
@@ -3979,3 +3979,9 @@ ol, ul {
 
 }
 
+.slideText{
+    display: none;
+}
+.curSlide{
+    display: flex !important;
+}
