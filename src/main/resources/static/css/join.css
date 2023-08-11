@@ -1,0 +1,301 @@
+.css-hpn70j {
+    width: 0px;
+    height: 4px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.css-15zhte1 {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+.css-1t9iucw {
+    border-width: 0px;
+    color: rgb(76, 76, 76);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+.css-2ezfro {
+    width: 16px;
+    height: 0px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.css-14ctgde {
+    display: flex;
+    width: 100%;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: row;
+}
+.css-wbyakl {
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-width: 0px;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: inline-flex;
+    padding: 15px 14px;
+    position: relative;
+}
+@media screen and (min-width: 640px) {
+    .css-wbyakl {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .css-wbyakl {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+.css-3kqv01 {
+    display: flex;
+    visibility: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+.css-19rwgym {
+    width: 2px;
+    display: flex;
+}
+.css-1bc1yxd {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+@media screen and (min-width: 640px) {
+    .css-1bc1yxd {
+        width: 20px;
+        height: 20px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .css-1bc1yxd {
+        width: 20px;
+        height: 20px;
+    }
+}
+.css-1oe6l0y {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #f3f3f3;
+}
+
+.css-1b224fx {
+    fill: #f3f3f3;
+}
+
+#emailJoin {
+    display: none;
+}
+#emailJoinButtonWrap {
+    display: none;
+}
+.css-ykvgqz {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+    .css-ykvgqz {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .css-ykvgqz {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+.css-1ht7h3h {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+}
+.css-wzytx3 {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+.css-ow87nl {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgb(116, 116, 116);
+}
+.css-156lfx0 {
+    width: 10px;
+    height: 0px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.css-1wxja1r {
+    border-width: 0px;
+    color: rgb(243, 243, 243);
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+}
+.css-14gyp6s {
+    flex: 0 0 auto;
+    background-color: rgb(42, 42, 42);
+    width: 100%;
+    height: 1px;
+}
+.css-1xymumh {
+    height: 16px;
+    display: flex;
+}
+.css-168eep1 {
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+}
+@media screen and (min-width: 640px) {
+    .css-168eep1 {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .css-168eep1 {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+.css-v4tyvr {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.css-jrafz4 {
+    display: flex;
+    min-width: 16px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+.css-8ciuji {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+.css-1jo1oap {
+    border-width: 0px;
+    color: rgb(243, 243, 243);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    text-align: left;
+}
+.css-i3jcei {
+    flex: 1 1 0%;
+    display: flex;
+}
+.css-1lldgru {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.css-8ciuji {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+.css-646bo6 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgb(243, 243, 243);
+}
+.css-or9w1f {
+    fill: rgb(243, 243, 243);
+}
+.css-ltdizj {
+    height: 24px;
+    display: flex;
+}
+.css-181thk6 {
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-width: 0px;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    display: inline-flex;
+    padding: 15px 14px;
+    --system-on-color: #747474;
+    position: relative;
+}
+@media screen and (min-width: 640px) {
+    .css-181thk6 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .css-181thk6 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+}
+.checked{
+    fill:rgb(55, 109, 250) !important;
+}
+

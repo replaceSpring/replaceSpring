@@ -1,0 +1,2342 @@
+:root {
+    --system-on-color: #f3f3f3;
+    -webkit-print-color-scheme: dark;
+    color-scheme: dark;
+}
+
+@supports (top: env(safe-area-inset-top)){
+    :root {
+        --safe-area-inset-top: env(safe-area-inset-top);
+        --safe-area-inset-right: env(safe-area-inset-right);
+        --safe-area-inset-bottom: env(safe-area-inset-bottom);
+        --safe-area-inset-left: env(safe-area-inset-left);
+    }
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+* {
+    font-family: 'Pretendard JP',Pretendard,system-ui,-apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+}
+
+[lang='ko'] body {
+    word-break: keep-all;
+}
+
+a {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1;
+    background-color: #0c0c0c;
+}
+
+body>div {
+    position: relative;
+    z-index: 0;
+}
+
+img, video {
+    height: auto;
+    max-width: 100%;
+}
+
+button, input, select {
+    margin: 0;
+}
+
+button {
+    background-color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+    list-style-type: disc;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+p, ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* main 태그 css 설정 */
+.main-wrap {
+    width: 100%;
+    height: 100%;
+    padding-left: constant(safe-area-inset-left);
+    padding-left: env(safe-area-inset-left);
+    padding-right: constant(safe-area-inset-right);
+    padding-right: env(safe-area-inset-right);
+}
+
+.hide-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 210;
+    position: relative;
+}
+
+.hide1-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.hide2-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 199;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.hide3-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 198;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    transition-property: top;
+    transition-duration: 300ms;
+}
+
+.hide4-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 197;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    transition-property: top;
+    transition-duration: 300ms;
+}
+
+.hide5-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 196;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    transition-property: top;
+    transition-duration: 300ms;
+}
+
+.div-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.css-1b7i15z {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    height: 55px;
+    background-color: rgb(12, 12, 12);
+}
+
+.css-mwm79r {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-riy7es {
+    width: 32px;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.css-j14p5i {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.css-171gxex {
+    text-align: left;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    padding-left: 12px;
+    flex: 1 1 0%;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+.css-slclp7 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.css-10vbztj {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    background-color: inherit;
+    border-width: 0px;
+    padding: 0px;
+    overflow: hidden;
+    -webkit-box-align: center;
+    align-items: center;
+    z-index: 0;
+    border-radius: 4px;
+}
+
+.css-1r5wrp6 {
+    text-align: left;
+    color: rgb(255, 116, 48);
+    -webkit-text-fill-color: rgb(255, 116, 48);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 500;
+    margin-left: 0px;
+    margin-right: 0px;
+    white-space: nowrap;
+}
+
+.css-1b40zj1 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 22px;
+    height: 0px;
+}
+
+.css-1dcq9or {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    background-color: inherit;
+    border-width: 0px;
+    padding: 0px;
+    overflow: hidden;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    z-index: 0;
+    border-radius: 4px;
+}
+
+.css-sybpvl {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    fill: rgb(243, 243, 243);
+}
+
+.css-17f4zqp {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.css-bmlgtn {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: sticky;
+    top: 12px;
+    z-index: 199;
+    width: 100%;
+    margin-bottom: -52px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1fo6jlw {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: visible;
+    height: 52px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.css-14bj9bf {
+    display: flex;
+    place-content: stretch space-between;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 202;
+    max-width: 100%;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1hj69o9 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 0;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-h8nxjb {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 12px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1hvtp3b {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    background-color: inherit;
+    border-width: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    z-index: 0;
+}
+
+.css-ymr6q4 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    fill: rgb(243, 243, 243);
+}
+
+.css-1abld0t {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0px;
+}
+
+.css-1hu4u6u {
+    display: block;
+    width: auto;
+    height: 22px;
+}
+
+.css-hnwxmn {
+    display: block;
+    width: auto;
+    height: 100%;
+    fill: #f3f3f3;
+}
+
+.css-12fz3yr {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-21wtj9 {
+    display: none;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-jci0dj {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    height: 20px;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-5divv0 {
+    text-align: left;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    margin-right: 4px;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}
+
+.css-361q50 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 2px;
+    height: 0px;
+}
+
+.css-1bsx5uz {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 20px;
+    height: 0px;
+}
+
+.css-6g5r4z {
+    text-align: left;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}
+
+.css-esw18d {
+    display: flex;
+    place-content: stretch flex-start;
+    flex: 0 0 auto;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1b055sq {
+    border-width: 0px;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+.css-27oxq6 {
+    display: none;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: sticky;
+    top: 64px;
+    z-index: 199;
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1ejl8vx {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: visible;
+    height: 52px;
+    width: 100%;
+    background-color: rgb(12, 12, 12);
+}
+
+.css-2c2hxy {
+    display: none;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: sticky;
+    top: 64px;
+    z-index: 199;
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1hx3xz3 {
+    display: none;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 199;
+    width: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+/* 상단 카테고리 상세바 */
+.css-cb3w06 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: fixed;
+    cursor: pointer;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.8);
+    inset: 0px;
+}
+
+.css-rirn54 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    background-color: rgb(12, 12, 12);
+}
+
+.css-19zdhbd {
+    display: flex;
+    place-content: stretch center;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1nn6t1v {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 1312px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.css-14q7sgs {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-box-pack: start;
+    align-items: flex-end;
+}
+
+.css-zlo6qq {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 360px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-14fzkbc {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    min-width: 162px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-346lod {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    z-index: 0;
+}
+
+.css-13vbe2p {
+    text-align: start;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.css-gefh0b {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 0px;
+    height: 20px;
+}
+
+.css-iis9oy {
+    display: flex;
+    align-content: stretch;
+    flex: 0 0 auto;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    border-width: 0px 1px 0px 0px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-style: solid;
+    width: 0px;
+    height: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.css-yzqw5 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 0px;
+    height: 40px;
+}
+
+.css-1qxfavt {
+    text-align: left;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    margin-left: 6px;
+    margin-right: 0px;
+    white-space: nowrap;
+}
+
+/* session 부분*/
+
+.css-1t0urrj {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1312px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.css-vwco3d {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1b89rzx {
+    display: none;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: sticky;
+    height: calc(100vh - 64px);
+    top: 64px;
+    padding-top: 40px;
+    padding-right: 16px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-jw0xw2 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 224px;
+    height: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1i5bsm {
+    text-align: left;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+}
+
+.css-1110jh0 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 0px;
+    height: 24px;
+}
+
+.css-1hzwvc0 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: auto;
+    height: 100%;
+}
+
+.css-jpc6au {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.css-14bzam7 {
+    text-align: start;
+    color: rgb(255, 93, 0);
+    -webkit-text-fill-color: rgb(255, 93, 0);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+}
+
+.css-1d944kd {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.css-qlly12 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-19vi3od {
+    text-align: left;
+    color: #f3f3f3;
+    -webkit-text-fill-color: #f3f3f3;
+    text-fill-color: #f3f3f3;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+.css-zk53ni {
+    display: flex;
+    overflow-x: scroll;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: -20px;
+    margin-right: -20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.css-1gz0uo4 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 12px;
+}
+
+.css-iiuncx {
+    width: 8px;
+    height: 0px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.css-o5crzx {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgb(12, 12, 12);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 0 0 auto;
+    display: inline-flex;
+    padding: 8px 11px 8px 15px;
+    --system-on-color: #f3f3f3;
+}
+
+.css-11rc5ya {
+    width: 0px;
+    display: flex;
+}
+
+.css-1a4a92y {
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+.css-1gqu4n6 {
+    width: 6px;
+    display: flex;
+}
+
+.css-ujih8e {
+    display: block;
+    width: 14px;
+    height: 14px;
+}
+
+.css-1oe6l0y {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--system-on-color);
+}
+
+.css-1upuyz0 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: max-content;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1meit79 {
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    padding: 9px 0px;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-ynj3fh {
+    cursor: pointer;
+    transition: opacity 0.2s ease 0s;
+    border-width: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: inline-flex;
+}
+
+.css-1p1m4ay {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.css-16acpt {
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+}
+
+.css-1bep15o {
+    width: 4px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.css-1ujtdkg {
+    display: block;
+    width: 14px;
+    height: 14px;
+}
+
+.css-yoxaiy {
+    display: none;
+    place-content: stretch space-between;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    -webkit-box-pack: justify;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1dcygz9 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-yemm12 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 16px;
+    height: 0px;
+}
+
+.css-1b5ucmn {
+    display: none;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+    padding-top: 40px;
+    padding-bottom: 14px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+/* main 내용부분 */
+
+.css-73s7lu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.css-iftixr {
+    flex: 0 1 calc((100% - 12px) / 2);
+    width: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    display: flex;
+}
+
+.css-1qc8ju8 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+}
+
+.css-60ifsp {
+    width: 100%;
+    height: 100%;
+    --system-on-color: #f3f3f3;
+}
+
+.css-j50c81 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-j2nt8g {
+    flex: 0 1 calc((100% - 12px) / 2);
+    width: 0px;
+    margin-left: 12px;
+    margin-top: 0px;
+    display: flex;
+}
+
+.css-8atqhb {
+    width: 100%;
+}
+
+.css-mgewzr {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 75%;
+    position: relative;
+}
+
+.css-1ct1iq3 {
+    position: absolute;
+    inset: 0px;
+}
+
+.css-abev78 {
+    overflow: hidden;
+    border-radius: 4px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgb(25, 25, 25);
+}
+
+.css-eti150 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+.css-1u3hmek {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.css-eti150::after {
+    position: absolute;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.05);
+    content: "";
+}
+
+.css-1h9gj2l {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 12px;
+    height: auto;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-es3o19 {
+    text-align: left;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    flex-shrink: 0;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+.css-1k0q1kx {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 0px;
+    height: 6px;
+}
+
+.css-o90gdq {
+    text-align: left;
+    color: rgb(171, 171, 171);
+    -webkit-text-fill-color: rgb(171, 171, 171);
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-size: 0.6875rem;
+    line-height: 0.875rem;
+    font-weight: 400;
+}
+
+.css-1devemn {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    fill: rgb(243, 243, 243);
+}
+
+.css-1p34t11 {
+    flex: 0 1 calc((100% - 12px) / 2);
+    width: 0px;
+    margin-left: 0px;
+    margin-top: 32px;
+    display: flex;
+}
+
+.css-1s11ofp {
+    flex: 0 1 calc((100% - 12px) / 2);
+    width: 0px;
+    margin-left: 12px;
+    margin-top: 32px;
+    display: flex;
+}
+
+.css-7i8iq {
+    flex: 0 1 calc((100% - 12px) / 2);
+    width: 0px;
+    margin-left: 0px;
+    margin-top: 32px;
+    display: flex;
+}
+
+.css-1927syl {
+    flex: 0 1 calc((100% - 12px) / 2);
+    width: 0px;
+    margin-left: 12px;
+    margin-top: 32px;
+    display: flex;
+}
+
+.css-u4797e {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    height: 80px;
+}
+
+.css-10c2f7i {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.css-37paae {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 200;
+}
+
+.css-1y9khfs {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.css-1woanks {
+    backdrop-filter: blur(8px);
+    transform: translate3d(0px, 0px, 0px);
+    padding-top: 12px;
+    padding-bottom: max(var(--safe-area-inset-bottom, 0px), 12px);
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(25, 25, 25);
+}
+
+.css-5dkw6v {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.css-tnftlu {
+    display: flex;
+    place-content: stretch space-between;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-exlkmr {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    align-items: flex-start;
+}
+
+.css-g9vuog {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 4px;
+    -webkit-box-pack: start;
+    align-items: flex-start;
+}
+
+.css-1ekacgu {
+    border-width: 0px;
+    color: rgb(243, 243, 243);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.125rem;
+}
+
+.css-1irypia {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    width: 0;
+    height: 8px;
+}
+
+.css-1nyenq2 {
+    border-width: 0px;
+    color: rgb(243, 243, 243);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+}
+
+.css-1ozz338 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 8px;
+    height: 0px;
+}
+
+.css-1ac1w2 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: auto;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1es8bh8 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(255, 93, 0);
+    border-width: 0px;
+    overflow: hidden;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    z-index: 0;
+    width: auto;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.css-a2v7f3 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: -1;
+    inset: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.css-tp7c7l {
+    display: flex;
+    place-content: stretch center;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 1;
+    gap: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+}
+
+.css-up21q0 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+
+@media screen and (min-width: 640px){
+    .css-5n5vj0 {
+        display: flex;
+        align-content: stretch;
+        flex-shrink: 1;
+    }
+    .css-nieagp {
+        display: none;
+    }
+
+    .css-f5zhuv {
+        height: auto;
+    }
+
+    /* category.css / session 부분 */
+    .css-zk53ni {
+        display: none;
+    }
+
+    .css-o5crzx {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 15px;
+        padding-right: 11px;
+    }
+
+    .css-11rc5ya {
+        width: 0px;
+    }
+
+    .css-1a4a92y {
+        line-height: 1.125rem;
+        font-weight: 400;
+        font-size: 0.875rem;
+    }
+
+    .css-1upuyz0 {
+        display: none;
+    }
+
+    .css-1meit79 {
+        display: flex;
+        align-content: stretch;
+        flex-shrink: 1;
+    }
+
+    .css-16acpt {
+        line-height: 1.125rem;
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
+
+    .css-yoxaiy {
+        display: flex;
+    }
+
+    .css-iftixr {
+        flex: 0 1 calc((100% - 24px) / 3);
+        margin-left: 0px;
+        margin-top: 0px;
+        display: flex;
+    }
+
+    .css-j2nt8g {
+        flex: 0 1 calc((100% - 24px) / 3);
+        margin-left: 12px;
+        margin-top: 0px;
+        display: flex;
+    }
+
+    .css-1p34t11 {
+        flex: 0 1 calc((100% - 24px) / 3);
+        margin-left: 12px;
+        margin-top: 0px;
+        display: flex;
+    }
+
+    .css-1s11ofp {
+        flex: 0 1 calc((100% - 24px) / 3);
+        margin-left: 0px;
+        margin-top: 32px;
+        display: flex;
+    }
+
+    .css-7i8iq {
+        flex: 0 1 calc((100% - 24px) / 3);
+        margin-left: 12px;
+        margin-top: 32px;
+        display: flex;
+    }
+
+    .css-1927syl {
+        flex: 0 1 calc((100% - 24px) / 3);
+        margin-left: 12px;
+        margin-top: 32px;
+        display: flex;
+    }
+
+    .css-1ekacgu {
+        line-height: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .css-1nyenq2 {
+        line-height: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .css-1ac1w2 {
+        width: 240px;
+    }
+
+    .css-1es8bh8 {
+        width: 100%;
+        padding: 15px 14px;
+    }
+
+    .css-tp7c7l {
+        gap: 2px;
+    }
+
+    .css-up21q0 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .css-1b7i15z {
+        display: none;
+    }
+
+    .css-1fo6jlw {
+        height: 64px;
+    }
+
+    .css-14bj9bf {
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 1312px;
+    }
+
+    .css-h8nxjb {
+        display: none;
+    }
+
+    .css-1abld0t {
+        margin-right: 48px;
+    }
+
+    .css-21wtj9 {
+        display: flex;
+    }
+
+    .css-27oxq6 {
+        display: none;
+    }
+
+    .css-1ejl8vx {
+        height: 64px;
+    }
+
+    .css-2c2hxy {
+        top: 64px;
+        display: none;
+    }
+
+    .css-1hx3xz3 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .css-70zip8 {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .css-bhssm9 {
+        height: 56px;
+    }
+
+    .css-1qkmwl5 {
+        margin-bottom: 32px;
+        font-size: 2.125rem;
+        line-height: 2.75rem;
+    }
+
+    .css-1a0dzko {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+    .css-1rhl0mq {
+        display: none;
+    }
+
+    .css-eh97ym {
+        display: flex;
+        align-content: stretch;
+        flex-shrink: 1;
+    }
+
+    .css-t2lgjs {
+        height: 48px;
+    }
+
+    .css-12v8crx {
+        width: 100%;
+    }
+
+    .css-1t0urrj {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .css-gk1dbe {
+        margin-top: 64px;
+    }
+
+    .css-vu1lbu {
+        -webkit-line-clamp: 1;
+        font-size: 1.625rem;
+        line-height: 2.25rem;
+    }
+
+    .css-15gl84l {
+        gap: 16px;
+        height: 36px;
+    }
+
+    .css-ieh5q7 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+    }
+
+    .css-1vehcc9 {
+        width: 24px;
+        height: 24px;
+    }
+
+    .css-16fy5ny .flicking-viewport {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .css-zpf9vi {
+        width: calc((100% + 0px - 84px) / 4);
+    }
+
+    .css-1syx2uv {
+        width: calc((100% + 0px - 84px) / 4);
+        margin-left: 28px;
+    }
+
+    .css-ceb9ik {
+        height: 64px;
+    }
+
+    .css-6hez41 {
+        margin-left: 20px;
+    }
+
+    .css-njbq58 .flicking-viewport {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .css-16lgwuh .flicking-viewport {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .css-16lgwuh .flicking-viewport {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .css-1hzd6sn {
+        width: calc((100% + 0px - 112px) / 5);
+    }
+
+    .css-1y8wdmt {
+        display: none;
+    }
+
+    .css-ar0our {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+    }
+
+    .css-tht49e {
+        width: calc((100% + 0px - 112px) / 5);
+        margin-left: 28px;
+    }
+
+    .css-19h4pru {
+        margin-top: 86px;
+    }
+
+    .css-12v8crx {
+        width: 100%;
+    }
+
+    .css-1uc1m8f .flicking-viewport {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .css-1hziyko .flicking-viewport {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .css-100302t {
+        width: calc(((100% + 0px) - 84px) / 4);
+    }
+
+    .css-d7und8 {
+        width: calc(((100% + 0px) - 84px) / 4);
+        margin-left: 28px;
+    }
+
+    .css-c7hkc8 {
+        padding-top: 80px;
+    }
+
+    .css-buqv05 {
+        height: 12px;
+    }
+
+    .css-35zkm6 {
+        max-width: 886px;
+    }
+
+    .css-9kb7es {
+        min-height: 38px;
+        padding: 9px 15px;
+    }
+
+    .css-1450fq6 {
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+    }
+
+    .css-1ph5ldh {
+        display: flex;
+        align-content: stretch;
+        flex-shrink: 1;
+    }
+
+    .css-1lxbn8n {
+        display: none;
+    }
+
+    .css-18yb3mg {
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .css-1szuq4w {
+        height: 0;
+    }
+
+    .css-ewv9rt {
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .css-j56oz9 {
+        max-width: 700px;
+    }
+
+    .css-cbdlqa {
+        display: none;
+    }
+
+    .css-1epejsd {
+        display: none;
+    }
+
+    .css-nshan7 {
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 1 1 0%;
+        display: flex;
+        padding: 8px;
+        --system-on-color: #ababab;
+    }
+
+    /* 상단 카테고리 세부바 */
+    .css-1nn6t1v {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+/*   category.css /  session 부분 */
+    .css-1b89rzx {
+        display: flex;
+    }
+
+    .css-o5crzx {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 15px;
+        padding-right: 11px;
+    }
+
+    .css-11rc5ya {
+        width: 0px;
+    }
+
+    .css-1a4a92y {
+        line-height: 1.125rem;
+        font-weight: 400;
+        font-size: 0.875rem;
+    }
+
+    .css-1gqu4n6 {
+        width: 6px;
+    }
+
+    .css-1meit79 {
+        padding: 16px 14px;
+    }
+
+    .css-16acpt {
+        line-height: 1.125rem;
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
+
+    .css-1ujtdkg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .css-yoxaiy {
+        display: none;
+    }
+
+    .css-1b5ucmn {
+        display: flex;
+    }
+
+    .css-iftixr {
+        flex: 0 1 calc((100% - 56px) / 3);
+        margin-left: 0px;
+        margin-top: 0px;
+        display: flex;
+    }
+
+    .css-j2nt8g {
+        flex: 0 1 calc((100% - 56px) / 3);
+        margin-left: 28px;
+        margin-top: 0px;
+        display: flex;
+    }
+
+    .css-1p34t11 {
+        flex: 0 1 calc((100% - 56px) / 3);
+        margin-left: 28px;
+        margin-top: 0px;
+        display: flex;
+    }
+
+    .css-1s11ofp {
+        flex: 0 1 calc((100% - 56px) / 3);
+        margin-left: 0px;
+        margin-top: 48px;
+        display: flex;
+    }
+
+    .css-7i8iq {
+        flex: 0 1 calc((100% - 56px) / 3);
+        margin-left: 28px;
+        margin-top: 48px;
+        display: flex;
+    }
+
+    .css-1927syl {
+        flex: 0 1 calc((100% - 56px) / 3);
+        margin-left: 28px;
+        margin-top: 48px;
+        display: flex;
+    }
+
+/*    하단바 부분 */
+    .css-tnftlu {
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+    }
+
+    .css-g9vuog {
+        margin-bottom: 8px;
+        align-items: flex-end;
+    }
+
+    .css-1ozz338 {
+        width: 24px;
+    }
+
+    .css-1ac1w2 {
+        width: 320px;
+    }
+
+
+}
+
+
+
