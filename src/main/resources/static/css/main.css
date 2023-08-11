@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* main 태그 css 설정 */
-.css-mw5pt9 {
+.main-wrap {
     width: 100%;
     height: 100%;
     padding-left: constant(safe-area-inset-left);
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: env(safe-area-inset-right);
 }
 
-.css-lrk3v9 {
+.hide-wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.css-zsoya5 {
+.hide1-wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
 }
 
-.css-1j2he8a {
+.hide2-wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
 }
 
-.css-1jl7ivf {
+.hide3-wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: 300ms;
 }
 
-.css-14vima6 {
+.hide4-wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -177,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: 300ms;
 }
 
-.css-1cbthfr {
+.hide5-wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: 300ms;
 }
 
-.css-10c2f7i {
+.div-wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1024,12 +1024,12 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
     color: rgb(243, 243, 243);
     -webkit-text-fill-color: rgb(243, 243, 243);
-    white-space: pre-wrap;
+    /*white-space: pre-wrap;*/
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    /*-webkit-line-clamp: 2;*/
     margin-bottom: 16px;
     font-size: 1.625rem;
     line-height: 2.25rem;
@@ -1040,7 +1040,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
     color: rgb(171, 171, 171);
     -webkit-text-fill-color: rgb(171, 171, 171);
-    white-space: pre-wrap;
+    white-space: nowrap;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3449,8 +3449,197 @@ ol, ul {
     display: flex;
 }
 
+/* 상단 카테고리 상세바 */
+.css-cb3w06 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: fixed;
+    cursor: pointer;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.8);
+    inset: 0px;
+}
 
+.css-rirn54 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    background-color: rgb(12, 12, 12);
+}
 
+.css-19zdhbd {
+    display: flex;
+    place-content: stretch center;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1nn6t1v {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 1312px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.css-14q7sgs {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-box-pack: start;
+    align-items: flex-end;
+}
+
+.css-zlo6qq {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 360px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-14fzkbc {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    min-width: 162px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-346lod {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    z-index: 0;
+}
+
+.css-13vbe2p {
+    text-align: start;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.css-gefh0b {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 0px;
+    height: 20px;
+}
+
+.css-iis9oy {
+    display: flex;
+    align-content: stretch;
+    flex: 0 0 auto;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    border-width: 0px 1px 0px 0px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-style: solid;
+    width: 0px;
+    height: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.css-yzqw5 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 0px;
+    height: 40px;
+}
+
+.css-1qxfavt {
+    text-align: left;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    margin-left: 6px;
+    margin-right: 0px;
+    white-space: nowrap;
+}
 
 
 
@@ -3763,6 +3952,12 @@ ol, ul {
         display: flex;
         padding: 8px;
         --system-on-color: #ababab;
+    }
+
+    /* 상단 카테고리 세부바 */
+    .css-1nn6t1v {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
 
