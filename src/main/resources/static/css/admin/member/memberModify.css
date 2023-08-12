@@ -300,3 +300,8 @@ button {
 	height: 20px;
 	font-size: 15px;
 }
+
+.title-name {
+    position: absolute;
+    left: 250px;
+}

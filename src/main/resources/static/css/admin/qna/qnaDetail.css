@@ -248,3 +248,8 @@ button {
     top: 5px;
     text-align: center;
 }
+
+.title-name {
+    position: absolute;
+    left: 250px;
+}
