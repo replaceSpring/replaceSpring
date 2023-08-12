@@ -170,3 +170,7 @@ table {
     cursor: pointer;
 }
 
+.title-name {
+    position: absolute;
+    left: 250px;
+}

@@ -227,3 +227,8 @@ div.margin span {
     border: 0;
     border-radius: 5px;
 }
+
+.title-name {
+    position: absolute;
+    left: 250px;
+}
