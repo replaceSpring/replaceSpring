@@ -143,7 +143,10 @@ video {
 * {
     font-family: 'Pretendard JP', Pretendard, system-ui, -apple-system, BlinkMacSystemFont, Roboto,
     'Helvetica Neue', 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+
 }
+
+
 button,
 input,
 select {
@@ -1131,4 +1134,21 @@ li {
     font-size: 1rem;
     line-height: 1.25rem;
     font-weight: 400;
+}
+.css-blveub {
+    display: none;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+@media (min-width: 640px) {
+    .css-blveub {
+        display: none;
+    }
+}
+@media (min-width: 1024px) {
+    .css-blveub {
+        display: flex;
+    }
 }
