@@ -3302,7 +3302,7 @@ p {
 
 .header__logo img {
     max-width: 360px;
-    max-height: 35px;
+    max-height: 70px;
     vertical-align: baseline;
     -webkit-backface-visibility: hidden;
     transform: translateZ(0);

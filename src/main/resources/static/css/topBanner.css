@@ -1,3 +1,8 @@
+:root{
+    --system-on-color: rgba(255, 255, 255, 0.15);
+    --word-color : #f7f7f7;
+}
+
 html,
 body,
 p,
@@ -427,7 +432,7 @@ li {
 .css-1hu4u6u {
     display: block;
     width: auto;
-    height: 22px;
+    height: 50px;
 }
 .css-hnwxmn {
     display: block;
@@ -477,7 +482,7 @@ li {
 .css-5divv0 {
     text-align: left;
     color: rgb(243, 243, 243);
-    -webkit-text-fill-color: rgb(243, 243, 243);
+    -webkit-text-fill-color: var(--word-color);
     margin-right: 4px;
     font-size: 1rem;
     line-height: 1.25rem;
@@ -521,7 +526,7 @@ li {
 .css-6g5r4z {
     text-align: left;
     color: rgb(243, 243, 243);
-    -webkit-text-fill-color: rgb(243, 243, 243);
+    -webkit-text-fill-color: var(--word-color);
     height: 20px;
     font-size: 1rem;
     line-height: 1.25rem;
