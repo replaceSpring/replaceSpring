@@ -735,7 +735,7 @@ p, ul {
 
 /* 상단 카테고리 상세바 */
 .css-cb3w06 {
-    display: flex;
+    display: none;
     align-content: stretch;
     flex-shrink: 1;
     flex-direction: column;
@@ -748,7 +748,7 @@ p, ul {
 }
 
 .css-rirn54 {
-    display: flex;
+    display: none;
     align-content: stretch;
     flex-shrink: 1;
     flex-direction: column;
@@ -1795,6 +1795,314 @@ p, ul {
     margin-right: 4px;
 }
 
+/* 상단 검색 바 css */
+.css-iu7izx {
+    display: none;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    z-index: 211;
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-ggltqk {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: visible;
+    height: 52px;
+    background-color: rgb(12, 12, 12);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+.css-1s9yjfq {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    cursor: default;
+    overflow: hidden;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.css-30zh0b {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-5d6zqx {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-a0nn8i {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+}
+
+.css-19d216y {
+    display: flex;
+    place-content: stretch center;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    padding: 8px 20px;
+    height: 52px;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-fkkc8t {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0px;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 100%;
+    padding: 9px 48px 9px 16px;
+}
+
+.css-8m4vrq {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    top: 9px;
+    right: 16px;
+    z-index: 1;
+    cursor: text;
+}
+
+.css-kgbhgr {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    fill: rgb(243, 243, 243);
+}
+
+.css-12z1g49 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: auto;
+}
+
+.css-1h2nts4 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: visible;
+    background-color: rgb(12, 12, 12);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.css-c1hse5 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    padding: 12px 20px 110px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-3h1h96 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-175jfes {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-kmla08 {
+    text-align: left;
+    color: rgb(171, 171, 171);
+    -webkit-text-fill-color: rgb(171, 171, 171);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+}
+
+.css-a36j2r {
+    text-align: left;
+    color: rgb(116, 116, 116);
+    -webkit-text-fill-color: rgb(116, 116, 116);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 500;
+}
+
+.css-1g6jm3w {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-flow: column wrap;
+    box-sizing: border-box;
+    position: relative;
+    max-height: 100%;
+    width: 100%;
+    gap: 4px 24px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1gpbe29 {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-gh0k4l {
+    text-align: left;
+    color: rgb(255, 116, 48);
+    -webkit-text-fill-color: rgb(255, 116, 48);
+    flex-shrink: 0;
+    width: 18px;
+    white-space: nowrap;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.css-147sg2d {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 8px;
+    height: 0px;
+}
+
+.css-13knazy {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    z-index: 0;
+}
+
+.css-vj9owe {
+    text-align: left;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+}
+
+
 
 @media screen and (min-width: 640px){
     .css-5n5vj0 {
@@ -1924,7 +2232,7 @@ p, ul {
 
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     .css-1b7i15z {
         display: none;
     }
@@ -2225,7 +2533,7 @@ p, ul {
         padding-right: 40px;
     }
 
-/*   category.css /  session 부분 */
+    /*   category.css /  session 부분 */
     .css-1b89rzx {
         display: flex;
     }
@@ -2316,7 +2624,7 @@ p, ul {
         display: flex;
     }
 
-/*    하단바 부분 */
+    /*    하단바 부분 */
     .css-tnftlu {
         -webkit-box-pack: end;
         justify-content: flex-end;
@@ -2335,8 +2643,39 @@ p, ul {
         width: 320px;
     }
 
+    /*    검색 css */
+    .css-ggltqk {
+        height: 64px;
+    }
 
+    .css-30zh0b {
+        max-width: 560px;
+    }
+
+    .css-a0nn8i {
+        width: 560px;
+    }
+
+    .css-19d216y {
+        padding: 13px 8px;
+        height: 64px;
+    }
+
+    .css-1h2nts4 {
+        background-color: rgb(23, 23, 23);
+    }
+
+    .css-c1hse5 {
+        padding: 16px 24px 20px;
+    }
+
+    .css-1g6jm3w {
+        max-height: 220px;
+    }
+
+    .css-1gpbe29 {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 50%;
+    }
 }
-
-
-
