@@ -1051,8 +1051,8 @@ p, ul {
 
 .css-14bzam7 {
     text-align: start;
-    color: rgb(255, 93, 0);
-    -webkit-text-fill-color: rgb(255, 93, 0);
+    color: #98d8f5;
+    -webkit-text-fill-color: #98d8f5;
     font-size: 0.875rem;
     line-height: 1.125rem;
     font-weight: 700;
@@ -1747,7 +1747,7 @@ p, ul {
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
-    background-color: rgb(255, 93, 0);
+    background-color: #98d8f5;
     border-width: 0px;
     overflow: hidden;
     -webkit-box-align: stretch;
@@ -2050,8 +2050,8 @@ p, ul {
 
 .css-gh0k4l {
     text-align: left;
-    color: rgb(255, 116, 48);
-    -webkit-text-fill-color: rgb(255, 116, 48);
+    color: #98d8f5;
+    -webkit-text-fill-color: #98d8f5;
     flex-shrink: 0;
     width: 18px;
     white-space: nowrap;
@@ -2678,4 +2678,23 @@ p, ul {
         padding-bottom: 8px;
         width: 50%;
     }
+}
+
+.css-12j5knc {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
 }
