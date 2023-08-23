@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지 상세</title>
+    <link rel="stylesheet" href="../../../static/css/admin/sideBar.css">
+    <link rel="stylesheet" href="../../../static/css/admin/board/boardDetail.css">
+</head>
+
+<body>
+    <div>
+        <div class="info-title-box flex">
+            <div class="header-name">
+                <span class="title-name">공고게시판 관리</span>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+
+        <!-- 사이드 바 -->
+        <aside class="side-bar">
+            <ul>
+                <div class="side-bar-first">menu</div>
+                <li class="side-list">
+                    <a href="../main/adminMain.html" class="side-option">메인페이지</a>
+                </li>
+                <li class="side-list">
+                    <a href="../member/memberList.html" class="side-option">회원관리</a>
+                </li>
+                <li class="side-list">
+                    <a href="../notice/noticeList.html" class="side-option">공지사항</a>
+                </li>
+                <li class="side-list">
+                    <a href="../qna/qnaList.html" class="side-option">qna</a>
+                </li>
+                <li class="side-list">
+                    <a href="../bord/boardList.html" class="side-option">공고게시판</a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="container">
+            <div class="container-margin">
+                <!-- 헤더 -->
+                <div class="prev-button-layout">
+                    <div>
+                        <a href="boardList.html" style="color: black;">
+                            <img src="../../../static/image/prev_icon.png" class="prev-icon">
+                            <span class="prev-title">리스트로 돌아가기</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="info-flex">
+                    <!-- 내용 섹션 -->
+                    <section class="board-info-box-layout">
+                        <div class="board-info-box board-info-box-flex title-container">
+                            <div class="board-info-title-box">
+                                <span>공고게시판 상세보기</span>
+                            </div>
+                            <div class="modify-button-box">
+                                <a>
+                                    <a href="noticeModify.html" class="complete-button">마감</a>
+                                </a>
+                            </div>
+                            <div class="modify-button-box">
+                                <a>
+                                    <a href="noticeModify.html" class="delete-button">삭제</a>
+                                </a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="board-info-box">
+                            <div class="info-table">
+                                <div class="info-member">
+                                    <span class="span-bold">제목 :</span>
+                                    <span>제목1</span>
+                                </div>
+                                <div class="info-member">
+                                    <span class="span-bold">작성자 :</span>
+                                    <span>
+                                        <span>박북박</span>
+                                </div>
+                                <div class="info-member">
+                                    <span class="span-bold">공고 날짜 :</span>
+                                    <span>
+                                        2012-12-12
+                                    </span>
+                                    <div></div>
+                                    <span class="span-bold">마감 날짜 :</span>
+                                    <span>
+                                        2012-12-12
+                                    </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- 내용 -->
+                            <div class="info-content">
+                                <div>
+                                    게시판 내용
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+
+</script>
+
+</html>
