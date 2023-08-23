@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 상세</title>
+    <link rel="stylesheet" href="../../../static/css/admin/sideBar.css">
+    <link rel="stylesheet" href="../../../static/css/admin/member/memberModify.css">
+</head>
+
+<body>
+    <div>
+        <div class="info-title-box flex">
+            <div class="header-name">
+                <span class="title-name">회원정보 관리</span>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+
+        <!-- 사이드 바 -->
+        <aside class="side-bar">
+            <ul>
+                <div class="side-bar-first">menu</div>
+                <li class="side-list">
+                    <a href="../main/adminMain.html" class="side-option">메인페이지</a>
+                </li>
+                <li class="side-list">
+                    <a href="../member/memberList.html" class="side-option">회원관리</a>
+                </li>
+                <li class="side-list">
+                    <a href="../notice/noticeList.html" class="side-option">공지사항</a>
+                </li>
+                <li class="side-list">
+                    <a href="../qna/qnaList.html" class="side-option">qna</a>
+                </li>
+                <li class="side-list">
+                    <a href="../bord/boardList.html" class="side-option">공고게시판</a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="container">
+            <div class="container-margin">
+                <!-- 헤더 -->
+                <div class="prev-button-layout">
+                    <div>
+                        <a href="memberDetail.html" style="color: black;">
+                            <img src="../../../static/image/prev_icon.png" class="prev-icon">
+                            <span class="prev-title">회원정보로 돌아가기</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="info-flex">
+                    <!-- 내용 섹션 -->
+                    <div class="info-flex">
+                        <section class="board-info-box-layout" style="width: 100%;">
+                            <div class="board-info-box">
+                                <div class="board-info-title-box">
+                                    <span>회원 정보</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="board-info-box">
+                                <div class="member-img-box">
+                                    <img src="../../../static/image/nomal_person_icon.png" class="member-img">
+                                </div>
+                                <div class="member-info-box">
+                                    <div class="member-info-tag-box">
+                                        <span class="info-tag">이름</span>
+                                        <!-- 이름은 앞페이지에서 가져옴 -->
+                                        <div class="info info-name">
+                                            <span>최말말</span>
+                                        </div>
+                                    </div>
+                                    <!-- 폼 -->
+                                    <form>
+                                        <div class="member-info-tag-box">
+                                            <span class="info-tag">이메일</span>
+                                            <div class="info">
+                                                <input type="text" class="member-email">
+                                            </div>
+                                        </div>
+                                        <div class="member-info-tag-box">
+                                            <span class="info-tag">닉네임</span>
+                                            <div class="info">
+                                                <input type="text" class="member-nickname">
+                                            </div>
+                                        </div>
+                                        <div class="member-info-tag-box">
+                                            <span class="info-tag">핸드폰 번호</span>
+                                            <div class="info">
+                                                <input type="text" class="member-phone">
+                                            </div>
+                                        </div>
+                                        <div class="member-info-tag-box">
+                                            <span class="info-tag">유저 상태</span>
+                                            <div class="info">
+                                                <select name="status" class="member-status">
+                                                    <option value="개인">개인</option>
+                                                    <option value="기업">기업</option>
+                                                    <option value="휴면">휴면</option>
+                                                    <option value="탈퇴">탈퇴</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="button-box">
+                                            <button type="submit">변경</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+
+</html>
