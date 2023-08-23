@@ -18,6 +18,7 @@ import java.io.IOException;
 public class MyBatisConfiguration {
     private final ApplicationContext applicationContext;
 
+
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.hikari")
     public HikariConfig hikariConfig(){

@@ -6,6 +6,6 @@ spring:
   datasource:
     hikari:
       driver-class-name: oracle.jdbc.OracleDriver
-      jdbc-url: jdbc:oracle:thin:@//localhost:1521/XE
+      jdbc-url: jdbc:oracle:thin:@13.125.255.15:1521:XE
       username: hr
       password: hr
