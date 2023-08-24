@@ -13,4 +13,7 @@ public class MemberDAO {
     public MemberVO select(long id){
         return memberMapper.select(id);
     }
+    public void update(MemberVO memberVO){
+        memberMapper.update(memberVO);
+    }
 }

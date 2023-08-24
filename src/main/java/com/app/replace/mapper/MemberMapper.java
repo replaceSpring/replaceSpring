@@ -7,4 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface MemberMapper {
 
     public MemberVO select(long id);
+
+    public void update(MemberVO memberVO);
 }
