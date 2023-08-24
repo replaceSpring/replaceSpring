@@ -1,0 +1,1175 @@
+
+:root {
+    --safe-area-inset-top: 0px;
+    --safe-area-inset-right: 0px;
+    --safe-area-inset-bottom: 0px;
+    --safe-area-inset-left: 0px;
+}
+
+:root {
+    --safe-area-inset-top: 0px;
+    --safe-area-inset-right: 0px;
+    --safe-area-inset-bottom: 0px;
+    --safe-area-inset-left: 0px;
+}
+
+:root {
+    -webkit-print-color-scheme: dark;
+    color-scheme: dark;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Pretendard JP',Pretendard,system-ui,-apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+}
+
+:root {
+    --system-on-color: #f3f3f3;
+}
+
+:root {
+    -webkit-print-color-scheme: dark;
+    color-scheme: dark;
+}
+
+@supports (top: env(safe-area-inset-top)){
+    :root {
+        --safe-area-inset-top: env(safe-area-inset-top);
+        --safe-area-inset-right: env(safe-area-inset-right);
+        --safe-area-inset-bottom: env(safe-area-inset-bottom);
+        --safe-area-inset-left: env(safe-area-inset-left);
+    }
+}
+
+[lang='ko'] body {
+    word-break: keep-all;
+}
+
+body {
+    margin: 0;
+    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+body {
+    line-height: 1;
+    background-color: #0c0c0c;
+}
+
+body>div {
+    position: relative;
+    z-index: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.css-mw5pt9 {
+    width: 100%;
+    height: 100%;
+    padding-left: constant(safe-area-inset-left);
+    padding-left: env(safe-area-inset-left);
+    padding-right: constant(safe-area-inset-right);
+    padding-right: env(safe-area-inset-right);
+}
+
+.css-lrk3v9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 210;
+    position: relative;
+}
+
+.css-zsoya5 {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.css-1j2he8a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 199;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.css-1jl7ivf {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 198;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    transition-property: top;
+    transition-duration: 300ms;
+}
+
+.css-14vima6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 197;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    transition-property: top;
+    transition-duration: 300ms;
+}
+
+.css-1cbthfr {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 196;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    transition-property: top;
+    transition-duration: 300ms;
+}
+
+.css-1tiw5e2 {
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12, 12, 12);
+    border-color: rgb(25, 25, 25);
+}
+
+.css-blveub {
+    display: none;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 640px){
+    .css-blveub {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-blveub {
+        display: flex;
+    }
+}
+
+.css-1it9y7q {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+.css-9ap60a {
+    display: none;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgb(25, 25, 25);
+}
+
+@media screen and (min-width: 640px){
+    .css-9ap60a {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-9ap60a {
+        display: flex;
+    }
+}
+
+/* 의심되는 style(회색으로 쓰여있음) */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.css-1h1zkn7 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 78px;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 640px){
+    .css-1h1zkn7 {
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-1h1zkn7 {
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1312px){
+    .css-1h1zkn7 {
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+.css-1t0urrj {
+    display: flex;
+    width: 100%;
+    max-width: 1312px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 640px){
+    .css-1t0urrj {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-1t0urrj {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.css-1f8m7mx {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 640px){
+    .css-1f8m7mx {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-1f8m7mx {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1312px){
+    .css-1f8m7mx {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+.css-qlxdgd {
+    display: block;
+    width: auto;
+    height: 24px;
+}
+
+/* svg -> img tag로 바꾸고 클래스 똑같이 먹여봄*/
+.css-hnwxmn {
+    display: block;
+    width: auto;
+    height: 50px;
+    fill: rgb(243, 243, 243);
+}
+
+.css-15q7g99 {
+    display: flex;
+    flex: 1 1 auto;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.css-1rg31ja {
+    display: flex;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgb(25, 25, 25);
+}
+
+@media screen and (min-width: 640px){
+    .css-1rg31ja {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-1rg31ja {
+        display: none;
+    }
+}
+
+.css-16hwzgi {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 52px;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 640px){
+    .css-16hwzgi {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-16hwzgi {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1312px){
+    .css-16hwzgi {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+.css-1svc1pb {
+    display: flex;
+    max-width: 64px;
+    flex: 1 1 0%;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.css-1hvtp3b {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    background-color: inherit;
+    border-width: 0px;
+    padding: 0px;
+    overflow: hidden;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    z-index: 0;
+}
+
+button, input, select {
+    margin: 0;
+}
+
+button {
+    background-color: inherit;
+}
+
+.css-ymr6q4 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    fill: rgb(243, 243, 243);
+}
+
+.css-17f4zqp {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.css-1phucrr {
+    display: flex;
+    width: 64px;
+    align-items: flex-end;
+    flex-direction: column;
+}
+/* header  끝 */
+
+.css-dyptwd {
+    display: flex;
+    margin-bottom: 80px;
+    min-height: 90vh;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 640px){
+    .css-dyptwd {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+.css-1vknbmh {
+    display: flex;
+    width: 100%;
+    max-width: 446px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 640px){
+    .css-1vknbmh {
+        max-width: 446px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-1vknbmh {
+        max-width: 400px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 201px;
+    }
+}
+
+.css-751n0r {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    /* flex-direction: column; */
+}
+
+@media screen and (min-width: 640px){
+    .css-751n0r {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-751n0r {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+.css-1f8m7mx {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 640px){
+    .css-1f8m7mx {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-1f8m7mx {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1312px){
+    .css-1f8m7mx {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+.css-150gfsc {
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+}
+
+@media screen and (min-width: 640px){
+    .css-150gfsc {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-150gfsc {
+        font-size: 1.625rem;
+        line-height: 2.25rem;
+    }
+}
+
+.css-sosrl8 {
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.css-1labwoc {
+    height: 12px;
+    display: flex;
+}
+
+.css-zsoya5 {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.css-15zhte1 {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.css-1d944kd {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-ajvi5m {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 15px;
+    width: 100%;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+.css-f0f5li {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1l30t8 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: text;
+}
+
+.css-du0zpy {
+    text-align: left;
+    color: rgb(171, 171, 171);
+    -webkit-text-fill-color: rgb(171, 171, 171);
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    right: 12px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    /* 추가 */
+    top: 15px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    transition-property: top, fontSize, lineHeight;
+    transition-duration: 100ms;
+    transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.css-1qayebk {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+}
+
+.css-3lg7k9 {
+    text-align: left;
+    color: rgb(171, 171, 171);
+    -webkit-text-fill-color: rgb(171, 171, 171);
+    display: none;
+    flex-shrink: 0;
+    padding-top: 23px;
+    padding-left: 15px;
+    padding-bottom: 7px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+.css-1y9i12j {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0px;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    width: 100%;
+    height: 48px;
+    padding: 23px 12px 7px 15px;
+}
+
+input {
+    margin: 0;
+}
+
+.css-1wfdhd6 {
+    text-align: left;
+    color: rgb(171, 171, 171);
+    -webkit-text-fill-color: rgb(171, 171, 171);
+    display: none;
+    flex-shrink: 0;
+    padding-top: 23px;
+    padding-right: 12px;
+    padding-bottom: 7px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+.css-12fz3yr {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-10c2f7i {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+/* display:none 되어야하는 클래스 */
+.css-c30tin {
+    display: block;
+    width: 22.38px;
+    height: 22.38px;
+}
+
+.css-1sijg49 {
+    fill: rgb(235, 0, 27);
+}
+
+.css-1scgdcs {
+    fill: rgb(247, 158, 27);
+}
+
+.css-mq7kcy {
+    fill: rgb(255, 95, 0);
+}
+
+.css-la5ys6 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 12px;
+    height: 0px;
+}
+
+.css-1lnpec3 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    fill: rgb(171, 171, 171);
+}
+
+.css-17f4zqp {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.css-17f4zqp {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.css-tkvxhg {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 0px;
+    height: 4px;
+}
+
+.css-8c834m {
+    text-align: left;
+    color: rgb(251, 18, 57);
+    -webkit-text-fill-color: rgb(251, 18, 57);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+}
+/* 위쪽까지 카드 번호 에러 메세지*/
+
+.css-1u2hgfc {
+    width: 0px;
+    height: 12px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.css-1d944kd {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-18nkakz {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+.css-1hc3cmd {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    cursor: text;
+}
+
+.css-n3wr5d {
+    text-align: left;
+    color: rgb(171, 171, 171);
+    -webkit-text-fill-color: rgb(171, 171, 171);
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    right: 15px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+/* .css-n3wr5d 클래스에 element.style로 추가되는 요소들*/
+.addStyle {
+    top: 1px;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    transition-property: top, fontSize, lineHeight;
+    transition-duration: 100ms;
+    transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+    position: absolute;
+
+}
+
+.css-12ec47q {
+    text-align: left;
+    color: rgb(251, 18, 57);
+    -webkit-text-fill-color: rgb(251, 18, 57);
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    right: 12px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+/* 생년월일 6자리 또는 사업자번호 추가되는 요소들 */
+
+.css-tkvxhg {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    width: 0px;
+    height: 4px;
+}
+
+.css-8c834m {
+    text-align: left;
+    color: rgb(251, 18, 57);
+    -webkit-text-fill-color: rgb(251, 18, 57);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+}
+
+
+
+.css-tbm6v1 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0px;
+    color: rgb(243, 243, 243);
+    -webkit-text-fill-color: rgb(243, 243, 243);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    width: 100%;
+    height: 48px;
+    padding: 23px 15px 7px;
+}
+
+.css-z08qwz {
+    text-align: left;
+    color: rgb(171, 171, 171);
+    -webkit-text-fill-color: rgb(171, 171, 171);
+    display: none;
+    flex-shrink: 0;
+    padding-top: 23px;
+    padding-right: 15px;
+    padding-bottom: 7px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+.css-1pkue4f {
+    height: 28px;
+    display: flex;
+}
+
+.css-181thk6 {
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-width: 0px;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    display: inline-flex;
+    padding: 15px 14px;
+    --system-on-color: #747474;
+    position: relative;
+}
+
+@media screen and (min-width: 640px){
+    .css-181thk6 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 14px;
+        padding-right: 14px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-181thk6 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 14px;
+        padding-right: 14px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1312px){
+    .css-181thk6 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 14px;
+        padding-right: 14px;
+        width: 100%;
+    }
+}
+
+.css-3kqv01 {
+    display: flex;
+    visibility: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.css-1bep15o {
+    width: 4px;
+    display: flex;
+}
+
+.css-1f75ggl {
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+@media screen and (min-width: 640px){
+    .css-1f75ggl {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .css-1f75ggl {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 1312px){
+    .css-1f75ggl {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+/* footer CSS 시작 */
+.css-cn56hh {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(12, 12, 12);
+}
+
+.css-4dhpus {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
