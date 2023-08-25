@@ -8,7 +8,9 @@
     </select>
     <update id="update">
         UPDATE TBL_MEMBER
-        SET MEMBER_NICKNAME = #{memberNickname}, MEMBER_EMAIL = #{memberEmail}, MEMBER_PHONE = #{memberPhone}
+        SET MEMBER_NICKNAME = #{memberNickname}, MEMBER_PASSWORD = #{memberPassword}, MEMBER_PHONE = #{memberPhone}
         WHERE ID = #{id}
     </update>
+
 </mapper>
+

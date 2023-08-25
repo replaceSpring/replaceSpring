@@ -42,9 +42,9 @@ public class myPageController {
         MemberVO memberVO = memberDAO.select(session);
         memberVO.setMemberPhone((String)map.get("phone"));
         memberVO.setMemberNickname((String)map.get("nickname"));
-        memberVO.setMemberEmail((String)map.get("email"));
+        memberVO.setMemberPassword((String)map.get("password"));
 
-        log.info("{} : {},{},{}.......","update", (String)map.get("phone"),(String)map.get("nickname"),(String)map.get("email"));
+        log.info("{} : {}.......","update",memberVO.toString());
         memberDAO.update(memberVO);
 
         return new RedirectView("/myPage/main");

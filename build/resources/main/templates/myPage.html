@@ -945,7 +945,7 @@
                                                 <div class="css-zsoya5">
                                                     <div class="css-ohkw6f">
                                                         <div class="css-15zhte1">
-                                                            <label for="">
+                                                            <label>
                                                                 <div class="css-15zhte1">
                                                                     <p class="css-1rejurp" >닉네임</p>
                                                                     <div class="css-1k5xfry"></div>
@@ -973,14 +973,15 @@
                                                             </label>
                                                             <div class="css-oor4vx"></div>
                                                             <label>
-                                                                <div class="css-15zhte1">
-                                                                    <p class="css-1rejurp" >이메일</p>
-                                                                    <div class="css-1k5xfry"></div>
+                                                                <label>
                                                                     <div class="css-15zhte1">
-                                                                        <input disabled id="memberEmail" name="email" type="email" placeholder="이메일 정보가 없습니다." class="css-1av4098" value="이메일@naver.com" th:value = ${member.memberEmail}>
-
+                                                                        <p class="css-1rejurp" >비밀번호</p>
+                                                                        <div class="css-1k5xfry"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <input id="memberPassword" name="pw" placeholder="비밀번호 입력해주세요." class="css-1av4098" th:value = ${member.memberPassword} >
+                                                                        </div>
                                                                     </div>
-                                                                </div>
+                                                                </label>
                                                             </label>
 
                                                         </div>
@@ -1567,7 +1568,7 @@
 </script>
 <script>
     const memberInfoSaveButton = $("#memberInfoSaveButton");
-    const memberEmail = $("#memberEmail");
+    const memberPassword = $("#memberPassword");
     const memberPhone = $("#memberPhone");
     const memberNickname = $("#memberNickname");
 
@@ -1575,19 +1576,23 @@
         $.ajax({
             url : "/myPage/update",
             type : 'post',
+            async: false,
             data :{
-                email: memberEmail.prop("value"),
+                password: memberPassword.prop("value"),
                 phone: memberPhone.prop("value"),
                 nickname:memberNickname.prop("value")
             },
             success:function () {
                 console.log("user updated");
+                console.log(memberPassword.prop("value"));
             },
             error:function(){
                 alart("error");
             }
 
         }) ;
+
+        location.reload();
     });
 </script>
 </html>

@@ -17,4 +17,6 @@ public class CategoryMapperTest {
     public void CategoryTest(){
         log.info("{}......",positionDAO.selectAllWithCompanyName().toString());
     }
+
+
 }
