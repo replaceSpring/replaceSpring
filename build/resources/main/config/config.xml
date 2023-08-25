@@ -4,5 +4,8 @@
     <typeAliases>
         <typeAlias type="com.app.replace.vo.BigCategoryVO" alias="bigCategoryVO"/>
         <typeAlias type="com.app.replace.vo.MemberVO" alias="memberVO"/>
+        <typeAlias type="com.app.replace.vo.PositionVO" alias="positionVO"/>
+        <typeAlias type="com.app.replace.dto.PositionDTO" alias="positionDTO"/>
     </typeAliases>
 </configuration>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.replace.mapper.PositionMapper">
+    <select id="selectAll" resultType="positionVO">
+        SELECT ID, COMPANY_ID, POSITION_NAME, POSITION_INFO, POSITION_DUE_DATE, POSITION_OPEN_DATE, POSITION_STATUS, MID_CATEGORY_ID
+        FROM TBL_POSITION
+    </select>
+
+    <select id="selectAllWithCompanyName" resultType="positionDTO">
+        SELECT P.ID, P.COMPANY_ID,P.POSITION_NAME,P.POSITION_INFO, P.POSITION_DUE_DATE ,P.POSITION_OPEN_DATE ,P.POSITION_STATUS,P.MID_CATEGORY_ID, C.COMPANY_NAME, MC.MID_CATEGORY_NAME
+        FROM TBL_COMPANY C JOIN TBL_POSITION P
+        ON P.COMPANY_ID = C.ID
+        JOIN TBL_MID_CATEGORY MC
+        ON P.MID_CATEGORY_ID = MC.ID
+    </select>
+</mapper>
