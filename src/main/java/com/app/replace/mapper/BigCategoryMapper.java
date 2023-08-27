@@ -8,4 +8,6 @@ import java.util.List;
 @Mapper
 public interface BigCategoryMapper {
     public List<BigCategoryVO> selectAll();
+
+    public BigCategoryVO selectById(long id);
 }

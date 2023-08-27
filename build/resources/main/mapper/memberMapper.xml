@@ -12,5 +12,21 @@
         WHERE ID = #{id}
     </update>
 
+<!--    <select id="selectByMemberEmail" resultType="memberVO">-->
+<!--        SELECT ID, MEMBER_EMAIL, MEMBER_PASSWORD, MEMBER_NICKNAME,  MEMBER_PHONE, MEMBER_STATUS-->
+<!--        FROM TBL_MEMBER-->
+<!--        WHERE MEMBER_EMAIL = #{memberEmail}-->
+<!--    </select>-->
+
+<!--    <insert id="insert" useGeneratedKeys="true" keyProperty="id">-->
+<!--    INSERT INTO TBL_MEMBER(ID, MEMBER_EMAIL, MEMBER_PASSWORD, MEMBER_NICKNAME, MEMBER_PHONE)-->
+<!--        VALUES (SEQ_MEMBER.NEXTVAL,#{memberEmail}, #{memberPassword},#{memberPhone})-->
+<!--    </insert>-->
+
+<!--    <select id="selectByEmail" resultType="memberVO">-->
+<!--        SELECT ID, MEMBER_EMAIL, MEMBER_PASSWORD, MEMBER_NICKNAME, MEMBER_PHONE, MEMBER_STATUS-->
+<!--        FROM TBL_MEMBER-->
+<!--        WHERE ID = #{id}-->
+<!--    </select>-->
 </mapper>
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.replace.mapper.BookmarkMapper">
+    <select id="selectAll" resultType="bookmarkDTO">
+        SELECT B.ID, B.POSITION_ID ,B.MEMBER_ID,P.POSITION_NAME ,P.POSITION_INFO ,P.POSITION_DUE_DATE ,P.POSITION_OPEN_DATE ,P.POSITION_STATUS,C.COMPANY_NAME,MC.MID_CATEGORY_NAME
+        FROM TBL_BOOKMARK B JOIN TBL_POSITION P
+        ON B.POSITION_ID = P.ID
+        JOIN TBL_COMPANY C
+        ON P.COMPANY_ID = C.ID
+        JOIN TBL_MID_CATEGORY MC
+        ON P.MID_CATEGORY_ID = MC.ID
+        WHERE B.MEMBER_ID = #{id}
+        ORDER BY P.POSITION_ID
+    </select>
+
+</mapper>
+

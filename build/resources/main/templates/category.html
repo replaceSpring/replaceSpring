@@ -1,10 +1,10 @@
-<html lang="ko" style="">
+<html lang="en" xmlns:th="http://www.thymeleag.org">
 <head translate="no">
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>카테고리</title>
-    <link rel="stylesheet" href="../static/css/category.css">
+    <link rel="stylesheet" href="/css/category.css">
 </head>
 <body style="">
 <div id="__next">
@@ -23,7 +23,7 @@
                     <div class="css-1ejl8vx">
                         <div class="css-14bj9bf">
                             <div class="css-1hj69o9">
-                                <img src="../static/images/logo_garo.png" style="height: 50px;">
+                                <img src="/images/logo_garo.png" style="height: 50px;">
                                 <div class="css-h8nxjb">
                                     <button type="button" class="css-1hvtp3b" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                         <svg viewBox="0 0 24 24" data-testid="menu-regular" class="css-ymr6q4">
@@ -212,118 +212,60 @@
                                     <div class="css-14q7sgs">
                                         <div class="css-zlo6qq">
                                             <div class="css-14fzkbc">
-                                                <a class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed0030e" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 class="css-13vbe2p">디지털 드로잉</h3>
+                                                <a class="css-346lod" href="#" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                    <h3  class="css-13vbe2p"> 전체
+                                                    </h3>
                                                 </a>
                                                 <span class="css-gefh0b"></span>
-                                                <a class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed00304" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 class="css-13vbe2p">드로잉</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed00317" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">공예</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed0034f" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">요리 · 음료</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed0035e" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">베이킹 · 디저트</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed00365" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">음악</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed00373" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">운동</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed0037e" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">라이프스타일</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed00389" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">사진 · 영상</h3>
-                                                </a>
+                                                <th:block th:each="num : ${#numbers.sequence(0,2)}">
+                                                    <a class="css-346lod" href="#" onclick="categorySelected(this);" th:attr="data-categoryid=${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                        <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
+                                                        </h3>
+                                                    </a>
+                                                    <span class="css-gefh0b"></span>
+                                                </th:block>
                                             </div>
                                             <div class="css-iis9oy"></div>
                                             <div class="css-14fzkbc">
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed003b3" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">금융 · 재테크</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed003b7" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">창업 · 부업</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/604f1c9756c3676f1ed003c3" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">성공 마인드</h3>
-                                                </a>
+                                                <th:block th:each="num : ${#numbers.sequence(3,6)}">
+                                                    <a class="css-346lod" href="#" onclick="categorySelected(this);" th:attr="data-categoryid=${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                        <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
+                                                        </h3>
+                                                    </a>
+                                                    <span class="css-gefh0b"></span>
+                                                </th:block>
                                             </div>
                                             <div class="css-iis9oy"></div>
                                             <div class="css-14fzkbc">
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b839" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">프로그래밍</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b83a" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">데이터사이언스</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b83b" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">제품 기획</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b83c" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">비즈니스</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b83d" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">생산성</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b83e" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">마케팅</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b83f" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">디자인</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b840" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">영상/3D</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/pages/adobe-category-page" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">어도비 캠퍼스</h3>
-                                                </a>
+                                                <th:block th:each="num : ${#numbers.sequence(7,10)}">
+                                                    <a class="css-346lod" href="#" onclick="categorySelected(this);" th:attr="data-categoryid=${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                        <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
+                                                        </h3>
+                                                    </a>
+                                                    <span class="css-gefh0b"></span>
+                                                </th:block>
                                             </div>
                                             <div class="css-iis9oy"></div>
                                             <div class="css-14fzkbc">
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b841" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">영어</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b842" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">외국어 시험</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62206086d39299379ee5b843" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">제2 외국어</h3>
-                                                </a>
+                                                <th:block th:each="num : ${#numbers.sequence(11,14)}">
+                                                    <a class="css-346lod" href="#" onclick="categorySelected(this);" th:attr="data-categoryid=${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                        <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
+                                                        </h3>
+                                                    </a>
+                                                    <span class="css-gefh0b"></span>
+                                                </th:block>
                                             </div>
                                             <div class="css-iis9oy"></div>
                                             <div class="css-14fzkbc">
-                                                <a data-testid="pressable" class="css-346lod"  href="/ko/categories/604f1c9756c3676f1ed003d6" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">아이 교육</h3>
-                                                </a>
-                                                <span class="css-gefh0b"></span>
-                                                <a data-testid="pressable" class="css-346lod" href="/ko/categories/62fee7187e7da70bfa57950d" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <h3 data-testid="title" class="css-13vbe2p">부모 교육</h3>
-                                                </a>
+                                                <th:block th:each="num : ${#numbers.sequence(15,18)}">
+                                                    <a class="css-346lod" href="#" onclick="categorySelected(this);" th:attr="data-categoryid=${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                        <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
+                                                        </h3>
+                                                    </a>
+                                                    <span class="css-gefh0b"></span>
+                                                </th:block>
                                             </div>
+
                                         </div>
                                         <span class="css-yzqw5"></span>
                                         <button type="button" data-testid="ghost-button" class="css-10vbztj" id="popUpCloseButton" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
@@ -345,43 +287,23 @@
                 <div class="css-1t0urrj">
                     <div class="css-vwco3d" style="padding-top: 30px;">
                         <div class="css-1b89rzx">
-                            <div class="css-jw0xw2"><h1 data-testid="title" class="css-1i5bsm">프로그래밍</h1><span
+                            <div class="css-jw0xw2"><h1 data-testid="title" class="css-1i5bsm" th:text="${bigCategory.bigCategoryName}"></h1><span
                                     class="css-1110jh0"></span>
-                                <div class="css-1hzwvc0"><a href="/ko/categories/62206086d39299379ee5b839">
-                                    <div class="css-jpc6au"><span data-testid="body" class="css-14bzam7">전체</span></div>
-                                </a>
-                                    <div class="css-1d944kd"><a href="/ko/categories/6220895c9dede0214b0783bb">
-                                        <div class="css-qlly12"><span data-testid="body" class="css-19vi3od">IT교양</span>
+                                <div class="css-1hzwvc0">
+                                    <a href="#" class ="category-option">
+                                       <div class="css-jpc6au">
+                                           <span data-testid="body" class="css-19vi3od css-14bzam7">전체</span>
+                                       </div>
+                                    </a>
+                                    <th:block th:each = "midCategory : ${midCategoryList}">
+                                        <div class="css-1d944kd" >
+                                            <a href="#" class ="category-option"th:attr="data-midcategory=${midCategory.id}">
+                                                <div class="css-qlly12">
+                                                    <span data-testid="body" class="css-19vi3od" th:text="${midCategory.midCategoryName}"></span>
+                                                </div>
+                                            </a>
                                         </div>
-                                    </a></div>
-                                    <div class="css-1d944kd"><a href="/ko/categories/6220895c9dede0214b0783bc">
-                                        <div class="css-qlly12"><span data-testid="body"
-                                                                      class="css-19vi3od">프로그래밍언어</span></div>
-                                    </a></div>
-                                    <div class="css-1d944kd"><a href="/ko/categories/6220895c9dede0214b0783bd">
-                                        <div class="css-qlly12"><span data-testid="body"
-                                                                      class="css-19vi3od">Web · 프론트엔드</span></div>
-                                    </a></div>
-                                    <div class="css-1d944kd"><a href="/ko/categories/6220895c9dede0214b0783be">
-                                        <div class="css-qlly12"><span data-testid="body" class="css-19vi3od">백엔드</span>
-                                        </div>
-                                    </a></div>
-                                    <div class="css-1d944kd"><a href="/ko/categories/6220895c9dede0214b0783bf">
-                                        <div class="css-qlly12"><span data-testid="body" class="css-19vi3od">App</span>
-                                        </div>
-                                    </a></div>
-                                    <div class="css-1d944kd"><a href="/ko/categories/6220895c9dede0214b0783c0">
-                                        <div class="css-qlly12"><span data-testid="body" class="css-19vi3od">게임</span>
-                                        </div>
-                                    </a></div>
-                                    <div class="css-1d944kd"><a href="/ko/categories/6220895c9dede0214b0783c1">
-                                        <div class="css-qlly12"><span data-testid="body"
-                                                                      class="css-19vi3od">보안 · 네트워크</span></div>
-                                    </a></div>
-                                    <div class="css-1d944kd"><a href="/ko/categories/6220895c9dede0214b0783c2">
-                                        <div class="css-qlly12"><span data-testid="body" class="css-19vi3od">시스템 · DevOps</span>
-                                        </div>
-                                    </a></div>
+                                    </th:block>
                                 </div>
                             </div>
                         </div>
@@ -481,23 +403,28 @@
                                     <div class="css-17f4zqp">
                                         <div class="css-1meit79">
                                             <button class="css-ynj3fh">
-                                                <div class="css-1p1m4ay"><span class="css-16acpt">인기순</span><span
-                                                        class="css-1bep15o"></span><span class="css-1ujtdkg"><svg
-                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                        class="css-1oe6l0y"><path
-                                                        d="m7.05 9.4 4.75 7c.1.15.3.15.4 0l4.75-7c.1-.15 0-.4-.2-.4h-9.5c-.2 0-.3.25-.2.4Z"
-                                                        class="css-0"></path></svg></span></div>
+                                                <div class="css-1p1m4ay">
+                                                    <span class="css-16acpt">인기순</span>
+                                                    <span class="css-1bep15o"></span>
+                                                    <span class="css-1ujtdkg">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-1oe6l0y">
+                                                            <path d="m7.05 9.4 4.75 7c.1.15.3.15.4 0l4.75-7c.1-.15 0-.4-.2-.4h-9.5c-.2 0-.3.25-.2.4Z" class="css-0"></path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
                                             </button>
                                         </div>
                                         <div class="css-1upuyz0">
-                                            <button class="css-o5crzx"
-                                                    style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;"><span
-                                                    class="css-11rc5ya"></span><span class="css-1a4a92y">인기순</span><span
-                                                    class="css-1gqu4n6"></span><span class="css-ujih8e"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                    class="css-1oe6l0y"><path
-                                                    d="m7.05 9.4 4.75 7c.1.15.3.15.4 0l4.75-7c.1-.15 0-.4-.2-.4h-9.5c-.2 0-.3.25-.2.4Z"
-                                                    class="css-0"></path></svg></span></button>
+                                            <button class="css-o5crzx" style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
+                                                <span class="css-11rc5ya"></span>
+                                                <span class="css-1a4a92y">인기순</span>
+                                                <span class="css-1gqu4n6"></span>
+                                                <span class="css-ujih8e">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-1oe6l0y">
+                                                        <path d="m7.05 9.4 4.75 7c.1.15.3.15.4 0l4.75-7c.1-.15 0-.4-.2-.4h-9.5c-.2 0-.3.25-.2.4Z" class="css-0"></path>
+                                                    </svg>
+                                                </span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -550,273 +477,58 @@
                                 </div>
                             </div>
                             <ul class="css-73s7lu">
-                                <li class="css-iftixr">
-                                    <div class="css-1d944kd">
-                                        <div tabindex="0" class="css-1qc8ju8"><a draggable="false"
-                                                                                 href="/ko/products/5c5d780974eabcfdafd39897">
-                                            <div class="css-8atqhb">
-                                                <div class="css-mgewzr">
-                                                    <div class="css-1ct1iq3">
-                                                        <div class="css-abev78">
-                                                            <div class="css-60ifsp"
-                                                                 style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                                                <picture data-testid="image" class="css-eti150">
-                                                                    <source type="image/webp"
-                                                                            srcset="https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/640xauto.webp 640w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/750xauto.webp 750w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/828xauto.webp 828w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1080xauto.webp 1080w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1200xauto.webp 1200w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1920xauto.webp 1920w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/2048xauto.webp 2048w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/3840xauto.webp 3840w"
-                                                                            sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
-                                                                    <img class="css-1u3hmek" draggable="false" alt=""
-                                                                         srcset="https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/640xauto 640w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/750xauto 750w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/828xauto 828w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1080xauto 1080w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1200xauto 1200w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1920xauto 1920w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/2048xauto 2048w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/3840xauto 3840w"
-                                                                         src="https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26"
-                                                                         sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
-                                                                         loading="eager"></picture>
+                                <th:block th:each="position : ${positions}">
+                                    <li class="css-7i8iq position-wrap" th:attr="data-position=${position.midCategoryId}">
+                                        <div class="css-1d944kd">
+                                            <div tabindex="0" class="css-1qc8ju8">
+                                                <a draggable="false" href="/ko/products/5c5d780974eabcfdafd39897">
+                                                    <div class="css-8atqhb">
+                                                        <div class="css-mgewzr">
+                                                            <div class="css-1ct1iq3">
+                                                                <div class="css-abev78">
+                                                                    <div class="css-60ifsp" style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
+                                                                        <picture data-testid="image" class="css-eti150">
+                                                                            <source type="image/webp"
+                                                                                    srcset="https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/640xauto.webp 640w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/750xauto.webp 750w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/828xauto.webp 828w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1080xauto.webp 1080w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1200xauto.webp 1200w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1920xauto.webp 1920w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/2048xauto.webp 2048w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/3840xauto.webp 3840w"
+                                                                                    sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
+                                                                            <img class="css-1u3hmek" draggable="false" alt=""
+                                                                                 srcset="https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/640xauto 640w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/750xauto 750w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/828xauto 828w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1080xauto 1080w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1200xauto 1200w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1920xauto 1920w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/2048xauto 2048w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/3840xauto 3840w"
+                                                                                 src="https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26"
+                                                                                 sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
+                                                                                 loading="eager">
+                                                                        </picture>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="css-1h9gj2l"><h2 data-testid="title" class="css-es3o19">네이버 개발자
-                                                뮤와 함께하는 내인생 첫번째 앱 만들기</h2><span class="css-1k0q1kx"></span>
-                                                <h2 data-testid="body" class="css-o90gdq">프로그래밍&nbsp;&nbsp;|&nbsp;&nbsp;뮤</h2>
-                                            </div>
-                                        </a></div>
-                                        <div class="css-60ifsp"
-                                             style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                            <div class="css-j50c81">
-                                                <button type="button" data-testid="icon-button" class="css-1dcq9or"
-                                                        style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <svg viewBox="0 0 24 24" data-testid="heart-thin"
-                                                         class="css-1devemn">
-                                                        <path d="M20.75 4.8C19.55 3.6 18 3 16.45 3c-1.55 0-3.1.6-4.3 1.8-.05.05-.1.15-.15.2a.69.69 0 0 1-.15-.2C10.65 3.6 9.1 3 7.55 3c-1.55 0-3.1.6-4.3 1.8-2.35 2.4-2.35 6.35 0 8.75 2.35 2.4 8.55 8.35 8.55 8.35.05.1.15.1.2.1.05 0 .15 0 .15-.05 0 0 6.2-5.95 8.55-8.35 2.35-2.4 2.4-6.35.05-8.8ZM12 7.35c.35 0 .45-.4.75-.8 1.6-1.85 4.25-2.4 6.25-.9 1.3 1 1.95 2.75 1.65 4.35-.3 1.7-1.75 2.9-3 4.2-.65.65-5.65 5.4-5.65 5.4s-5-4.75-5.65-5.4c-1.25-1.25-2.7-2.5-3-4.2-.3-1.6.35-3.4 1.65-4.35 2-1.5 4.65-1 6.2.9.35.4.45.8.8.8Z"
-                                                              class="css-17f4zqp"></path>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="css-j2nt8g">
-                                    <div class="css-1d944kd">
-                                        <div tabindex="0" class="css-1qc8ju8"><a draggable="false"
-                                                                                 href="/ko/products/5fd1e78590d3b2000d8cbc96">
-                                            <div class="css-8atqhb">
-                                                <div class="css-mgewzr">
-                                                    <div class="css-1ct1iq3">
-                                                        <div class="css-abev78">
-                                                            <div class="css-60ifsp"
-                                                                 style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                                                <picture data-testid="image" class="css-eti150">
-                                                                    <source type="image/webp"
-                                                                            srcset="https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/640xauto.webp 640w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/750xauto.webp 750w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/828xauto.webp 828w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1080xauto.webp 1080w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1200xauto.webp 1200w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1920xauto.webp 1920w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/2048xauto.webp 2048w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/3840xauto.webp 3840w"
-                                                                            sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
-                                                                    <img class="css-1u3hmek" draggable="false" alt=""
-                                                                         srcset="https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/640xauto 640w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/750xauto 750w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/828xauto 828w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1080xauto 1080w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1200xauto 1200w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1920xauto 1920w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/2048xauto 2048w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/3840xauto 3840w"
-                                                                         src="https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685"
-                                                                         sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
-                                                                         loading="eager"></picture>
-                                                            </div>
-                                                        </div>
+                                                    <div class="css-1h9gj2l">
+                                                        <h2 data-testid="title" class="css-es3o19" th:text="${position.positionName}">
+                                                            네이버 개발자 뮤와 함께하는 내인생 첫번째 앱 만들기
+                                                        </h2>
+                                                        <span class="css-1k0q1kx"></span>
+
+                                                        <h2 data-testid="body" class="css-o90gdq"th:text="${position.midCategoryName}+' * '+${position.companyName}">프로그래밍&nbsp;&nbsp;|&nbsp;&nbsp;뮤</h2>
                                                     </div>
+                                                </a>
+                                            </div>
+                                            <div class="css-60ifsp"
+                                                 style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
+                                                <div class="css-j50c81">
+                                                    <button type="button" data-testid="icon-button" class="css-1dcq9or"
+                                                            style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                        <svg viewBox="0 0 24 24" data-testid="heart-thin"
+                                                             class="css-1devemn">
+                                                            <path d="M20.75 4.8C19.55 3.6 18 3 16.45 3c-1.55 0-3.1.6-4.3 1.8-.05.05-.1.15-.15.2a.69.69 0 0 1-.15-.2C10.65 3.6 9.1 3 7.55 3c-1.55 0-3.1.6-4.3 1.8-2.35 2.4-2.35 6.35 0 8.75 2.35 2.4 8.55 8.35 8.55 8.35.05.1.15.1.2.1.05 0 .15 0 .15-.05 0 0 6.2-5.95 8.55-8.35 2.35-2.4 2.4-6.35.05-8.8ZM12 7.35c.35 0 .45-.4.75-.8 1.6-1.85 4.25-2.4 6.25-.9 1.3 1 1.95 2.75 1.65 4.35-.3 1.7-1.75 2.9-3 4.2-.65.65-5.65 5.4-5.65 5.4s-5-4.75-5.65-5.4c-1.25-1.25-2.7-2.5-3-4.2-.3-1.6.35-3.4 1.65-4.35 2-1.5 4.65-1 6.2.9.35.4.45.8.8.8Z"
+                                                                  class="css-17f4zqp"></path>
+                                                        </svg>
+                                                    </button>
                                                 </div>
                                             </div>
-                                            <div class="css-1h9gj2l"><h2 data-testid="title" class="css-es3o19">[비전공자도
-                                                OK] 용돈 벌어주는 나만의 앱 직접 만들어보기</h2><span class="css-1k0q1kx"></span>
-                                                <h2 data-testid="body" class="css-o90gdq">프로그래밍&nbsp;&nbsp;|&nbsp;&nbsp;커니</h2>
-                                            </div>
-                                        </a></div>
-                                        <div class="css-60ifsp"
-                                             style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                            <div class="css-j50c81">
-                                                <button type="button" data-testid="icon-button" class="css-1dcq9or"
-                                                        style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <svg viewBox="0 0 24 24" data-testid="heart-thin"
-                                                         class="css-1devemn">
-                                                        <path d="M20.75 4.8C19.55 3.6 18 3 16.45 3c-1.55 0-3.1.6-4.3 1.8-.05.05-.1.15-.15.2a.69.69 0 0 1-.15-.2C10.65 3.6 9.1 3 7.55 3c-1.55 0-3.1.6-4.3 1.8-2.35 2.4-2.35 6.35 0 8.75 2.35 2.4 8.55 8.35 8.55 8.35.05.1.15.1.2.1.05 0 .15 0 .15-.05 0 0 6.2-5.95 8.55-8.35 2.35-2.4 2.4-6.35.05-8.8ZM12 7.35c.35 0 .45-.4.75-.8 1.6-1.85 4.25-2.4 6.25-.9 1.3 1 1.95 2.75 1.65 4.35-.3 1.7-1.75 2.9-3 4.2-.65.65-5.65 5.4-5.65 5.4s-5-4.75-5.65-5.4c-1.25-1.25-2.7-2.5-3-4.2-.3-1.6.35-3.4 1.65-4.35 2-1.5 4.65-1 6.2.9.35.4.45.8.8.8Z"
-                                                              class="css-17f4zqp"></path>
-                                                    </svg>
-                                                </button>
-                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="css-1p34t11">
-                                    <div class="css-1d944kd">
-                                        <div tabindex="0" class="css-1qc8ju8"><a draggable="false"
-                                                                                 href="/ko/products/5fb5d4c6c64f67000daa59e0">
-                                            <div class="css-8atqhb">
-                                                <div class="css-mgewzr">
-                                                    <div class="css-1ct1iq3">
-                                                        <div class="css-abev78">
-                                                            <div class="css-60ifsp"
-                                                                 style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                                                <picture data-testid="image" class="css-eti150">
-                                                                    <source type="image/webp"
-                                                                            srcset="https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/640xauto.webp 640w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/750xauto.webp 750w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/828xauto.webp 828w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1080xauto.webp 1080w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1200xauto.webp 1200w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1920xauto.webp 1920w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/2048xauto.webp 2048w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/3840xauto.webp 3840w"
-                                                                            sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
-                                                                    <img class="css-1u3hmek" draggable="false" alt=""
-                                                                         srcset="https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/640xauto 640w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/750xauto 750w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/828xauto 828w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1080xauto 1080w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1200xauto 1200w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1920xauto 1920w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/2048xauto 2048w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/3840xauto 3840w"
-                                                                         src="https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143"
-                                                                         sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
-                                                                         loading="eager"></picture>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="css-1h9gj2l"><h2 data-testid="title" class="css-es3o19">15년 차 웹
-                                                개발자가 제대로 알려주는 웹 개발 입문!</h2><span class="css-1k0q1kx"></span>
-                                                <h2 data-testid="body" class="css-o90gdq">프로그래밍&nbsp;&nbsp;|&nbsp;&nbsp;몰입코딩</h2>
-                                            </div>
-                                        </a></div>
-                                        <div class="css-60ifsp"
-                                             style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                            <div class="css-j50c81">
-                                                <button type="button" data-testid="icon-button" class="css-1dcq9or"
-                                                        style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <svg viewBox="0 0 24 24" data-testid="heart-thin"
-                                                         class="css-1devemn">
-                                                        <path d="M20.75 4.8C19.55 3.6 18 3 16.45 3c-1.55 0-3.1.6-4.3 1.8-.05.05-.1.15-.15.2a.69.69 0 0 1-.15-.2C10.65 3.6 9.1 3 7.55 3c-1.55 0-3.1.6-4.3 1.8-2.35 2.4-2.35 6.35 0 8.75 2.35 2.4 8.55 8.35 8.55 8.35.05.1.15.1.2.1.05 0 .15 0 .15-.05 0 0 6.2-5.95 8.55-8.35 2.35-2.4 2.4-6.35.05-8.8ZM12 7.35c.35 0 .45-.4.75-.8 1.6-1.85 4.25-2.4 6.25-.9 1.3 1 1.95 2.75 1.65 4.35-.3 1.7-1.75 2.9-3 4.2-.65.65-5.65 5.4-5.65 5.4s-5-4.75-5.65-5.4c-1.25-1.25-2.7-2.5-3-4.2-.3-1.6.35-3.4 1.65-4.35 2-1.5 4.65-1 6.2.9.35.4.45.8.8.8Z"
-                                                              class="css-17f4zqp"></path>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!--                                3개 li태그 반복 해야 css적용이 잘됨 css-1s11ofp / css-7i8iq / css-1927syl -->
-                                <li class="css-1s11ofp">
-                                    <div class="css-1d944kd">
-                                        <div tabindex="0" class="css-1qc8ju8"><a draggable="false"
-                                                                                 href="/ko/products/6050210d0f3dd70014977fa2">
-                                            <div class="css-8atqhb">
-                                                <div class="css-mgewzr">
-                                                    <div class="css-1ct1iq3">
-                                                        <div class="css-abev78">
-                                                            <div class="css-60ifsp"
-                                                                 style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                                                <picture data-testid="image" class="css-eti150">
-                                                                    <source type="image/webp"
-                                                                            srcset="https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/640xauto.webp 640w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/750xauto.webp 750w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/828xauto.webp 828w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/1080xauto.webp 1080w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/1200xauto.webp 1200w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/1920xauto.webp 1920w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/2048xauto.webp 2048w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/3840xauto.webp 3840w"
-                                                                            sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
-                                                                    <img class="css-1u3hmek" draggable="false" alt=""
-                                                                         srcset="https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/640xauto 640w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/750xauto 750w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/828xauto 828w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/1080xauto 1080w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/1200xauto 1200w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/1920xauto 1920w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/2048xauto 2048w,https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc/3840xauto 3840w"
-                                                                         src="https://cdn.class101.net/images/1174a875-ed0b-4e7d-96ba-e397a48149cc"
-                                                                         sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
-                                                                         loading="eager"></picture>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="css-1h9gj2l"><h2 data-testid="title" class="css-es3o19">Python
-                                                101: 매일 30분, 40일 동안! LV. 1 파이썬 기초 프로젝트</h2><span
-                                                    class="css-1k0q1kx"></span>
-                                                <h2 data-testid="body" class="css-o90gdq">프로그래밍&nbsp;&nbsp;|&nbsp;&nbsp;Python101</h2>
-                                            </div>
-                                        </a></div>
-                                        <div class="css-60ifsp"
-                                             style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                            <div class="css-j50c81">
-                                                <button type="button" data-testid="icon-button" class="css-1dcq9or"
-                                                        style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <svg viewBox="0 0 24 24" data-testid="heart-thin"
-                                                         class="css-1devemn">
-                                                        <path d="M20.75 4.8C19.55 3.6 18 3 16.45 3c-1.55 0-3.1.6-4.3 1.8-.05.05-.1.15-.15.2a.69.69 0 0 1-.15-.2C10.65 3.6 9.1 3 7.55 3c-1.55 0-3.1.6-4.3 1.8-2.35 2.4-2.35 6.35 0 8.75 2.35 2.4 8.55 8.35 8.55 8.35.05.1.15.1.2.1.05 0 .15 0 .15-.05 0 0 6.2-5.95 8.55-8.35 2.35-2.4 2.4-6.35.05-8.8ZM12 7.35c.35 0 .45-.4.75-.8 1.6-1.85 4.25-2.4 6.25-.9 1.3 1 1.95 2.75 1.65 4.35-.3 1.7-1.75 2.9-3 4.2-.65.65-5.65 5.4-5.65 5.4s-5-4.75-5.65-5.4c-1.25-1.25-2.7-2.5-3-4.2-.3-1.6.35-3.4 1.65-4.35 2-1.5 4.65-1 6.2.9.35.4.45.8.8.8Z"
-                                                              class="css-17f4zqp"></path>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="css-7i8iq">
-                                    <div class="css-1d944kd">
-                                        <div tabindex="0" class="css-1qc8ju8"><a draggable="false"
-                                                                                 href="/ko/products/5f54e6d9010ada000eeb9960">
-                                            <div class="css-8atqhb">
-                                                <div class="css-mgewzr">
-                                                    <div class="css-1ct1iq3">
-                                                        <div class="css-abev78">
-                                                            <div class="css-60ifsp"
-                                                                 style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                                                <picture data-testid="image" class="css-eti150">
-                                                                    <source type="image/webp"
-                                                                            srcset="https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/640xauto.webp 640w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/750xauto.webp 750w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/828xauto.webp 828w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1080xauto.webp 1080w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1200xauto.webp 1200w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1920xauto.webp 1920w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/2048xauto.webp 2048w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/3840xauto.webp 3840w"
-                                                                            sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
-                                                                    <img class="css-1u3hmek" draggable="false" alt=""
-                                                                         srcset="https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/640xauto 640w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/750xauto 750w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/828xauto 828w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1080xauto 1080w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1200xauto 1200w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1920xauto 1920w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/2048xauto 2048w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/3840xauto 3840w"
-                                                                         src="https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48"
-                                                                         sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
-                                                                         loading="eager"></picture>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="css-1h9gj2l"><h2 data-testid="title" class="css-es3o19">코딩하는거니의
-                                                문과 감성 실용 파이썬, 나의 첫 프로그래밍!</h2><span class="css-1k0q1kx"></span>
-                                                <h2 data-testid="body" class="css-o90gdq">프로그래밍&nbsp;&nbsp;|&nbsp;&nbsp;코딩하는거니</h2>
-                                            </div>
-                                        </a></div>
-                                        <div class="css-60ifsp"
-                                             style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                            <div class="css-j50c81">
-                                                <button type="button" data-testid="icon-button" class="css-1dcq9or"
-                                                        style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <svg viewBox="0 0 24 24" data-testid="heart-thin"
-                                                         class="css-1devemn">
-                                                        <path d="M20.75 4.8C19.55 3.6 18 3 16.45 3c-1.55 0-3.1.6-4.3 1.8-.05.05-.1.15-.15.2a.69.69 0 0 1-.15-.2C10.65 3.6 9.1 3 7.55 3c-1.55 0-3.1.6-4.3 1.8-2.35 2.4-2.35 6.35 0 8.75 2.35 2.4 8.55 8.35 8.55 8.35.05.1.15.1.2.1.05 0 .15 0 .15-.05 0 0 6.2-5.95 8.55-8.35 2.35-2.4 2.4-6.35.05-8.8ZM12 7.35c.35 0 .45-.4.75-.8 1.6-1.85 4.25-2.4 6.25-.9 1.3 1 1.95 2.75 1.65 4.35-.3 1.7-1.75 2.9-3 4.2-.65.65-5.65 5.4-5.65 5.4s-5-4.75-5.65-5.4c-1.25-1.25-2.7-2.5-3-4.2-.3-1.6.35-3.4 1.65-4.35 2-1.5 4.65-1 6.2.9.35.4.45.8.8.8Z"
-                                                              class="css-17f4zqp"></path>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="css-1927syl">
-                                    <div class="css-1d944kd">
-                                        <div tabindex="0" class="css-1qc8ju8"><a draggable="false"
-                                                                                 href="/ko/products/5fbe5b799cd9fb0013f6e62a">
-                                            <div class="css-8atqhb">
-                                                <div class="css-mgewzr">
-                                                    <div class="css-1ct1iq3">
-                                                        <div class="css-abev78">
-                                                            <div class="css-60ifsp"
-                                                                 style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                                                <picture data-testid="image" class="css-eti150">
-                                                                    <source type="image/webp"
-                                                                            srcset="https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/640xauto.webp 640w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/750xauto.webp 750w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/828xauto.webp 828w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/1080xauto.webp 1080w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/1200xauto.webp 1200w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/1920xauto.webp 1920w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/2048xauto.webp 2048w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/3840xauto.webp 3840w"
-                                                                            sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
-                                                                    <img class="css-1u3hmek" draggable="false" alt=""
-                                                                         srcset="https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/640xauto 640w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/750xauto 750w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/828xauto 828w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/1080xauto 1080w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/1200xauto 1200w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/1920xauto 1920w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/2048xauto 2048w,https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1/3840xauto 3840w"
-                                                                         src="https://cdn.class101.net/images/c5f96f30-d57d-4d92-b24d-be686272d8a1"
-                                                                         sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
-                                                                         loading="eager"></picture>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="css-1h9gj2l"><h2 data-testid="title" class="css-es3o19">10년 차
-                                                개발자의 [게임 개발/앱 개발/프로그래밍]을 위한 C/C++ 입문</h2><span
-                                                    class="css-1k0q1kx"></span>
-                                                <h2 data-testid="body" class="css-o90gdq">프로그래밍&nbsp;&nbsp;|&nbsp;&nbsp;개발자
-                                                    라라</h2></div>
-                                        </a></div>
-                                        <div class="css-60ifsp"
-                                             style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
-                                            <div class="css-j50c81">
-                                                <button type="button" data-testid="icon-button" class="css-1dcq9or"
-                                                        style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                    <svg viewBox="0 0 24 24" data-testid="heart-thin"
-                                                         class="css-1devemn">
-                                                        <path d="M20.75 4.8C19.55 3.6 18 3 16.45 3c-1.55 0-3.1.6-4.3 1.8-.05.05-.1.15-.15.2a.69.69 0 0 1-.15-.2C10.65 3.6 9.1 3 7.55 3c-1.55 0-3.1.6-4.3 1.8-2.35 2.4-2.35 6.35 0 8.75 2.35 2.4 8.55 8.35 8.55 8.35.05.1.15.1.2.1.05 0 .15 0 .15-.05 0 0 6.2-5.95 8.55-8.35 2.35-2.4 2.4-6.35.05-8.8ZM12 7.35c.35 0 .45-.4.75-.8 1.6-1.85 4.25-2.4 6.25-.9 1.3 1 1.95 2.75 1.65 4.35-.3 1.7-1.75 2.9-3 4.2-.65.65-5.65 5.4-5.65 5.4s-5-4.75-5.65-5.4c-1.25-1.25-2.7-2.5-3-4.2-.3-1.6.35-3.4 1.65-4.35 2-1.5 4.65-1 6.2.9.35.4.45.8.8.8Z"
-                                                              class="css-17f4zqp"></path>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                </th:block>
+
                             </ul>
                             <div class="css-1pt88zm"></div>
                             <div class="css-u4797e"></div>
@@ -891,13 +603,11 @@
     searchButton.click(function(){
         searchPopUp.css("display", "flex");
         background.css("display", "flex");
-        console.log("searchButton click");
     });
     background.click(function(){
         categoryPopUp.css("display", "none");
         background.css("display", "none");
         searchPopUp.css("display", "none");
-        console.log("background click");
     });
 
     function bookmarkOn() {
@@ -910,5 +620,46 @@
     }
 
 
+</script>
+<script>
+    const categoryOption = $(".category-option");
+    let categoryId
+    $.each(categoryOption, function (i,d) {
+        let data = $(d);
+        data.click(function(){
+            categoryId = data.data('midcategory')+"";
+            categoryOption.find(".css-14bzam7").removeClass("css-14bzam7");
+            data.find(".css-19vi3od").toggleClass("css-14bzam7");
+
+            if (i == 0){
+                $(".position-wrap").css("display","flex");
+            }else{
+                $(".position-wrap").css("display","none");
+                $("[data-position="+categoryId+"]").css("display","flex");
+            }
+
+        });
+    });
+</script>
+<script>
+
+    function categorySelected(categId){
+        let $categId = $(categId).data("categoryid")
+        // $.ajax({
+        //     url : "/positionList/positions",
+        //     type : 'get',
+        //     async: true,
+        //     data :{
+        //         cid: $categId
+        //     },
+        //     success:function () {
+        //         console.log("success");
+        //     },
+        //     error:function(){
+        //         alert("error");
+        //     }
+        // });
+        window.location = "/positionList/positions?cid=" + $categId;
+    }
 </script>
 </html>

@@ -15,4 +15,7 @@ public class BigCategoryDAO {
     public List<BigCategoryVO> selectAll(){
         return bigCategoryMapper.selectAll();
     }
+    public BigCategoryVO selectById(long id){
+        return bigCategoryMapper.selectById(id);
+    }
 }
