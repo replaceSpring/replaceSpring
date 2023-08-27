@@ -1049,14 +1049,6 @@ p, ul {
     align-items: stretch;
 }
 
-.css-14bzam7 {
-    text-align: start;
-    color: #98d8f5;
-    -webkit-text-fill-color: #98d8f5;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    font-weight: 700;
-}
 
 .css-1d944kd {
     display: -webkit-box;
@@ -1100,6 +1092,14 @@ p, ul {
     align-items: stretch;
 }
 
+.css-14bzam7 {
+    text-align: start;
+    color: #98d8f5 !important;
+    -webkit-text-fill-color: #98d8f5 !important;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+}
 .css-19vi3od {
     text-align: left;
     color: #f3f3f3;
@@ -1513,10 +1513,10 @@ p, ul {
 }
 
 .css-7i8iq {
-    flex: 0 1 calc((100% - 12px) / 2);
+    flex: 0 1 calc(89% / 4);
     width: 0px;
     margin-left: 0px;
-    margin-top: 32px;
+    margin-bottom: 32px;
     display: flex;
 }
 
@@ -1584,7 +1584,7 @@ p, ul {
 }
 
 .css-1y9khfs {
-    display: flex;
+    display: none;
     align-content: stretch;
     flex-shrink: 1;
     flex-direction: column;
@@ -2189,9 +2189,9 @@ p, ul {
     }
 
     .css-7i8iq {
-        flex: 0 1 calc((100% - 24px) / 3);
+        flex: 0 1 calc((89% ) / 4);
         margin-left: 12px;
-        margin-top: 32px;
+        margin-bottom: 32px;
         display: flex;
     }
 
@@ -2318,8 +2318,8 @@ p, ul {
     }
 
     .css-1t0urrj {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding: 100px 0px;
+        margin: auto;
     }
 
     .css-gk1dbe {
@@ -2611,9 +2611,9 @@ p, ul {
     }
 
     .css-7i8iq {
-        flex: 0 1 calc((100% - 56px) / 3);
+        flex: 0 1 calc((89%) / 4);
         margin-left: 28px;
-        margin-top: 48px;
+        margin-bottom: 48px;
         display: flex;
     }
 

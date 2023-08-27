@@ -4,4 +4,8 @@
     <select id="selectAll" resultType="bigCategoryVO">
         SELECT ID, BIG_CATEGORY_NAME FROM TBL_BIG_CATEGORY
     </select>
+    <select id="selectById" resultType="bigCategoryVO">
+        SELECT ID, BIG_CATEGORY_NAME FROM TBL_BIG_CATEGORY
+        WHERE ID = #{id}
+    </select>
 </mapper>

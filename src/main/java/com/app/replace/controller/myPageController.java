@@ -1,8 +1,6 @@
 package com.app.replace.controller;
 
-import com.app.replace.dao.BigCategoryDAO;
-import com.app.replace.dao.MemberDAO;
-import com.app.replace.dao.PositionDAO;
+import com.app.replace.dao.*;
 import com.app.replace.vo.MemberVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +21,8 @@ import java.util.Map;
 public class myPageController {
     private final BigCategoryDAO bigCategoryDAO;
     private final MemberDAO memberDAO;
-    private final PositionDAO positionDAO;
+    private final ApplyDAO applyDAO;
+
 
     private final long session = 1L;
 
@@ -32,7 +31,8 @@ public class myPageController {
         MemberVO memberVO = memberDAO.select(session);
         model.addAttribute("categories", bigCategoryDAO.selectAll());
         model.addAttribute("member", memberVO);
-        model.addAttribute("positions", positionDAO.selectAllWithCompanyName());
+        model.addAttribute("positions", applyDAO.selectAll(session));
+
         log.info("main entered...");
         return "myPage";
     }
@@ -46,6 +46,14 @@ public class myPageController {
 
         log.info("{} : {}.......","update",memberVO.toString());
         memberDAO.update(memberVO);
+
+        return new RedirectView("/myPage/main");
+    }
+    @PostMapping("remove")
+    public RedirectView bookmarkRemove(@RequestParam Map<String,Object> map){
+
+
+        log.info("{} : {}.......","remove",(String)map.get("pId"));
 
         return new RedirectView("/myPage/main");
     }
