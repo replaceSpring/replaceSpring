@@ -1,0 +1,17 @@
+diff a/src/main/java/com/app/replace/dao/PositionDAO.java b/src/main/java/com/app/replace/dao/PositionDAO.java	(rejected hunks)
+@@ -18,4 +18,14 @@
+     public List<PositionDTO> selectAllWithCompanyName(){
+         return positionMapper.selectAllWithCompanyName();
+     }
+-}
++    public List<PositionDTO> selectAllByPositionOpenDate(){
++        return positionMapper.selectAllByPositionOpenDate();
++    }
++    public List<PositionDTO> selectAllByPositionDueDate(){
++        return positionMapper.selectAllByPositionDueDate();
++    }
++
++    public List<PositionDTO> findAll(Search search) {
++        return positionMapper.selectAllBySearch(search);
++    }
++};
