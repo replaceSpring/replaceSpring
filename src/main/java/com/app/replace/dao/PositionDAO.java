@@ -18,6 +18,7 @@ public class PositionDAO {
     public List<PositionDTO> selectAllWithCompanyName(){
         return positionMapper.selectAllWithCompanyName();
     }
+<<<<<<< HEAD
     public List<PositionDTO> selectAllByPositionOpenDate(){
         return positionMapper.selectAllByPositionOpenDate();
     }
@@ -29,3 +30,14 @@ public class PositionDAO {
         return positionMapper.selectAllBySearch(search);
     }
 };
+=======
+
+    public List<PositionDTO> selectByBigCategoryId(long id){
+        return positionMapper.selectByBigCategory(id);
+    }
+
+    public PositionDTO select(long id){
+        return positionMapper.select(id);
+    }
+}
+>>>>>>> 3cc62086bb56f45fb9d7ec4681bb912d7e54dbc4

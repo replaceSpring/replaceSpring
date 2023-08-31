@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.replace.mapper.FileMapper">
+    <insert id="insert">
+        INSERT INTO TBL_FILE
+        (ID, FILE_PATH, FILE_UUID, FILE_NAME, FILE_SIZE, MEMBER_ID, FILE_TYPE)
+        VALUES(SEQ_FILE.NEXTVAL, #{filePath}, #{fileUuid}, #{fileName}, #{fileSize}, #{memberId}, #{fileType})
+    </insert>
+    <select id="selectById" resultType="FileVO">
+        SELECT ID, FILE_PATH, FILE_UUID, FILE_NAME, FILE_SIZE, MEMBER_ID, FILE_TYPE
+        FROM TBL_FILE
+        WHERE MEMBER_ID = #{id}
+    </select>
+    <select id="countFileById" resultType="_int">
+        SELECT COUNT(ID)
+        FROM TBL_FILE tf
+        WHERE MEMBER_ID = #{id}
+    </select>
+    <update id="update">
+        UPDATE TBL_FILE
+        SET FILE_PATH = #{filePath}, FILE_UUID = #{fileUuid}, FILE_NAME = #{fileName}, FILE_SIZE = #{fileSize}, FILE_TYPE = #{fileType}
+        WHERE MEMBER_ID = #{memberId}
+    </update>
+</mapper>
+

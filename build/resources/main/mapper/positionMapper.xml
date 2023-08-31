@@ -13,8 +13,19 @@
         JOIN TBL_MID_CATEGORY MC
         ON P.MID_CATEGORY_ID = MC.ID
     </select>
+<<<<<<< HEAD
 
 <!--    메인페이지 자리 클릭 하면 상세보기로 이동하게끔-->
+=======
+    <select id="selectByBigCategory" resultType="positionDTO">
+        SELECT P.ID, P.COMPANY_ID,P.POSITION_NAME,P.POSITION_INFO, P.POSITION_DUE_DATE ,P.POSITION_OPEN_DATE ,P.POSITION_STATUS,P.MID_CATEGORY_ID, C.COMPANY_NAME, MC.MID_CATEGORY_NAME
+        FROM TBL_COMPANY C JOIN TBL_POSITION P
+        ON P.COMPANY_ID = C.ID
+        JOIN TBL_MID_CATEGORY MC
+        ON P.MID_CATEGORY_ID = MC.ID
+        WHERE MC.BIG_CATEGORY_ID = #{id}
+    </select>
+>>>>>>> 3cc62086bb56f45fb9d7ec4681bb912d7e54dbc4
     <select id="select" resultType="positionDTO">
         SELECT P.ID, P.COMPANY_ID,P.POSITION_NAME,P.POSITION_INFO, P.POSITION_DUE_DATE ,P.POSITION_OPEN_DATE ,P.POSITION_STATUS,P.MID_CATEGORY_ID, C.COMPANY_NAME, MC.MID_CATEGORY_NAME
         FROM TBL_COMPANY C JOIN TBL_POSITION P
@@ -23,6 +34,7 @@
         ON P.MID_CATEGORY_ID = MC.ID
         WHERE P.ID = #{id}
     </select>
+<<<<<<< HEAD
 
     <select id="selectAllByPositionOpenDate" resultType="positionDTO">
         SELECT P.ID, P.COMPANY_ID,P.POSITION_NAME,P.POSITION_INFO, P.POSITION_DUE_DATE ,P.POSITION_OPEN_DATE ,P.POSITION_STATUS,P.MID_CATEGORY_ID, C.COMPANY_NAME, MC.MID_CATEGORY_NAME
@@ -67,4 +79,6 @@
         </if>
     </select>
 
+=======
+>>>>>>> 3cc62086bb56f45fb9d7ec4681bb912d7e54dbc4
 </mapper>

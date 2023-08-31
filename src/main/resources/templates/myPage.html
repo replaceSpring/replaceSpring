@@ -80,8 +80,7 @@
                                         <div class="css-3rl35p">
                                             <a href="/myPage/main">
                                                 <picture class="css-1417i7t">
-                                                    <source type="image/webp" srcset="https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/640xauto.webp 640w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/750xauto.webp 750w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/828xauto.webp 828w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1080xauto.webp 1080w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1200xauto.webp 1200w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1920xauto.webp 1920w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/2048xauto.webp 2048w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/3840xauto.webp 3840w" sizes="30px">
-                                                    <img class="css-kbc021"  draggable="false" alt="profile" srcset="https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/640xauto 640w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/750xauto 750w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/828xauto 828w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1080xauto 1080w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1200xauto 1200w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1920xauto 1920w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/2048xauto 2048w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/3840xauto 3840w" src="https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/640xauto" sizes="30px" loading="eager">
+                                                    <img class="css-kbc021"  draggable="false" alt="profile" th:src="@{/file/display?memberId=} + ${member.id}" sizes="30px" loading="eager">
                                                 </picture>
                                             </a>
                                         </div>
@@ -102,10 +101,10 @@
                                                 <div class="css-12j5knc">
                                                     <input type="text" inputmode="text" autocomplete="off" placeholder="관심 주제, 클래스, 크리에이터 찾기" class="css-fkkc8t" value="">
                                                     <span class="css-8m4vrq">
-                                                                <svg viewBox="0 0 24 24" class="css-kgbhgr">
-                                                                    <path d="m22.45 21.2-5.35-5.35c1.2-1.45 1.9-3.3 1.9-5.35C19 5.8 15.2 2 10.5 2S2 5.8 2 10.5 5.8 19 10.5 19c2.05 0 3.9-.7 5.35-1.9l5.35 5.35c.1.1.25.1.35 0l.9-.9c.1-.1.1-.25 0-.35ZM3.75 10.5c0-3.7 3.05-6.75 6.75-6.75s6.75 3.05 6.75 6.75-3.05 6.75-6.75 6.75-6.75-3.05-6.75-6.75Z" class="css-17f4zqp"></path>
-                                                                </svg>
-                                                            </span>
+                                                        <svg viewBox="0 0 24 24" class="css-kgbhgr">
+                                                            <path d="m22.45 21.2-5.35-5.35c1.2-1.45 1.9-3.3 1.9-5.35C19 5.8 15.2 2 10.5 2S2 5.8 2 10.5 5.8 19 10.5 19c2.05 0 3.9-.7 5.35-1.9l5.35 5.35c.1.1.25.1.35 0l.9-.9c.1-.1.1-.25 0-.35ZM3.75 10.5c0-3.7 3.05-6.75 6.75-6.75s6.75 3.05 6.75 6.75-3.05 6.75-6.75 6.75-6.75-3.05-6.75-6.75Z" class="css-17f4zqp"></path>
+                                                        </svg>
+                                                    </span>
                                                 </div>
                                             </div>
                                             <div class="css-12z1g49">
@@ -124,9 +123,9 @@
                                                                     <span class="css-gh0k4l">1</span>
                                                                     <span class="css-147sg2d"></span>
                                                                     <li tabindex="0" class="css-13knazy" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                                                <span class="css-vj9owe">
-                                                                                    프로크리에이트
-                                                                                </span>
+                                                                        <span class="css-vj9owe">
+                                                                            프로크리에이트
+                                                                        </span>
                                                                     </li>
                                                                 </div>
                                                             </ul>
@@ -148,13 +147,9 @@
                                             <div class="css-14q7sgs">
                                                 <div class="css-zlo6qq">
                                                     <div class="css-14fzkbc">
-                                                        <a class="css-346lod" href="https://class101.net/ko/categories/604f1c9756c3676f1ed0030e" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                            <h3  class="css-13vbe2p"> 전체
-                                                            </h3>
-                                                        </a>
-                                                        <span class="css-gefh0b"></span>
                                                         <th:block th:each="num : ${#numbers.sequence(0,2)}">
-                                                            <a class="css-346lod" href="${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <a class="css-346lod" th:href="@{/positionList/positions?cid=} + ${categories[numStat.current].id}"
+                                                               style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
                                                                 </h3>
                                                             </a>
@@ -164,7 +159,7 @@
                                                     <div class="css-iis9oy"></div>
                                                     <div class="css-14fzkbc">
                                                         <th:block th:each="num : ${#numbers.sequence(3,6)}">
-                                                            <a class="css-346lod" href="${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <a class="css-346lod" th:href="@{/positionList/positions?cid=} + ${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
                                                                 </h3>
                                                             </a>
@@ -174,7 +169,7 @@
                                                     <div class="css-iis9oy"></div>
                                                     <div class="css-14fzkbc">
                                                         <th:block th:each="num : ${#numbers.sequence(7,10)}">
-                                                            <a class="css-346lod" href="${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <a class="css-346lod" th:href="@{/positionList/positions?cid=} + ${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
                                                                 </h3>
                                                             </a>
@@ -184,7 +179,7 @@
                                                     <div class="css-iis9oy"></div>
                                                     <div class="css-14fzkbc">
                                                         <th:block th:each="num : ${#numbers.sequence(11,14)}">
-                                                            <a class="css-346lod" href="${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <a class="css-346lod" th:href="@{/positionList/positions?cid=} + ${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
                                                                 </h3>
                                                             </a>
@@ -234,8 +229,7 @@
                                                                     <div class="css-1qlj0xn">
                                                                         <div class="css-phjt6u">
                                                                             <picture class="css-efzjop">
-                                                                                <source type="image/webp" srcset="https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/640xauto.webp 640w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/750xauto.webp 750w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/828xauto.webp 828w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1080xauto.webp 1080w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1200xauto.webp 1200w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1920xauto.webp 1920w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/2048xauto.webp 2048w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/3840xauto.webp 3840w">
-                                                                                <img class="css-1u3hmek" alt="profile-picture" srcset="https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/640xauto 640w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/750xauto 750w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/828xauto 828w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1080xauto 1080w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1200xauto 1200w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1920xauto 1920w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/2048xauto 2048w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/3840xauto 3840w" src="https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/640xauto" loading="eager">
+                                                                                <img class="css-1u3hmek" alt="profile-picture" th:src="@{/file/display?memberId=} + ${member.id}" loading="eager">
                                                                             </picture>
                                                                         </div>
                                                                     </div>
@@ -390,7 +384,7 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="javascript:void(0);" onclick="positionOn();" class="css-n1tq6f" id="positionButton">
+                                            <a href="#" onclick="positionOn();" class="css-n1tq6f" id="positionButton">
                                                 <div class="css-1dv4z93">
                                                             <span class="css-wzytx3">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-1oe6l0y">
@@ -401,7 +395,7 @@
                                                     <div class="css-wd98za"></div>
                                                     <div class="css-1lg6qbs">
                                                         <h6 class="css-lixhnq">
-                                                            등록한 자리 보기
+                                                            내가 올린 자리 보기
                                                         </h6>
                                                     </div>
                                                 </div>
@@ -413,7 +407,7 @@
                                                 <div class="css-xc4w7p"></div>
                                             </div>
                                         </div>
-                                        <a href="https://class101.net/ko/classmate-referral/intro" class="css-n1tq6f" id="appliedButton">
+                                        <a href="#" class="css-n1tq6f" id="createPositionButton">
                                             <div class="css-1dv4z93">
                                                         <span class="css-wzytx3">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-1oe6l0y">
@@ -422,7 +416,7 @@
                                                         </span>
                                                 <div class="css-wd98za"></div>
                                                 <div class="css-1lg6qbs">
-                                                    <h6 class="css-lixhnq">지원한 자리</h6>
+                                                    <h6 class="css-lixhnq">자리 만들기</h6>
                                                 </div>
                                             </div>
                                         </a>
@@ -680,9 +674,9 @@
                                         <div class="css-10c2f7i">
                                             <ul class="css-1lnq94y">
                                                 <th:block th:each = "position : ${positions}">
-                                                    <li class="css-1lt9x97 positionBox">
+                                                    <li class="css-1lt9x97 positionBox" th:classappend="${position.applyStatus}" >
                                                         <div class="css-o6xp2d">
-                                                            <button class="css-1hvtp3b" type="button" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <button th:attr="data-position_id=${position.positionId}" class="css-1hvtp3b gotoPositionBtn" onclick="gotoPosition(this)" type="button" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <div class="css-slclp7">
                                                                     <div class="css-tiz9x3">
                                                                         <div class="css-sw6duf">
@@ -690,18 +684,12 @@
                                                                                 <div class="css-em9mzn">
                                                                                     <div class="css-z0796k"></div>
                                                                                     <picture class="css-10evqi9">
-                                                                                        <source type="image/webp" srcset="https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/640xauto.webp 640w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/750xauto.webp 750w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/828xauto.webp 828w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1080xauto.webp 1080w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1200xauto.webp 1200w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1920xauto.webp 1920w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/2048xauto.webp 2048w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/3840xauto.webp 3840w">
-                                                                                        <img class="css-1u3hmek" data-testid="image-thumbnail-content" draggable="false" alt="" srcset="https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/640xauto 640w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/750xauto 750w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/828xauto 828w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1080xauto 1080w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1200xauto 1200w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1920xauto 1920w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/2048xauto 2048w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/3840xauto 3840w" src="https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48" loading="lazy">
+                                                                                        <img class="css-1u3hmek" data-testid="image-thumbnail-content" draggable="false" alt="" th:src="@{/file/display?memberId=} + ${position.memberId}" loading="lazy">
                                                                                     </picture>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="css-1j37w9d">
-                                                                            <svg viewBox="0 0 24 24" class="css-p3n3ha">
-                                                                                <path d="M16.15 11.8c.15.1.15.3 0 .4l-2.9 1.9-2.8 1.85c-.15.1-.4 0-.4-.2v-7.5c0-.2.25-.3.4-.2l2.8 1.85 2.9 1.9Z" class="css-17f4zqp"></path>
-                                                                                <path d="M12 2.75c5.1 0 9.25 4.15 9.25 9.25S17.1 21.25 12 21.25 2.75 17.1 2.75 12 6.9 2.75 12 2.75ZM12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Z" class="css-17f4zqp"></path>
-                                                                            </svg>
-                                                                        </div>
+
                                                                     </div>
                                                                     <span class="css-18oe494"></span>
                                                                     <div class="css-4f8m8u">
@@ -710,7 +698,7 @@
                                                                                 (포지션 이름 1)
                                                                             </h3>
                                                                             <div class="css-1k0bovv"></div>
-                                                                            <span class="css-1mcr3z2" th:text="${position.companyName}">(기업명 1)</span>
+                                                                            <span class="css-1mcr3z2" th:text="${position.companyName}+' * '+${position.midCategoryName}">(기업명 1)</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -728,64 +716,6 @@
                                                         </div>
                                                     </li>
                                                 </th:block>
-
-                                                <li class="css-1lt9x97 positionBox">
-                                                    <div class="css-o6xp2d">
-                                                        <button class="css-1hvtp3b" type="button" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                            <div class="css-slclp7">
-                                                                <div class="css-tiz9x3">
-                                                                    <div class="css-sw6duf">
-                                                                        <div class="css-ne3opq">
-                                                                            <div class="css-em9mzn">
-                                                                                <div class="css-z0796k"></div>
-                                                                                <picture class="css-10evqi9">
-                                                                                    <source type="image/webp" srcset="https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/640xauto.webp 640w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/750xauto.webp 750w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/828xauto.webp 828w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1080xauto.webp 1080w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1200xauto.webp 1200w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1920xauto.webp 1920w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/2048xauto.webp 2048w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/3840xauto.webp 3840w">
-                                                                                    <img class="css-1u3hmek" data-testid="image-thumbnail-content" draggable="false" alt="" srcset="https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/640xauto 640w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/750xauto 750w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/828xauto 828w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1080xauto 1080w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1200xauto 1200w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/1920xauto 1920w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/2048xauto 2048w,https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48/3840xauto 3840w" src="https://cdn.class101.net/images/7b964146-2ade-4e2e-a031-b3e72d168b48" loading="lazy">
-                                                                                </picture>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="css-1j37w9d">
-                                                                        <svg viewBox="0 0 24 24" class="css-p3n3ha">
-                                                                            <path d="M16.15 11.8c.15.1.15.3 0 .4l-2.9 1.9-2.8 1.85c-.15.1-.4 0-.4-.2v-7.5c0-.2.25-.3.4-.2l2.8 1.85 2.9 1.9Z" class="css-17f4zqp"></path>
-                                                                            <path d="M12 2.75c5.1 0 9.25 4.15 9.25 9.25S17.1 21.25 12 21.25 2.75 17.1 2.75 12 6.9 2.75 12 2.75ZM12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Z" class="css-17f4zqp"></path>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="css-18oe494"></span>
-                                                                <div class="css-4f8m8u">
-                                                                    <div class="css-10c2f7i">
-                                                                        <h3 class="css-1b2g8of">
-                                                                            (포지션 이름 3)
-                                                                        </h3>
-                                                                        <div class="css-1k0bovv"></div>
-                                                                        <span class="css-1mcr3z2">(기업명 3)</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </button>
-                                                        <div class="invitationButtonContainer">
-                                                            <button type="button" class="css-3zevl0" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                                    <span class="css-a2v7f3" style="opacity: 0; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                                    </span>
-                                                                <span class="css-10ypsmu">
-                                                                        <span class="css-15nwl8k">초대수락</span>
-                                                                    </span>
-                                                            </button>
-                                                        </div>
-
-                                                        <span class="css-18oe494"></span>
-                                                        <div class="css-1qr2a0y">
-                                                            <div class="css-17f4zqp">
-                                                                <button type="button" class="css-1dcq9or positionListPopupButton" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                                    <svg viewBox="0 0 24 24" class="css-1devemn">
-                                                                        <path d="M12 6.6a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2Zm0 7a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2Zm0 7a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2Z" class="css-17f4zqp"></path>
-                                                                    </svg>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
                                             </ul>
                                             <span class="css-gefh0b"></span>
                                         </div>
@@ -923,12 +853,12 @@
                                             <form novalidate style="width: auto; height: auto;">
                                                 <div class="css-y930b">
                                                     <div class="css-10c2f7i">
-                                                        <div class="css-1efk3fx">
+                                                        <label class="css-1efk3fx" for="profileInput">
                                                             <button type="button" class="css-1hvtp3b" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <div class="css-10c2f7i">
+
                                                                     <picture class="css-1utt95r">
-                                                                        <source type="image/webp" srcset="https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/640xauto.webp 640w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/750xauto.webp 750w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/828xauto.webp 828w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1080xauto.webp 1080w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1200xauto.webp 1200w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1920xauto.webp 1920w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/2048xauto.webp 2048w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/3840xauto.webp 3840w" sizes="62px">
-                                                                        <img class="css-1aosfzd" draggable="false" alt="Profile Image" srcset="https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/640xauto 640w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/750xauto 750w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/828xauto 828w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1080xauto 1080w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1200xauto 1200w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/1920xauto 1920w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/2048xauto 2048w,https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/3840xauto 3840w" src="https://cdn.class101.net/images/1987cd22-21a3-475d-8453-f35d00622d47/640xauto" sizes="62px" loading="eager">
+                                                                        <img class="css-1aosfzd" id="defaultProfile" draggable="false" alt="Profile Image" th:src="@{/file/display?memberId=} + ${member.id}" sizes="62px" loading="eager">
                                                                     </picture>
                                                                     <div class="css-10sv4z2">
                                                                         <div class="css-1dn65u8" style="color: rgb(12, 12, 12); --system-on-color: #0c0c0c;">
@@ -939,7 +869,8 @@
                                                                     </div>
                                                                 </div>
                                                             </button>
-                                                        </div>
+                                                        </label>
+                                                        <input type="file" id="profileInput" accept="image/*">
                                                     </div>
                                                 </div>
                                                 <div class="css-zsoya5">
@@ -983,8 +914,93 @@
                                                                     </div>
                                                                 </label>
                                                             </label>
-
                                                         </div>
+                                                        <div class="css-oor4vx"></div>
+                                                        <div class="css-oor4vx"></div>
+
+                                                        <th:block th:if="${company != null}">
+                                                            <h5 class="companyEdit">
+                                                                기업정보 관리
+                                                            </h5>
+                                                            <hr style="width: 80%">
+                                                            <div class="css-oor4vx"></div>
+                                                            <div class="css-oor4vx"></div>
+
+                                                            <div class="css-15zhte1">
+                                                                <label>
+                                                                    <div class="css-15zhte1">
+                                                                        <p class="css-1rejurp" >기업 이름</p>
+                                                                        <div class="css-1k5xfry"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <input name="companyName" placeholder="닉네임을 입력해주세요." class="css-1av4098 companyName" th:value = ${company.companyName} >
+                                                                            <div class="css-hpn70j"></div>
+                                                                            <div class="css-15zhte1">
+                                                                                <p class="css-1t9iucw">
+                                                                                    기업 정보 입력시 기업회원으로 등록 됩니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </label>
+                                                                <div class="css-oor4vx"></div>
+                                                                <label>
+                                                                    <div class="css-15zhte1">
+                                                                        <p class="css-1rejurp" >기업인증 번호</p>
+                                                                        <div class="css-1k5xfry"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <input name="" placeholder="클릭 후 휴대폰 번호를 인증해주세요." class="css-1av4098 companyCode" value="(전화번호)" th:value = ${company.companyVarificationCode}>
+                                                                            <div class="css-hpn70j"></div>
+                                                                            <div class="css-15zhte1">
+                                                                                <p class="css-1t9iucw">
+                                                                                    잘못된 기업인증번호 등록시 불이익이 있을 수 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </label>
+
+
+                                                            </div>
+                                                        </th:block>
+                                                        <th:block th:unless="${company != null}">
+                                                            <h5 class="companyEdit">
+                                                                기업정보 관리
+                                                            </h5>
+                                                            <hr style="width: 80%">
+                                                            <div class="css-oor4vx"></div>
+                                                            <div class="css-oor4vx"></div>
+
+                                                            <div class="css-15zhte1">
+                                                                <label>
+                                                                    <div class="css-15zhte1">
+                                                                        <p class="css-1rejurp" >기업 이름</p>
+                                                                        <div class="css-1k5xfry"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <input name="companyName" placeholder="닉네임을 입력해주세요." class="css-1av4098 companyName">
+                                                                        </div>
+                                                                    </div>
+                                                                </label>
+                                                                <div class="css-oor4vx"></div>
+                                                                <label>
+                                                                    <div class="css-15zhte1">
+                                                                        <p class="css-1rejurp" >기업인증 번호</p>
+                                                                        <div class="css-1k5xfry"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <input name="companyCode" placeholder="기업 인증 번호를 입력해주세요" class="css-1av4098 companyCode" >
+                                                                            <div class="css-hpn70j"></div>
+                                                                            <div class="css-15zhte1">
+                                                                                <p class="css-1t9iucw">
+                                                                                    잘못된 기업인증번호 등록시 불이익이 있을 수 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </label>
+
+
+                                                            </div>
+                                                        </th:block>
+
                                                     </div>
                                                     <button type="button" class="css-181thk6" style="color: rgb(116, 116, 116); --system-on-color: #ff5e00;" id="saveButton">
                                                         <div class="css-3kqv01">
@@ -1061,9 +1077,9 @@
                                                         <div class="css-r9y8tl">
                                                             <a href="https://class101.net/ko/topic">
                                                                 <div class="css-buugdi">
-                                                                            <span class="css-2qj4cb">
-                                                                                전체 카테고리
-                                                                            </span>
+                                                                    <span class="css-2qj4cb">
+                                                                        전체 카테고리
+                                                                    </span>
                                                                 </div>
                                                             </a>
                                                         </div>
@@ -1362,9 +1378,9 @@
                     </div>
                     <div role="dialog" data-testid="modal-bottom-sheet" class="css-1b6ea5o" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                         <div class="css-1t66ttm">
-                            <h2 class="css-1xtq33q">회원 탈퇴</h2>
+                            <h2 class="css-1xtq33q" id="modalTitle"></h2>
                             <div class="css-rcmffg">
-                                <button aria-label="Close" type="button"  class="css-1dcq9or modalOffButton" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                <button aria-label="Close" type="button"  class="css-1dcq9or" id="modalOffButton" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                     <svg viewBox="0 0 24 24"  class="css-1devemn">
                                         <path d="m13.75 12 6.35-6.35c.1-.1.1-.25 0-.35l-1.4-1.4c-.1-.1-.25-.1-.35 0L12 10.25l-6.35-6.4c-.1-.1-.25-.1-.35 0l-1.4 1.4c-.1.1-.1.25 0 .35l6.35 6.4-6.4 6.35c-.1.1-.1.25 0 .35l1.4 1.4c.1.1.25.1.35 0l6.4-6.35 6.35 6.35c.1.1.25.1.35 0l1.4-1.4c.1-.1.1-.25 0-.35L13.75 12Z" class="css-17f4zqp">
                                         </path>
@@ -1374,40 +1390,20 @@
                         </div>
                         <div class="css-8rafol">
                             <div class="css-uep89l">
-                                <span data-testid="body" class="css-23wcj6">탈퇴시 이미 초대받은 자리에 대한 환불은 불가합니다</span>
+                                <span data-testid="body" class="css-23wcj6" id="modalMsg"></span>
                                 <span class="css-1q2fvoq">
                                 </span>
-                                <div class="css-1d944kd">
-                                    <button type="button"class="css-1hvtp3b" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                        <div class="css-o6xp2d">
-                                            <button type="button"class="css-10vbztj" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                                <svg viewBox="0 0 24 24"  class="css-1fasav5">
-                                                    <path d="M12 3.5c4.7 0 8.5 3.8 8.5 8.5s-3.8 8.5-8.5 8.5-8.5-3.8-8.5-8.5S7.3 3.5 12 3.5ZM12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Z" class="css-17f4zqp">
-                                                    </path>
-                                                    <path d="M12 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm-.9-6.2c.15-.45.4-.8.75-1.1.35-.3.65-.55.8-.8.2-.25.25-.5.25-.75 0-.35-.05-.6-.2-.75-.15-.15-.35-.25-.65-.25-.25 0-.45.1-.65.3-.15.2-.25.45-.25.8 0 .05-.05.1-.1.1H8.6c-.05 0-.1-.05-.1-.1.05-1.1.35-1.9 1-2.4.65-.55 1.5-.8 2.55-.8 1.1 0 1.95.25 2.55.75.6.5.9 1.25.9 2.25 0 .35-.05.7-.2.95-.1.25-.25.5-.45.75-.2.2-.45.5-.8.8l-.3.25c-.3.25-.45.5-.6.75-.1.25-.15.5-.15.9 0 .05-.05.1-.1.1h-2c-.05 0-.1-.05-.1-.1.1-.7.2-1.2.3-1.65Z" class="css-17f4zqp">
-                                                    </path>
-                                                </svg>
-                                                <span class="css-1q7zbl">향후 불이익은 책임지지 않습니다.</span>
-                                            </button>
-                                        </div>
-                                    </button>
-                                </div>
                             </div>
                             <div class="css-32s6mg">
-                                <button type="button" class="css-3zevl0" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                <button type="button" class="css-3zevl0" id="modalComfirmBtn" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                     <span class="css-a2v7f3" style="opacity: 0; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                     </span>
                                     <span class="css-10ypsmu">
-                                        <span class="css-15nwl8k">탈퇴하기</span>
+                                        <span class="css-15nwl8k">확인</span>
                                     </span>
                                 </button>
                                 <span class="css-es0a3r">
                                 </span>
-                                <div class="css-wf2o7a">
-                                    <button type="button"class="css-10vbztj modalOffButton" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
-                                        <span class="css-updy6r">취소</span>
-                                    </button>
-                                </div>
                             </div>
                         </div>
 
@@ -1485,48 +1481,72 @@
     }
 </script>
 <script>
-    const listPopupBackground = $("#listPopupBg");
-    const positionListPopupButton = $(".positionListPopupButton");
-    const listPopupContainer = $("#listPopupContainer");
-    const listPopupBox = $("#listPopupBox");
-    const positionBox = $(".positionBox");
+    const $listPopupBackground = $("#listPopupBg");
+    const $positionListPopupButton = $(".positionListPopupButton");
+    const $listPopupContainer = $("#listPopupContainer");
+    const $listPopupBox = $("#listPopupBox");
+    const $positionBox = $(".positionBox");
     const $classCount = $("#classCount");
 
     let positionIndex = 0;
+    let positionId = 0;
 
-    $.each(positionBox, function(index,e){
+    $.each($positionBox, function(index,e){
         const button = $($(e).find(".positionListPopupButton"));
         button.click(function(event){
-            listPopupBox.css({'transform' : 'translateX('+ (button.offset().left - 100) +'px) translateY('+ button.offset().top +'px)'});
-            listPopupContainer.css("display", "flex");
-            positionIndex = index;
+            positionId = e.dataset.position_id;
+            $listPopupBox.css({'transform' : 'translateX('+ (button.offset().left - 100) +'px) translateY('+ (event.clientY) +'px)'});
+            $listPopupContainer.css("display", "flex");
 
             $('body').addClass("stop-scrolling");
         });
     });
-    listPopupBackground.click(function(){
-        listPopupContainer.css("display","none");
+    $listPopupBackground.click(function(){
+        $listPopupContainer.css("display","none");
         $('body').removeClass("stop-scrolling");
     });
-    $classCount.text("클래스 " + positionBox.length +"개");
+    $classCount.text("전체 클래스 " + $positionBox.length +"개");
 
-    const playButton = $("#playButton");
-    const removeButton = $("#removeButton");
-    const updateButton = $("#updateButton");
-    const infoButton = $("#infoButton");
+    const $playButton = $("#playButton");
+    const $removeButton = $("#removeButton");
+    const $updateButton = $("#updateButton");
+    const $infoButton = $("#infoButton");
 
-    playButton.click(function(){
-        console.log(positionIndex + "play");
+    $playButton.click(function(){
+        console.log(positionId + " : play");
     });
-    removeButton.click(function(){
-        console.log(positionIndex + "remove");
+    $removeButton.click(function(){
+        console.log(positionId + " : remove");
+        positionEditDataSend("remove");
     });
-    updateButton.click(function(){
-        console.log(positionIndex + "update");
+    $updateButton.click(function(){
+        console.log(positionId + " : update");
     });
-    infoButton.click(function(){
-        console.log(positionIndex + "info");
+    $infoButton.click(function(){
+        console.log(positionId + " : info");
     });
+
+    function positionEditDataSend(command){
+        $.ajax({
+            url : "/myPage/" + command,
+            type : 'post',
+            async: false,
+            data :{
+                pId: positionId
+            },
+            success:function () {
+                console.log("position : " + command);
+                console.log($memberPassword.prop("value"));
+            },
+            error:function(){
+                alart("error");
+            }
+        }) ;
+
+        location.reload();
+    }
+
+
 </script>
 
 <script>
@@ -1540,59 +1560,166 @@
         element.click(function(){
             $selectionUnderBar.css("display", "none");
             element.find(".css-971m5h").css("display","block");
+            switch (i) {
+                case 0:
+                    $positionBox.css("display","list-item");
+                    break
+                case 1:
+                    $positionBox.css("display","none");
+                    $(".bookmark").css("display","list-item");
+                    break
+                case 2:
+                    $positionBox.css("display","none");
+                    $(".applied").css("display","list-item");
+                    break
+                case 3:
+                    $positionBox.css("display","none");
+                    $(".invited").css("display","list-item");
+                    break
+            }
         })
     });
 
 </script>
 <script>
-    const deleteMemberButton = $("#deleteMemberButton");
-    const modalContainer = $("#modalContainer");
-    const modalBackground = $("#modalBg");
-    const modalOffButton = $(".modalOffButton");
+    const $deleteMemberButton = $("#deleteMemberButton");
+    const $modalContainer = $("#modalContainer");
+    const $modalBackground = $("#modalBg");
+    const $modalComfirmBtn = $("#modalComfirmBtn");
+    const $modalOffButton = $("#modalOffButton");
 
     function modalOff(){
-        modalContainer.css("display","none");
+        $modalContainer.css("display","none");
     }
     function modalOn(){
-        modalContainer.css("display","flex");
+        $modalContainer.css("display","flex");
     }
-    modalOffButton.click(function(){
+    $modalComfirmBtn.click(function(){
         modalOff();
     });
-    modalBackground.click(function(){
+    $modalOffButton.click(function(){
+        modalOff();
+    });
+    $modalBackground.click(function(){
         modalOff();
     });
     function deleteMember(){
+        $("#modalTitle").text("회원 탈퇴");
+        $("#modalMsg").text("탈퇴시 이미 초대받은 자리에 대한 환불은 불가합니다");
         modalOn();
     }
 </script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 <script>
-    const memberInfoSaveButton = $("#memberInfoSaveButton");
-    const memberPassword = $("#memberPassword");
-    const memberPhone = $("#memberPhone");
-    const memberNickname = $("#memberNickname");
+    const $memberInfoSaveButton = $("#memberInfoSaveButton");
+    const $memberPassword = $("#memberPassword");
+    const $memberPhone = $("#memberPhone");
+    const $memberNickname = $("#memberNickname");
+    const $companyName = $(".companyName");
+    const $companyCode = $(".companyCode")
 
-    memberInfoSaveButton.click(function(){
-        $.ajax({
-            url : "/myPage/update",
-            type : 'post',
-            async: false,
-            data :{
-                password: memberPassword.prop("value"),
-                phone: memberPhone.prop("value"),
-                nickname:memberNickname.prop("value")
-            },
-            success:function () {
-                console.log("user updated");
-                console.log(memberPassword.prop("value"));
-            },
-            error:function(){
-                alart("error");
-            }
+    const $profileInput = $("#profileInput");
+    const $profileImg = $("#profileImg");
+    const $defaultProfile = $("#defaultProfile");
+    let imgURLs = [];
 
-        }) ;
 
+    $memberInfoSaveButton.click(function(){
+
+        saveFile();
+        saveUserInfo();
+        imgURLs.forEach((e)=>{
+            window.URL.revokeObjectURL(e);
+        });
         location.reload();
     });
+    $profileInput.on("change", function(){
+        let imgURL = window.URL.createObjectURL($profileInput[0].files[0]);
+        imgURLs.push(imgURL);
+        $defaultProfile.prop("src", imgURL);
+    });
+    function saveFile(){
+        let file = $profileInput[0].files[0];
+        if (file){
+            let name = file.name;
+            let fileData = new FormData();
+            fileData.append("uploadFile", file);
+            fileData.append("memberId", [[${member.id}]]);
+            $.ajax({
+
+                url : "/file/upload",
+                type : 'post',
+                data : fileData,
+                contentType: false,
+                processData: false,
+                success:function (uuid) {
+
+                    $defaultProfile.attr("src",`/file/display?memberId=${member.id}`);
+                },
+                error:function(){
+                    alert("프로필이 저장되었습니다");
+                }
+            });
+        }
+
+    }
+
+    function saveUserInfo(){
+
+        if ($companyName.val() == "" && $companyCode.val()==""){
+            $.ajax({
+                url : "/myPage/update",
+                type : 'post',
+                async: false,
+                data :{
+                    password: $memberPassword.prop("value"),
+                    phone: $memberPhone.prop("value"),
+                    nickname:$memberNickname.prop("value")
+                },
+                success:function () {
+                    console.log("user updated");
+                },
+                error:function(){
+                    alert("프로필 error");
+                }
+
+            });
+        }else{
+            $.ajax({
+                url : "/myPage/update",
+                type : 'post',
+                async: false,
+                data :{
+                    password: $memberPassword.prop("value"),
+                    phone: $memberPhone.prop("value"),
+                    nickname:$memberNickname.prop("value"),
+                    cname: $companyName.prop("value"),
+                    ccode: $companyCode.val()
+                },
+                success:function () {
+                    console.log("user updated");
+                },
+                error:function(){
+                    alert("프로필 error");
+                }
+
+            });
+        }
+
+
+    }
+    function eraseImgfromMemory(urlData){
+        window.URL.revokeObjectURL(urlData);
+    }
+
+</script>
+<script>
+    const $gotoPositionBtn = $(".gotoPositionBtn");
+
+    function gotoPosition(data){
+        let positionId = ($(data).data("position_id"));
+        location.href = "/positionDetail/detail?positionId="+ positionId;
+    }
+
 </script>
 </html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.replace.mapper.MidCategoryMapper">
+    <select id="selectById" resultType="midCategoryVO">
+        SELECT MC.ID, MC.MID_CATEGORY_NAME,MC.BIG_CATEGORY_ID
+        FROM TBL_MID_CATEGORY MC
+        WHERE MC.BIG_CATEGORY_ID = #{id}
+    </select>
+</mapper>
