@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 @NoArgsConstructor
-public class PositionDTO {
+public class  PositionDTO {
     private long id;
     private long companyId;
     private String positionName;

@@ -20,7 +20,7 @@ import java.util.Map;
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/myPage/*")
-public class myPageController {
+public class MyPageController {
     private final BigCategoryDAO bigCategoryDAO;
     private final MemberDAO memberDAO;
     private final PositionDAO positionDAO;
@@ -44,7 +44,7 @@ public class myPageController {
         memberVO.setMemberNickname((String)map.get("nickname"));
         memberVO.setMemberPassword((String)map.get("password"));
 
-        log.info("{} : {}.......","update",memberVO.toString());
+        log.info("{} : {}…….","update",memberVO.toString());
         memberDAO.update(memberVO);
 
         return new RedirectView("/myPage/main");
