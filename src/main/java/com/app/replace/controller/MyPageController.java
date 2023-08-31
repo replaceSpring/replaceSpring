@@ -1,6 +1,7 @@
 package com.app.replace.controller;
 
 import com.app.replace.dao.*;
+import com.app.replace.vo.CompanyVO;
 import com.app.replace.vo.MemberVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,17 +13,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.swing.text.html.Option;
 import java.util.Map;
+import java.util.Optional;
 
 @Slf4j
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/myPage/*")
-public class myPageController {
+public class MyPageController {
     private final BigCategoryDAO bigCategoryDAO;
     private final MemberDAO memberDAO;
     private final ApplyDAO applyDAO;
-
+    private final CompanyDAO companyDAO;
 
     private final long session = 1L;
 
@@ -32,8 +35,14 @@ public class myPageController {
         model.addAttribute("categories", bigCategoryDAO.selectAll());
         model.addAttribute("member", memberVO);
         model.addAttribute("positions", applyDAO.selectAll(session));
+        try{
+            if (companyDAO.select(session).isPresent()){
+                model.addAttribute("company", companyDAO.select(session).get());
+            }
+        }catch (NullPointerException e){
+            log.info(e.getMessage());
+        }
 
-        log.info("main entered...");
         return "myPage";
     }
 
@@ -44,17 +53,37 @@ public class myPageController {
         memberVO.setMemberNickname((String)map.get("nickname"));
         memberVO.setMemberPassword((String)map.get("password"));
 
-        log.info("{} : {}.......","update",memberVO.toString());
+
+        try{
+            CompanyVO companyVO = companyDAO.select(session).get();
+            companyVO.setCompanyVarificationCode((String)map.get("ccode"));
+            companyVO.setCompanyName((String)map.get("cname"));
+            companyDAO.update(companyVO);
+        }catch (Exception e){
+            log.info("not a company member");
+            if ((String)map.get("cname")!=null && (String)map.get("ccode") != null) {
+                CompanyVO companyVO = new CompanyVO();
+                companyVO.setMemberId(session);
+                companyVO.setCompanyVarificationCode((String)map.get("ccode"));
+                companyVO.setCompanyName((String)map.get("cname"));
+                log.info(companyVO.toString());
+                companyDAO.insert(companyVO);
+            }
+        }
+
         memberDAO.update(memberVO);
+
 
         return new RedirectView("/myPage/main");
     }
+
+
     @PostMapping("remove")
     public RedirectView bookmarkRemove(@RequestParam Map<String,Object> map){
-
 
         log.info("{} : {}.......","remove",(String)map.get("pId"));
 
         return new RedirectView("/myPage/main");
     }
+
 }

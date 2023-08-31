@@ -36,13 +36,11 @@ public class PositionListController {
 
     @GetMapping("positions")
     public String gotoList(@RequestParam Map<String,Object> map, Model model){
-        log.info("{}.......................",Long.parseLong((String)map.get("cid")));
         long bigCategoryId = Long.parseLong((String)map.get("cid"));
         model.addAttribute("bigCategory", bigCategoryDAO.selectById(bigCategoryId));
         model.addAttribute("categories", bigCategoryDAO.selectAll());
         model.addAttribute("midCategoryList", midCategoryDAO.selectById(bigCategoryId));
         model.addAttribute("positions", positionDAO.selectByBigCategoryId(bigCategoryId));
-        log.info("category entered");
         return "category";
     }
 }

@@ -19,4 +19,5 @@ public class ApplyDTO {
     private String companyName;
     private String midCategoryName;
     private String applyStatus;
+
 }

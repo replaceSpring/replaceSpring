@@ -8,6 +8,8 @@
         <typeAlias type="com.app.replace.vo.BookmarkVO" alias="bookmarkVO"/>
         <typeAlias type="com.app.replace.vo.ApplyVO" alias="applyVO"/>
         <typeAlias type="com.app.replace.vo.MidCategoryVO" alias="midCategoryVO"/>
+        <typeAlias type="com.app.replace.vo.FileVO" alias="fileVO"/>
+        <typeAlias type="com.app.replace.vo.CompanyVO" alias="companyVO"/>
 
         <typeAlias type="com.app.replace.dto.PositionDTO" alias="positionDTO"/>
         <typeAlias type="com.app.replace.dto.ApplyDTO" alias="applyDTO"/>

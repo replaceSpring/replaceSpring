@@ -642,23 +642,8 @@
     });
 </script>
 <script>
-
     function categorySelected(categId){
         let $categId = $(categId).data("categoryid")
-        // $.ajax({
-        //     url : "/positionList/positions",
-        //     type : 'get',
-        //     async: true,
-        //     data :{
-        //         cid: $categId
-        //     },
-        //     success:function () {
-        //         console.log("success");
-        //     },
-        //     error:function(){
-        //         alert("error");
-        //     }
-        // });
         window.location = "/positionList/positions?cid=" + $categId;
     }
 </script>
