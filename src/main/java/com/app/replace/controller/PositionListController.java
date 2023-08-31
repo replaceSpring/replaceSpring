@@ -1,9 +1,5 @@
 package com.app.replace.controller;
 
-<<<<<<< HEAD
-public class PositionListController {
-=======
-
 import com.app.replace.dao.BigCategoryDAO;
 import com.app.replace.dao.MidCategoryDAO;
 import com.app.replace.dao.PositionDAO;
@@ -46,5 +42,4 @@ public class PositionListController {
         model.addAttribute("positions", positionDAO.selectByBigCategoryId(bigCategoryId));
         return "category";
     }
->>>>>>> 3cc62086bb56f45fb9d7ec4681bb912d7e54dbc4
 }

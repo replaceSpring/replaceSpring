@@ -1,13 +1,10 @@
 package com.app.replace.controller;
 
-<<<<<<< HEAD
 import com.app.replace.dao.BigCategoryDAO;
 import com.app.replace.dao.MemberDAO;
 import com.app.replace.dao.PositionDAO;
-=======
 import com.app.replace.dao.*;
 import com.app.replace.vo.CompanyVO;
->>>>>>> 3cc62086bb56f45fb9d7ec4681bb912d7e54dbc4
 import com.app.replace.vo.MemberVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,13 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
-<<<<<<< HEAD
 import java.util.Map;
-=======
 import javax.swing.text.html.Option;
 import java.util.Map;
 import java.util.Optional;
->>>>>>> 3cc62086bb56f45fb9d7ec4681bb912d7e54dbc4
 
 @Slf4j
 @Controller
@@ -34,12 +28,9 @@ import java.util.Optional;
 public class MyPageController {
     private final BigCategoryDAO bigCategoryDAO;
     private final MemberDAO memberDAO;
-<<<<<<< HEAD
     private final PositionDAO positionDAO;
-=======
     private final ApplyDAO applyDAO;
     private final CompanyDAO companyDAO;
->>>>>>> 3cc62086bb56f45fb9d7ec4681bb912d7e54dbc4
 
     private final long session = 1L;
 
@@ -48,10 +39,8 @@ public class MyPageController {
         MemberVO memberVO = memberDAO.select(session);
         model.addAttribute("categories", bigCategoryDAO.selectAll());
         model.addAttribute("member", memberVO);
-<<<<<<< HEAD
         model.addAttribute("positions", positionDAO.selectAllWithCompanyName());
         log.info("main entered...");
-=======
         model.addAttribute("positions", applyDAO.selectAll(session));
         try{
             if (companyDAO.select(session).isPresent()){
@@ -61,7 +50,6 @@ public class MyPageController {
             log.info(e.getMessage());
         }
 
->>>>>>> 3cc62086bb56f45fb9d7ec4681bb912d7e54dbc4
         return "myPage";
     }
 
@@ -72,14 +60,9 @@ public class MyPageController {
         memberVO.setMemberNickname((String)map.get("nickname"));
         memberVO.setMemberPassword((String)map.get("password"));
 
-<<<<<<< HEAD
         log.info("{} : {}…….","update",memberVO.toString());
         memberDAO.update(memberVO);
 
-        return new RedirectView("/myPage/main");
-    }
-}
-=======
 
         try{
             CompanyVO companyVO = companyDAO.select(session).get();
@@ -114,4 +97,3 @@ public class MyPageController {
     }
 
 }
->>>>>>> 3cc62086bb56f45fb9d7ec4681bb912d7e54dbc4
