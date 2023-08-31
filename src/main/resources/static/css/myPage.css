@@ -802,6 +802,15 @@
     font-weight: 700;
     line-height: 2.25rem;
 }
+.companyEdit {
+    border-width: 0px;
+    color: #f3f3f3;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 4.25rem;
+}
 @media (min-width: 640px) {
     .css-12xicwi {
         line-height: 2.25rem;
@@ -1960,4 +1969,7 @@
         margin-top: 24px;
         margin-left: 204px;
     }
+}
+#profileImg{
+    display : none;
 }

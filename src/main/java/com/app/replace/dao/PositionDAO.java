@@ -2,6 +2,7 @@ package com.app.replace.dao;
 
 import com.app.replace.dto.PositionDTO;
 import com.app.replace.mapper.PositionMapper;
+import com.app.replace.vo.PositionVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -18,5 +19,9 @@ public class PositionDAO {
 
     public List<PositionDTO> selectByBigCategoryId(long id){
         return positionMapper.selectByBigCategory(id);
+    }
+
+    public PositionDTO select(long id){
+        return positionMapper.select(id);
     }
 }
