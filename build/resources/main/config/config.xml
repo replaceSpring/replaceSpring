@@ -12,6 +12,7 @@
         <typeAlias type="com.app.replace.vo.CompanyVO" alias="companyVO"/>
 
         <typeAlias type="com.app.replace.dto.PositionDTO" alias="positionDTO"/>
+        <typeAlias type="com.app.replace.dto.Search" alias="search"/>
         <typeAlias type="com.app.replace.dto.ApplyDTO" alias="applyDTO"/>
         <typeAlias type="com.app.replace.dto.BookmarkDTO" alias="bookmarkDTO"/>
         <typeAlias type="com.app.replace.dto.MidCategoryDTO" alias="midCategoryDTO"/>

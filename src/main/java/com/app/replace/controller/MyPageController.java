@@ -1,5 +1,8 @@
 package com.app.replace.controller;
 
+import com.app.replace.dao.BigCategoryDAO;
+import com.app.replace.dao.MemberDAO;
+import com.app.replace.dao.PositionDAO;
 import com.app.replace.dao.*;
 import com.app.replace.vo.CompanyVO;
 import com.app.replace.vo.MemberVO;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.Map;
 import javax.swing.text.html.Option;
 import java.util.Map;
 import java.util.Optional;
@@ -24,6 +28,7 @@ import java.util.Optional;
 public class MyPageController {
     private final BigCategoryDAO bigCategoryDAO;
     private final MemberDAO memberDAO;
+    private final PositionDAO positionDAO;
     private final ApplyDAO applyDAO;
     private final CompanyDAO companyDAO;
 
@@ -34,6 +39,8 @@ public class MyPageController {
         MemberVO memberVO = memberDAO.select(session);
         model.addAttribute("categories", bigCategoryDAO.selectAll());
         model.addAttribute("member", memberVO);
+        model.addAttribute("positions", positionDAO.selectAllWithCompanyName());
+        log.info("main entered...");
         model.addAttribute("positions", applyDAO.selectAll(session));
         try{
             if (companyDAO.select(session).isPresent()){
@@ -52,6 +59,9 @@ public class MyPageController {
         memberVO.setMemberPhone((String)map.get("phone"));
         memberVO.setMemberNickname((String)map.get("nickname"));
         memberVO.setMemberPassword((String)map.get("password"));
+
+        log.info("{} : {}…….","update",memberVO.toString());
+        memberDAO.update(memberVO);
 
 
         try{

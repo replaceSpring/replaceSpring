@@ -13,6 +13,8 @@
         JOIN TBL_MID_CATEGORY MC
         ON P.MID_CATEGORY_ID = MC.ID
     </select>
+
+<!--    메인페이지 자리 클릭 하면 상세보기로 이동하게끔-->
     <select id="selectByBigCategory" resultType="positionDTO">
         SELECT P.ID, P.COMPANY_ID,P.POSITION_NAME,P.POSITION_INFO, P.POSITION_DUE_DATE ,P.POSITION_OPEN_DATE ,P.POSITION_STATUS,P.MID_CATEGORY_ID, C.COMPANY_NAME, MC.MID_CATEGORY_NAME
         FROM TBL_COMPANY C JOIN TBL_POSITION P
@@ -29,4 +31,48 @@
         ON P.MID_CATEGORY_ID = MC.ID
         WHERE P.ID = #{id}
     </select>
+
+    <select id="selectAllByPositionOpenDate" resultType="positionDTO">
+        SELECT P.ID, P.COMPANY_ID,P.POSITION_NAME,P.POSITION_INFO, P.POSITION_DUE_DATE ,P.POSITION_OPEN_DATE ,P.POSITION_STATUS,P.MID_CATEGORY_ID, C.COMPANY_NAME, MC.MID_CATEGORY_NAME
+        FROM TBL_COMPANY C JOIN TBL_POSITION P
+        ON P.COMPANY_ID = C.ID
+        JOIN TBL_MID_CATEGORY MC
+        ON P.MID_CATEGORY_ID = MC.ID
+        ORDER BY POSITION_OPEN_DATE DESC
+    </select>
+
+    <select id="selectAllByPositionDueDate" resultType="positionDTO">
+        SELECT P.ID, P.COMPANY_ID,P.POSITION_NAME,P.POSITION_INFO, P.POSITION_DUE_DATE ,P.POSITION_OPEN_DATE ,P.POSITION_STATUS,P.MID_CATEGORY_ID, C.COMPANY_NAME, MC.MID_CATEGORY_NAME
+        FROM TBL_COMPANY C JOIN TBL_POSITION P
+        ON P.COMPANY_ID = C.ID
+        JOIN TBL_MID_CATEGORY MC
+        ON P.MID_CATEGORY_ID = MC.ID
+        ORDER BY POSITION_OPEN_DATE ASC
+    </select>
+
+<!--    <sql id="search">-->
+<!--        <choose>-->
+<!--            <when test="searchOption =='all'">-->
+<!--                POSITION_NAME LIKE '%'||#{search.keyword}||'%'-->
+<!--                OR COMPANY_NAME LIKE '%'||#{search.keyword}||'%'-->
+<!--                OR MID_CATEGORY_NAME LIKE '%'||#{search.keyword}||'%'-->
+<!--            </when>-->
+<!--        </choose>-->
+<!--    </sql>-->
+    <select id="selectAllBySearch" resultType="positionDTO">
+        SELECT MID_CATEGORY_NAME, COMPANY_NAME, POSITION_NAME
+        FROM (
+        SELECT P.ID,P.POSITION_NAME,C.COMPANY_NAME ,MC.MID_CATEGORY_NAME
+        FROM TBL_POSITION P JOIN TBL_MID_CATEGORY MC
+        ON P.MID_CATEGORY_ID = MC.ID
+        JOIN TBL_COMPANY C
+        ON P.COMPANY_ID = C.ID
+        )
+        <if test="keyword != null">
+            WHERE MID_CATEGORY_NAME LIKE '%'||#{keyword}||'%'
+            OR COMPANY_NAME LIKE '%'||#{keyword}||'%'
+            OR POSITION_NAME LIKE '%'||#{keyword}||'%'
+        </if>
+    </select>
+
 </mapper>
