@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.Map;
-import javax.swing.text.html.Option;
-import java.util.Map;
 import java.util.Optional;
 
 @Slf4j
@@ -27,12 +25,13 @@ import java.util.Optional;
 @RequestMapping("/myPage/*")
 public class MyPageController {
     private final BigCategoryDAO bigCategoryDAO;
+    private final MidCategoryDAO midCategoryDAO;
     private final MemberDAO memberDAO;
     private final PositionDAO positionDAO;
     private final ApplyDAO applyDAO;
     private final CompanyDAO companyDAO;
 
-    private final long session = 21L;
+    private final long session = 1L;
 
     @GetMapping("main")
     public String Main(Model model){
@@ -40,16 +39,13 @@ public class MyPageController {
         model.addAttribute("categories", bigCategoryDAO.selectAll());
         model.addAttribute("member", memberVO);
         model.addAttribute("positions", positionDAO.selectAllWithCompanyName());
-        log.info("main entered member No{}...", memberVO.getId());
-        model.addAttribute("positions", applyDAO.selectAll(session));
-        try{
-            if (companyDAO.select(session).isPresent()){
-                model.addAttribute("company", companyDAO.select(session).get());
-            }
-        }catch (NullPointerException e){
-            log.info(e.getMessage());
-        }
+        model.addAttribute("midCategories", midCategoryDAO.selectAll());
 
+        log.info("main entered member No.{}...", memberVO.getId());
+        model.addAttribute("positions", applyDAO.selectAll(session));
+        if (companyDAO.selectCompanyCount(session) >=1){
+            model.addAttribute("company", companyDAO.select(session).get());
+        }
         return "myPage";
     }
 
@@ -63,13 +59,13 @@ public class MyPageController {
         memberDAO.update(memberVO);
 
 
-        try{
+        if (companyDAO.selectCompanyCount(session) >= 1){
             CompanyVO companyVO = companyDAO.select(session).get();
             companyVO.setCompanyVarificationCode((String)map.get("ccode"));
             companyVO.setCompanyName((String)map.get("cname"));
             companyVO.setCompanyAddress((String)map.get("caddress"));
             companyDAO.update(companyVO);
-        }catch (Exception e){
+        }else{
             log.info("not a company member");
             if ((String)map.get("cname")!=null && (String)map.get("ccode") != null) {
                 CompanyVO companyVO = new CompanyVO();
@@ -81,11 +77,17 @@ public class MyPageController {
             }
         }
 
-
+        return new RedirectView("/myPage/main");
+    }
+    @PostMapping("register")
+    public RedirectView register(@RequestParam Map<String,Object> map){
+        log.info((String)map.get("pinfo"));
+        log.info((String)map.get("pname"));
+        log.info((String)map.get("popen"));
+        log.info((String)map.get("pend"));
 
         return new RedirectView("/myPage/main");
     }
-
 
     @PostMapping("remove")
     public RedirectView bookmarkRemove(@RequestParam Map<String,Object> map){

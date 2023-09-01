@@ -407,7 +407,7 @@
                                                 <div class="css-xc4w7p"></div>
                                             </div>
                                         </div>
-                                        <a href="#" class="css-n1tq6f" id="createPositionButton">
+                                        <a href="javascript:void(0);" onclick="createPositionOn()" class="css-n1tq6f" id="createPositionButton">
                                             <div class="css-1dv4z93">
                                                         <span class="css-wzytx3">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-1oe6l0y">
@@ -1058,6 +1058,125 @@
                                         </div>
                                     </div>
                                 </div>
+<!--                                포지션 등록 시작-->
+                                <div class="css-1cse6ch" id="registerContainer">
+                                    <div class="css-1vfplh0">
+                                        <div class="css-pltp4t">
+                                            <h3 class="css-12xicwi">
+                                                자리 등록
+                                            </h3>
+                                        </div>
+                                        <div class="css-rg83xy">
+                                            <form novalidate style="width: auto; height: auto;">
+                                                <div class="css-zsoya5">
+                                                    <div class="css-ohkw6f">
+                                                        <div class="css-15zhte1">
+                                                            <label>
+                                                                <div class="css-15zhte1">
+                                                                    <p class="css-1rejurp" >자리 이름</p>
+                                                                    <div class="css-1k5xfry"></div>
+                                                                    <div class="css-15zhte1">
+                                                                        <input id="positionName" name="nickName" placeholder="자리이름을 입력해주세요." class="css-1av4098" >
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                            <div class="css-oor4vx"></div>
+
+                                                            <label>
+                                                                <div class="css-15zhte1">
+                                                                    <p class="css-1rejurp" >자리 내용</p>
+                                                                    <div class="css-1k5xfry"></div>
+                                                                    <div class="css-15zhte1">
+                                                                        <input id="positionInfo" name="phone" placeholder="자리의 내용을 작성해주세요" class="css-1av4098">
+                                                                        <div class="css-hpn70j"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <p class="css-1t9iucw">
+                                                                                자리 내용은 이 자리가 어떤 자리인지 알려줍니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                            <div class="css-oor4vx"></div>
+                                                            <label>
+                                                                <div class="css-15zhte1">
+                                                                    <p class="css-1rejurp" >자리 시작일</p>
+                                                                    <div class="css-1k5xfry"></div>
+                                                                    <div class="css-15zhte1">
+                                                                        <input type="date" id="positionOpenDate" value="2023-09-02" placeholder="자리의 시작일을 입력해주세요." class="css-1av4098">
+                                                                        <div class="css-hpn70j"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <p class="css-1t9iucw">
+                                                                                자리가 시작하는 날짜를 입력해주세요.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                            <div class="css-oor4vx"></div>
+
+                                                            <label>
+                                                                <div class="css-15zhte1">
+                                                                    <p class="css-1rejurp" >자리 마감일</p>
+                                                                    <div class="css-1k5xfry"></div>
+                                                                    <div class="css-15zhte1">
+                                                                        <input type="date" id="positionDueDate" name="pw" value="2023-09-02" placeholder="자리의 마감일을 입력해주세요." class="css-1av4098">
+                                                                        <div class="css-hpn70j"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <p class="css-1t9iucw">
+                                                                                자리가 마감되는 날짜를 입력해주세요.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                            <div class="css-oor4vx"></div>
+
+                                                            <label>
+                                                                <div class="css-15zhte1">
+                                                                    <p class="css-1rejurp" >자리 분류</p>
+                                                                    <div class="css-1k5xfry"></div>
+                                                                    <div class="css-15zhte1 categorySelection">
+                                                                        <select id="bigCategorySelection" name="bigCategory" class="css-1av4098">
+                                                                            <option disabled value="0" selected>자리 대분류 선택</option>
+                                                                            <th:block th:each = "category : ${categories}">
+                                                                                <option th:value="${category.id}" th:text="${category.bigCategoryName}">
+                                                                                </option>
+                                                                            </th:block>
+                                                                        </select>
+                                                                        <select id="midCategorySelection" name="midCategory" class="css-1av4098">
+                                                                            <option disabled value="0" selected>자리 소분류 선택</option>
+                                                                            <th:block th:each="midCategory : ${midCategories}">
+                                                                                <option class="selection" th:value="${midCategory.id}" th:text="${midCategory.midCategoryName}" th:attr="data-bigcategoryid=${midCategory.bigCategoryId}" style="display: none">
+                                                                                </option>
+                                                                            </th:block>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="css-oor4vx"></div>
+
+                                                    </div>
+                                                    <button type="button" class="css-181thk6" onclick="register()" style="color: rgb(116, 116, 116); --system-on-color: #ff5e00;" id="positionRegisterButton">
+                                                        <div class="css-3kqv01">
+                                                            <div class="css-1bep15o"></div>
+                                                            <span class="css-1f75ggl">
+                                                                등록하기
+                                                            </span>
+                                                            <div class="css-1bep15o"></div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                            <div class="css-1kzabao"></div>
+                                            <div class="css-10492wv"></div>
+                                            <div class="css-1kzabao"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+<!--                                포지션 등록 끝-->
                                 <!-- 마이페이지 상세기능 끝 -->
                             </div>
                             <!-- 마이페이지 끝 -->
@@ -1401,7 +1520,7 @@
         </div>
         <!-- 자리목록 팝업메뉴 끝 -->
         <!-- 모달창 시작 -->
-        <div  id="modalContainer" class="css-7gnsvq" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1); position: fixed; overflow: auto;">
+        <div id="modalContainer" class="css-7gnsvq" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1); position: fixed; overflow: auto;">
             <div class="css-r6966s">
                 <div class="css-1pmmjj5">
                     <div id="modalBg" tabindex="0"class="css-17g2p7t" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
@@ -1436,12 +1555,10 @@
                                 </span>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- 모달창 끝 -->
     </div>
 </div>
@@ -1460,10 +1577,38 @@
     const editContainer = $("#editContainer");
     const bookmarkContainer = $("#bookmarkContainer");
     const positionContainer = $("#positionContainer");
+    const registerContainer = $("#registerContainer");
+
+    const containers = [editContainer,bookmarkContainer,positionContainer,registerContainer];
 
     const saveButton = $("saveButton");
 
 
+    function register(){
+        let positionName = $("#positionName").val();
+        let positionInfo = $("#positionInfo").val();
+        console.log(positionName + " / " + positionInfo);
+        $.ajax({
+            url : "/myPage/register",
+            type : 'post',
+            async: false,
+            data :{
+                pinfo : positionInfo,
+                pname : positionName,
+                popen : $("#positionOpenDate").val(),
+                pend : $("#positionDueDate").val()
+            },
+            success:function () {
+                console.log("position register complete");
+            },
+            error:function(){
+                alert("register error");
+            }
+
+        });
+
+
+    }
     saveButton.click(function(){
         console.log("information saved");
     });
@@ -1483,31 +1628,29 @@
     searchButton.click(function(){
         searchPopUp.css("display", "flex");
         background.css("display", "flex");
-        console.log("searchButton click");
     });
     background.click(function(){
         categoryPopUp.css("display", "none");
         background.css("display", "none");
         searchPopUp.css("display", "none");
-        console.log("background click");
     });
 
     function bookmarkOn() {
+        $.each(containers,function(i, e){$(e).hide()});
         bookmarkContainer.css("display", "flex");
-        editContainer.css("display", "none");
-        positionContainer.css("display", "none")
 
     }
     function editOn(){
+        $.each(containers,function(i, e){$(e).hide()});
         editContainer.css("display", "flex");
-        bookmarkContainer.css("display", "none");
-        positionContainer.css("display", "none")
-
     }
     function positionOn() {
+        $.each(containers,function(i, e){$(e).hide()});
         positionContainer.css("display", "flex");
-        bookmarkContainer.css("display", "none");
-        editContainer.css("display", "none");
+    }
+    function createPositionOn(){
+        $.each(containers,function(i, e){$(e).hide()});
+        registerContainer.css("display","flex")
     }
 </script>
 <script>
@@ -1517,9 +1660,22 @@
     const $listPopupBox = $("#listPopupBox");
     const $positionBox = $(".positionBox");
     const $classCount = $("#classCount");
+    const $bigCategorySelection = $("#bigCategorySelection");
+    const $midCategorySelection = $("#midCategorySelection");
 
     let positionIndex = 0;
     let positionId = 0;
+
+    $bigCategorySelection.change(function(){
+        let categorySelectionIndex = $bigCategorySelection.val();
+        console.log(categorySelectionIndex);
+        $midCategorySelection.find(".selection").hide();
+        $.each($midCategorySelection.find(".selection"),function(i,e){
+            if ($(e).data("bigcategoryid") == categorySelectionIndex){
+                $(e).show();
+            }
+        })
+    });
 
     $.each($positionBox, function(index,e){
         const button = $($(e).find(".positionListPopupButton"));
@@ -1555,6 +1711,7 @@
     $infoButton.click(function(){
         console.log(positionId + " : info");
     });
+
 
     function positionEditDataSend(command){
         $.ajax({
@@ -1692,8 +1849,9 @@
                 }
             });
         }
-
     }
+
+
 
     function saveUserInfo(){
 

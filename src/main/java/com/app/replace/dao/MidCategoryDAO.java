@@ -15,4 +15,5 @@ public class MidCategoryDAO {
     public List<MidCategoryVO> selectById(long id){
         return midCategoryMapper.selectById(id);
     }
+    public List<MidCategoryVO> selectAll(){return midCategoryMapper.selectAll();}
 }

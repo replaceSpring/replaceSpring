@@ -15,5 +15,10 @@
         INSERT INTO TBL_COMPANY(ID,COMPANY_NAME,COMPANY_VARIFICATION_CODE, MEMBER_ID, COMPANY_ADDRESS)
         VALUES(SEQ_COMPANY.NEXTVAL, #{companyName}, #{companyVarificationCode}, #{memberId}, #{companyAddress})
     </insert>
+    <select id="selectCompanyCount" resultType="_int">
+        SELECT COUNT(ID)
+        FROM TBL_COMPANY
+        WHERE MEMBER_ID = #{id}
+    </select>
 </mapper>
 

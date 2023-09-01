@@ -6,4 +6,9 @@
         FROM TBL_MID_CATEGORY MC
         WHERE MC.BIG_CATEGORY_ID = #{id}
     </select>
+    <select id="selectAll" resultType="midCategoryVO">
+        SELECT ID, MID_CATEGORY_NAME, BIG_CATEGORY_ID
+        FROM TBL_MID_CATEGORY
+        ORDER BY ID
+    </select>
 </mapper>

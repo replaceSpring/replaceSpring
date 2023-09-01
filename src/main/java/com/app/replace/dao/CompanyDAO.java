@@ -23,4 +23,7 @@ public class CompanyDAO {
     public void insert(CompanyVO companyVO){
         companyMapper.insert(companyVO);
     }
+    public int selectCompanyCount(long id){
+        return companyMapper.selectCompanyCount(id);
+    }
 }

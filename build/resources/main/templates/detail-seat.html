@@ -453,8 +453,8 @@
                                                                 </div>
                                                                 <div class="css-1tc2doy"></div>
                                                                 <div class="css-la67us"></div>
-                                                                <th:block th:if="${position.companyAddress == 'none'}">
-                                                                    <div class="css-1tc2doy">회사 주소 : <string th:text="${position.companyAddress}"></string></div>
+                                                                <th:block th:if="${position.companyAddress != 'none'}">
+                                                                    <div class="css-1tc2doy">회사 주소 : <strong id="companyAddress" th:text="${position.companyAddress}"></strong></div>
 
                                                                     <div class="css-1tc2doy"></div>
                                                                     <div id="map" style="width:100%;height:350px;"></div>
@@ -605,9 +605,12 @@
     </div>
 </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9dbf59dfb163da9eeeab9e5da60c37b0&libraries=services"></script>
 <script>
-    if ([[${position.companyAddress}]] != "none"){
+    let address = $("#companyAddress").text();
+
+    if (address != "none"){
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             mapOption = {
                 center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -620,7 +623,7 @@
         // 주소-좌표 변환 객체를 생성합니다
         var geocoder = new kakao.maps.services.Geocoder();
         // 주소로 좌표를 검색합니다
-        geocoder.addressSearch("서울시", function(result, status) {
+        geocoder.addressSearch(address, function(result, status) {
 
             // 정상적으로 검색이 완료됐으면
             if (status === kakao.maps.services.Status.OK) {
