@@ -19,6 +19,7 @@ public class PositionController {
     @GetMapping("list")
     public String list(Search search, Model model){
         model.addAttribute("positions", searchService.getList(search));
+        log.info(searchService.getList(search).toString());
         return "list";
     }
 

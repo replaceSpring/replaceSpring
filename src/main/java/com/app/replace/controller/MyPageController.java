@@ -32,7 +32,7 @@ public class MyPageController {
     private final ApplyDAO applyDAO;
     private final CompanyDAO companyDAO;
 
-    private final long session = 102L;
+    private final long session = 66L;
 
     @GetMapping("main")
     public String Main(Model model){

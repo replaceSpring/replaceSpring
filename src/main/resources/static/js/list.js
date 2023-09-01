@@ -29,9 +29,9 @@ $(document).ready(function(){
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="css-1h9gj2l"><h2 data-testid="title" class="css-es3o19">${position.positionName}
+                                            <div class="css-1h9gj2l"><h2 data-testid="title" class="css-es3o19">[[${position.positionName}]]
                                                 </h2><span class="css-1k0q1kx"></span>
-                                                <h2 data-testid="body" class="css-o90gdq">${position.midCategoryName}|${position.companyName}</h2>
+                                                <h2 data-testid="body" class="css-o90gdq">[[${position.midCategoryName}]]|$[[{position.companyName}]]</h2>
                                             </div>
                                         </a></div>
                                         <div class="css-60ifsp"

@@ -557,10 +557,9 @@
             </div>
         </div>
         <div class="css-u4797e"></div>
-</div>
 <div class="css-10c2f7i"></div>
-</div>
 </main>
+</div>
 <!--    하단바 -->
 <div id="portal-root" class="css-37paae">
     <div class="css-1y9khfs" style="position: fixed;">
@@ -664,6 +663,7 @@
         let type = $("select[name=type]").val();
         let keyword = $("input[name=keyword]").val();
         let text = "";
+        console.log(positions);
         positions.forEach(position => {
             text += `
                                             <li class="css-iftixr" style="margin-right:15px; margin-top:10px;">
@@ -677,12 +677,8 @@
                                                             <div class="css-60ifsp"
                                                                  style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3;">
                                                                 <picture data-testid="image" class="css-eti150">
-                                                                    <source type="image/webp"
-                                                                            srcset="https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/640xauto.webp 640w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/750xauto.webp 750w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/828xauto.webp 828w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1080xauto.webp 1080w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1200xauto.webp 1200w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1920xauto.webp 1920w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/2048xauto.webp 2048w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/3840xauto.webp 3840w"
-                                                                            sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
                                                                     <img class="css-1u3hmek" draggable="false" alt=""
-                                                                         srcset="https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/640xauto 640w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/750xauto 750w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/828xauto 828w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1080xauto 1080w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1200xauto 1200w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/1920xauto 1920w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/2048xauto 2048w,https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26/3840xauto 3840w"
-                                                                         src="https://cdn.class101.net/images/110df2e9-4513-4d54-982c-1e795b084e26"
+                                                                         src="/file/display?memberId=${position.memberId}"
                                                                          sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
                                                                          loading="eager"></picture>
                                                             </div>
@@ -692,7 +688,7 @@
                                             </div>
                                             <div class="css-1h9gj2l"><h2 data-testid="title" class="css-es3o19">${position.positionName}
                                                 </h2><span class="css-1k0q1kx"></span>
-                                                <h2 data-testid="body" class="css-o90gdq">${position.midCategoryName}&nbsp|&nbsp${position.companyName}</h2>
+                                                <h2 data-testid="body" class="css-o90gdq"> ${position.midCategoryName}&nbsp|&nbsp${position.companyName}</h2>
                                             </div>
                                         </a></div>
                                         <div class="css-60ifsp"
@@ -715,5 +711,6 @@
 
         $ul.html(text);
     }
+
 </script>
 </html>
