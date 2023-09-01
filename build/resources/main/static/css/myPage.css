@@ -1973,3 +1973,6 @@
 #profileImg{
     display : none;
 }
+#saveButton:active{
+    opacity: 50%;
+}
