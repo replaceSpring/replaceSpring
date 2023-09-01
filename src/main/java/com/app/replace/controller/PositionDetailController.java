@@ -21,14 +21,18 @@ public class PositionDetailController {
     private final MemberDAO memberDAO;
     private final PositionDAO positionDAO;
 
-    private final long session = 1L;
-    private final long positionId = 1L;
+    private final long session = 21L;
 
     @GetMapping("detail")
     public String gotoDetail(@RequestParam("positionId") String positionId, Model model){
         PositionDTO positionDTO = positionDAO.select(Long.parseLong(positionId));
-
+        MemberVO memberVO = memberDAO.select(session);
+        positionDTO.setPositionOpenDate(positionDTO.getPositionOpenDate().split(" ")[0].replace("-","/"));
+        positionDTO.setPositionDueDate(positionDTO.getPositionDueDate().split(" ")[0].replace("-","/"));
+        model.addAttribute("position", positionDTO);
         log.info("position entered :  {}....", positionDTO.toString());
+        model.addAttribute("member", memberVO);
+        log.info("member entered : {}....", memberVO);
         return "detail-seat";
     }
 

@@ -2,18 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.app.replace.mapper.CompanyMapper">
     <select id="select" resultType="companyVO">
-        SELECT ID, COMPANY_NAME, COMPANY_VARIFICATION_CODE, MEMBER_ID
+        SELECT ID, COMPANY_NAME, COMPANY_VARIFICATION_CODE, MEMBER_ID, COMPANY_ADDRESS
         FROM TBL_COMPANY
         WHERE MEMBER_ID = #{id}
     </select>
     <update id="update">
         UPDATE TBL_COMPANY
-        SET COMPANY_NAME = #{companyName}, COMPANY_VARIFICATION_CODE = #{companyVarificationCode}
+        SET COMPANY_NAME = #{companyName}, COMPANY_VARIFICATION_CODE = #{companyVarificationCode}, COMPANY_ADDRESS = #{companyAddress}
         WHERE MEMBER_ID = #{memberId}
     </update>
     <insert id="insert">
-        INSERT INTO TBL_COMPANY(ID,COMPANY_NAME,COMPANY_VARIFICATION_CODE, MEMBER_ID)
-        VALUES(SEQ_COMPANY.NEXTVAL, #{companyName}, #{companyVarificationCode}, #{memberId})
+        INSERT INTO TBL_COMPANY(ID,COMPANY_NAME,COMPANY_VARIFICATION_CODE, MEMBER_ID, COMPANY_ADDRESS)
+        VALUES(SEQ_COMPANY.NEXTVAL, #{companyName}, #{companyVarificationCode}, #{memberId}, #{companyAddress})
     </insert>
 </mapper>
 

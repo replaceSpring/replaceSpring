@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleag.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -958,6 +958,22 @@
                                                                         </div>
                                                                     </div>
                                                                 </label>
+                                                                <div class="css-oor4vx"></div>
+                                                                <label>
+                                                                    <div class="css-15zhte1">
+                                                                        <p class="css-1rejurp" >회사 주소</p>
+                                                                        <div class="css-1k5xfry"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <input name="" placeholder="주소를 입력해주세요" class="css-1av4098 companyAddress" value="(전화번호)" th:value = ${company.companyAddress}>
+                                                                            <div class="css-hpn70j"></div>
+                                                                            <div class="css-15zhte1">
+                                                                                <p class="css-1t9iucw">
+                                                                                    올바른 주소를 입력했는지 확인해 주세요.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </label>
 
 
                                                             </div>
@@ -996,8 +1012,22 @@
                                                                         </div>
                                                                     </div>
                                                                 </label>
-
-
+                                                                <div class="css-oor4vx"></div>
+                                                                <label>
+                                                                    <div class="css-15zhte1">
+                                                                        <p class="css-1rejurp" >회사 주소</p>
+                                                                        <div class="css-1k5xfry"></div>
+                                                                        <div class="css-15zhte1">
+                                                                            <input name="" placeholder="주소를 입력해주세요" class="css-1av4098 companyAddress">
+                                                                            <div class="css-hpn70j"></div>
+                                                                            <div class="css-15zhte1">
+                                                                                <p class="css-1t9iucw">
+                                                                                    잘못된 기업인증번호 등록시 불이익이 있을 수 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </label>
                                                             </div>
                                                         </th:block>
 
@@ -1616,7 +1646,8 @@
     const $memberPhone = $("#memberPhone");
     const $memberNickname = $("#memberNickname");
     const $companyName = $(".companyName");
-    const $companyCode = $(".companyCode")
+    const $companyCode = $(".companyCode");
+    const $companyAddress = $(".companyAddress");
 
     const $profileInput = $("#profileInput");
     const $profileImg = $("#profileImg");
@@ -1694,7 +1725,8 @@
                     phone: $memberPhone.prop("value"),
                     nickname:$memberNickname.prop("value"),
                     cname: $companyName.prop("value"),
-                    ccode: $companyCode.val()
+                    ccode: $companyCode.val(),
+                    caddress: $companyAddress.val()
                 },
                 success:function () {
                     console.log("user updated");

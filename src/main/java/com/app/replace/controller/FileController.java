@@ -27,13 +27,10 @@ public class FileController {
     private final String projectPath = System.getProperty("user.dir").replace("\\","/");
     private final String imageFilePath = "/src/main/resources/static/images/";
 
-    private final long session = 2L;
-
     @PostMapping("upload")
     @ResponseBody
     public String upload(@RequestParam("uploadFile")MultipartFile uploadFile, @RequestParam("memberId")long memberId) throws IOException {
         String path = projectPath + imageFilePath + getPath();
-
         String uuid = UUID.randomUUID().toString();
         String fileName = uuid + "_" + uploadFile.getOriginalFilename();
         File file = new File(path);
@@ -41,8 +38,6 @@ public class FileController {
         if (!file.exists()){
             file.mkdirs();
         }
-
-        uploadFile.transferTo(new File(path, fileName));
 
         fileVO.setFileName(uploadFile.getOriginalFilename());
         fileVO.setFilePath(getPath());
@@ -53,20 +48,13 @@ public class FileController {
 
         log.info("file info : {}......", fileVO);
 
-        try{
-            if (fileDAO.getFile(fileVO.getMemberId()).isPresent()){
-                fileDAO.update(fileVO);
-            }
-        }catch (NoSuchElementException e){
+        if (fileDAO.getFileCountById(fileVO.getMemberId())>=1){ // 유저의 파일이 하나 이상일 때....
+            fileDAO.update(fileVO);
+            uploadFile.transferTo(new File(path, fileName));
+
+        }else {
             fileDAO.save(fileVO);
-        }
-
-
-        if (uploadFile.getContentType().startsWith("image")){
-//            FileOutputStream out = new FileOutputStream(new File(path, "t_" + uuid + "_" + uploadFile.getOriginalFilename()));
-//            Thumbnailator.createThumbnail(uploadFile.getInputStream(),out,100,100);
-//            out.close();
-            log.info("making Thumbnail.......");
+            uploadFile.transferTo(new File(path, fileName));
         }
 
         return uuid;
@@ -79,12 +67,12 @@ public class FileController {
     @GetMapping("display")
     @ResponseBody
     public byte[] display(String memberId) throws IOException{
-        log.info("display entered");
 
 
         Optional<FileVO> fileVO = fileDAO.getFile(Long.parseLong(memberId));
+        log.info("display entered member : {}" ,memberId);
 
-        if (fileVO.isPresent())
+        if (fileDAO.getFileCountById(Long.parseLong(memberId)) >= 1)//유저의 파일이 하나 이상일 때....
         {
             return FileCopyUtils.copyToByteArray(new File(projectPath + imageFilePath, fileVO.get().getFilePath()+ "/" + fileVO.get().getFileUuid() + "_" + fileVO.get().getFileName()));
         }else{

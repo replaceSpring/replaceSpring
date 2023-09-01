@@ -19,4 +19,5 @@ public class  PositionDTO {
     private long midCategoryId;
     private String companyName;
     private String midCategoryName;
+    private String companyAddress;
 }
