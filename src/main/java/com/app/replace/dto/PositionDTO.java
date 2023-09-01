@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 public class  PositionDTO {
     private long id;
+    private long memberId;
     private long companyId;
     private String positionName;
     private String positionInfo;
@@ -18,4 +19,5 @@ public class  PositionDTO {
     private long midCategoryId;
     private String companyName;
     private String midCategoryName;
+    private String companyAddress;
 }

@@ -32,7 +32,7 @@ public class MyPageController {
     private final ApplyDAO applyDAO;
     private final CompanyDAO companyDAO;
 
-    private final long session = 1L;
+    private final long session = 21L;
 
     @GetMapping("main")
     public String Main(Model model){
@@ -40,7 +40,7 @@ public class MyPageController {
         model.addAttribute("categories", bigCategoryDAO.selectAll());
         model.addAttribute("member", memberVO);
         model.addAttribute("positions", positionDAO.selectAllWithCompanyName());
-        log.info("main entered...");
+        log.info("main entered member No{}...", memberVO.getId());
         model.addAttribute("positions", applyDAO.selectAll(session));
         try{
             if (companyDAO.select(session).isPresent()){
@@ -60,7 +60,6 @@ public class MyPageController {
         memberVO.setMemberNickname((String)map.get("nickname"));
         memberVO.setMemberPassword((String)map.get("password"));
 
-        log.info("{} : {}…….","update",memberVO.toString());
         memberDAO.update(memberVO);
 
 
@@ -68,6 +67,7 @@ public class MyPageController {
             CompanyVO companyVO = companyDAO.select(session).get();
             companyVO.setCompanyVarificationCode((String)map.get("ccode"));
             companyVO.setCompanyName((String)map.get("cname"));
+            companyVO.setCompanyAddress((String)map.get("caddress"));
             companyDAO.update(companyVO);
         }catch (Exception e){
             log.info("not a company member");
@@ -76,12 +76,11 @@ public class MyPageController {
                 companyVO.setMemberId(session);
                 companyVO.setCompanyVarificationCode((String)map.get("ccode"));
                 companyVO.setCompanyName((String)map.get("cname"));
-                log.info(companyVO.toString());
+                companyVO.setCompanyAddress((String)map.get("caddress"));
                 companyDAO.insert(companyVO);
             }
         }
 
-        memberDAO.update(memberVO);
 
 
         return new RedirectView("/myPage/main");
@@ -92,6 +91,7 @@ public class MyPageController {
     public RedirectView bookmarkRemove(@RequestParam Map<String,Object> map){
 
         log.info("{} : {}.......","remove",(String)map.get("pId"));
+
 
         return new RedirectView("/myPage/main");
     }

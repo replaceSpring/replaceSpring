@@ -12,4 +12,5 @@ public class CompanyVO {
     private String companyName;
     private String companyVarificationCode;
     private long memberId;
+    private String companyAddress;
 }
