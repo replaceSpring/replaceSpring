@@ -43,6 +43,7 @@ public class MyPageController {
 
         log.info("main entered member No.{}...", memberVO.getId());
         model.addAttribute("positions", applyDAO.selectAll(session));
+  
         if (companyDAO.selectCompanyCount(session) >=1){
             model.addAttribute("company", companyDAO.select(session).get());
         }

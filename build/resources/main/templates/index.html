@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Replace</title>
+    <title>Index</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -91,7 +91,7 @@
                                         <div class="css-12fz3yr">
                                             <div class="css-esw18d">
                                                 <a href="/ko/login?redirect=%2Fko%2Fbrowse%3FnoRedirect%3Dtrue&amp;onboardingAfterSignUp=true">
-                                                    <p class="css-1b055sq">로그인</p>
+<!--                                                    <p class="css-1b055sq" th: th:href="@{/member/login}">로그인</p>-->
                                                 </a>
                                             </div>
                                         </div>
@@ -754,7 +754,7 @@
                                                                                                     <img class="css-1u3hmek"
                                                                                                          draggable="false"
                                                                                                          alt=""
-                                                                                                         th:src="@{/file/display?memberId=} + ${positionsByOpenDate[0].id}"
+                                                                                                         th:src="@{/file/display?memberId=} + ${positionsByOpenDate[0].memberId}"
                                                                                                          sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
                                                                                                          loading="lazy">
                                                                                                 </picture>
@@ -817,7 +817,7 @@
                                                                                                         <img class="css-1u3hmek"
                                                                                                              draggable="false"
                                                                                                              alt=""
-                                                                                                             th:src="@{/file/display?memberId=} + ${positionsByOpenDate[numStat.current].id}"
+                                                                                                             th:src="@{/file/display?memberId=} + ${positionsByOpenDate[numStat.current].memberId}"
                                                                                                              sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
                                                                                                              loading="lazy">
                                                                                                     </picture>
@@ -980,7 +980,7 @@
                                                                                                     <img class="css-1u3hmek"
                                                                                                          draggable="false"
                                                                                                          alt=""
-                                                                                                         th:src="@{/file/display?memberId=} + ${positionsByDueDate[0].id}"
+                                                                                                         th:src="@{/file/display?memberId=} + ${positionsByDueDate[0].memberId}"
                                                                                                          sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
                                                                                                          loading="lazy">
                                                                                                 </picture>
@@ -1101,7 +1101,7 @@
                                                                                                     <img class="css-1u3hmek"
                                                                                                          draggable="false"
                                                                                                          alt=""
-                                                                                                         th:src="@{/file/display?memberId=} + ${positionsByDueDate[numStat.current].id}"
+                                                                                                         th:src="@{/file/display?memberId=} + ${positionsByDueDate[numStat.current].memberId}"
                                                                                                          sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
                                                                                                          loading="lazy">
                                                                                                 </picture>
@@ -1631,5 +1631,5 @@
     let positions = [[${positions}]];
     let keyword = $("input[name=keyword]").val();
 </script>
-<script src="js/list.js"></script>
+<script src="/js/list.js"></script>
 </html>
