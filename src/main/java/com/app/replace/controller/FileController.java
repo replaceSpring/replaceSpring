@@ -70,12 +70,13 @@ public class FileController {
 
 
         Optional<FileVO> fileVO = fileDAO.getFile(Long.parseLong(memberId));
-        log.info("display entered member : {}" ,memberId);
 
         if (fileDAO.getFileCountById(Long.parseLong(memberId)) >= 1)//유저의 파일이 하나 이상일 때....
         {
+            log.info("display entered member : {} IMG SEND SUCCESSFUL {}" ,memberId, fileVO.get().getFileName());
             return FileCopyUtils.copyToByteArray(new File(projectPath + imageFilePath, fileVO.get().getFilePath()+ "/" + fileVO.get().getFileUuid() + "_" + fileVO.get().getFileName()));
         }else{
+            log.info("display entered member : {} NO PROFILE IMG" ,memberId);
             return FileCopyUtils.copyToByteArray(new File(projectPath + imageFilePath, "defaultProfileImg.jpg"));
 
         }
