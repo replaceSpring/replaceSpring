@@ -217,7 +217,7 @@
                                                         </a>
                                                         <span class="css-gefh0b"></span>
                                                         <th:block th:each="num : ${#numbers.sequence(0,2)}">
-                                                            <a class="css-346lod" th:href="${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <a class="css-346lod" th:href="@{/positionList/positions?cid=} + ${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
                                                                 </h3>
                                                             </a>
@@ -227,7 +227,7 @@
                                                     <div class="css-iis9oy"></div>
                                                     <div class="css-14fzkbc">
                                                         <th:block th:each="num : ${#numbers.sequence(3,6)}">
-                                                            <a class="css-346lod" th:href="${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <a class="css-346lod" th:href="@{/positionList/positions?cid=} + ${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
                                                                 </h3>
                                                             </a>
@@ -238,7 +238,7 @@
                                                     <div class="css-iis9oy"></div>
                                                     <div class="css-14fzkbc">
                                                         <th:block th:each="num : ${#numbers.sequence(7,10)}">
-                                                            <a class="css-346lod" th:href="${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <a class="css-346lod" th:href="@{/positionList/positions?cid=} + ${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
                                                                 </h3>
                                                             </a>
@@ -248,7 +248,7 @@
                                                     <div class="css-iis9oy"></div>
                                                     <div class="css-14fzkbc">
                                                         <th:block th:each="num : ${#numbers.sequence(11,14)}">
-                                                            <a class="css-346lod" th:href="${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <a class="css-346lod" th:href="@{/positionList/positions?cid=} + ${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
                                                                 </h3>
                                                             </a>
@@ -258,7 +258,7 @@
                                                     <div class="css-iis9oy"></div>
                                                     <div class="css-14fzkbc">
                                                         <th:block th:each="num : ${#numbers.sequence(15,18)}">
-                                                            <a class="css-346lod" th:href="${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
+                                                            <a class="css-346lod" th:href="@{/positionList/positions?cid=} + ${categories[numStat.current].id}" style="opacity: 1; transition-property: opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);">
                                                                 <h3  class="css-13vbe2p"th:text="${categories[numStat.current].bigCategoryName}">
                                                                 </h3>
                                                             </a>
@@ -750,13 +750,11 @@
                                                                                                         data-testid="image"
                                                                                                         class="css-eti150">
                                                                                                     <source type="image/webp"
-                                                                                                            srcset="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMDRfMjAy%2FMDAxNTQzOTMyNDI4Nzk1.G4pOasKFdPjvfNxhhGI8gY0gUuvGHq1qjDqHMKvi2S8g.3bX3ZNMI5P-ZM1jmFDPjDD5FZt1hDPnI9oL7sTTTCa0g.JPEG.cogito658%2F%25C4%25ED%25C6%25CE%25B7%25CE%25B0%25ED.jpg&type=sc960_832"
                                                                                                             sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
                                                                                                     <img class="css-1u3hmek"
                                                                                                          draggable="false"
                                                                                                          alt=""
-                                                                                                         srcset="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMDRfMjAy%2FMDAxNTQzOTMyNDI4Nzk1.G4pOasKFdPjvfNxhhGI8gY0gUuvGHq1qjDqHMKvi2S8g.3bX3ZNMI5P-ZM1jmFDPjDD5FZt1hDPnI9oL7sTTTCa0g.JPEG.cogito658%2F%25C4%25ED%25C6%25CE%25B7%25CE%25B0%25ED.jpg&type=sc960_832"
-                                                                                                         src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMDRfMjAy%2FMDAxNTQzOTMyNDI4Nzk1.G4pOasKFdPjvfNxhhGI8gY0gUuvGHq1qjDqHMKvi2S8g.3bX3ZNMI5P-ZM1jmFDPjDD5FZt1hDPnI9oL7sTTTCa0g.JPEG.cogito658%2F%25C4%25ED%25C6%25CE%25B7%25CE%25B0%25ED.jpg&type=sc960_832"
+                                                                                                         th:src="@{/file/display?memberId=} + ${positionsByOpenDate[0].id}"
                                                                                                          sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
                                                                                                          loading="lazy">
                                                                                                 </picture>
@@ -815,13 +813,11 @@
                                                                                                             data-testid="image"
                                                                                                             class="css-eti150">
                                                                                                         <source type="image/webp"
-                                                                                                                srcset="https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/640xauto.webp 640w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/750xauto.webp 750w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/828xauto.webp 828w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/1080xauto.webp 1080w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/1200xauto.webp 1200w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/1920xauto.webp 1920w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/2048xauto.webp 2048w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/3840xauto.webp 3840w"
                                                                                                                 sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
                                                                                                         <img class="css-1u3hmek"
                                                                                                              draggable="false"
                                                                                                              alt=""
-                                                                                                             srcset="https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/640xauto 640w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/750xauto 750w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/828xauto 828w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/1080xauto 1080w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/1200xauto 1200w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/1920xauto 1920w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/2048xauto 2048w,https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1/3840xauto 3840w"
-                                                                                                             src="https://cdn.class101.net/images/3505bbce-6bb1-4e7b-8247-1a2993372ef1"
+                                                                                                             th:src="@{/file/display?memberId=} + ${positionsByOpenDate[numStat.current].id}"
                                                                                                              sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
                                                                                                              loading="lazy">
                                                                                                     </picture>
@@ -980,13 +976,11 @@
                                                                                                         data-testid="image"
                                                                                                         class="css-eti150">
                                                                                                     <source type="image/webp"
-                                                                                                            srcset="https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/640xauto.webp 640w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/750xauto.webp 750w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/828xauto.webp 828w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1080xauto.webp 1080w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1200xauto.webp 1200w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1920xauto.webp 1920w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/2048xauto.webp 2048w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/3840xauto.webp 3840w"
                                                                                                             sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
                                                                                                     <img class="css-1u3hmek"
                                                                                                          draggable="false"
                                                                                                          alt=""
-                                                                                                         srcset="https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/640xauto 640w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/750xauto 750w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/828xauto 828w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1080xauto 1080w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1200xauto 1200w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/1920xauto 1920w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/2048xauto 2048w,https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143/3840xauto 3840w"
-                                                                                                         src="https://cdn.class101.net/images/d0e1941a-0695-4e00-b0c6-3971ac8f0143"
+                                                                                                         th:src="@{/file/display?memberId=} + ${positionsByDueDate[0].id}"
                                                                                                          sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
                                                                                                          loading="lazy">
                                                                                                 </picture>
@@ -1043,11 +1037,9 @@
                                                                                                         data-testid="image"
                                                                                                         class="css-10evqi9">
                                                                                                     <source type="image/webp"
-                                                                                                            srcset="https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/640xauto.webp 640w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/750xauto.webp 750w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/828xauto.webp 828w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1080xauto.webp 1080w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1200xauto.webp 1200w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1920xauto.webp 1920w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/2048xauto.webp 2048w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/3840xauto.webp 3840w">
                                                                                                     <img class="css-1u3hmek"
                                                                                                          data-testid="image"
                                                                                                          draggable="false"
-                                                                                                         srcset="https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/640xauto 640w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/750xauto 750w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/828xauto 828w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1080xauto 1080w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1200xauto 1200w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1920xauto 1920w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/2048xauto 2048w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/3840xauto 3840w"
                                                                                                          src="https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685"
                                                                                                          loading="lazy">
                                                                                                 </picture>
@@ -1105,13 +1097,11 @@
                                                                                                         data-testid="image"
                                                                                                         class="css-eti150">
                                                                                                     <source type="image/webp"
-                                                                                                            srcset="https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/640xauto.webp 640w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/750xauto.webp 750w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/828xauto.webp 828w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1080xauto.webp 1080w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1200xauto.webp 1200w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1920xauto.webp 1920w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/2048xauto.webp 2048w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/3840xauto.webp 3840w"
                                                                                                             sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px">
                                                                                                     <img class="css-1u3hmek"
                                                                                                          draggable="false"
                                                                                                          alt=""
-                                                                                                         srcset="https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/640xauto 640w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/750xauto 750w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/828xauto 828w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1080xauto 1080w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1200xauto 1200w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/1920xauto 1920w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/2048xauto 2048w,https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685/3840xauto 3840w"
-                                                                                                         src="https://cdn.class101.net/images/c3399227-5156-4af0-8e1f-934542a82685"
+                                                                                                         th:src="@{/file/display?memberId=} + ${positionsByDueDate[numStat.current].id}"
                                                                                                          sizes="(max-width: 640px) 160px,(max-width: 1024px) 200px,250px"
                                                                                                          loading="lazy">
                                                                                                 </picture>
@@ -1639,9 +1629,7 @@
 </script>
 <script th:inline="javascript">
     let positions = [[${positions}]];
-    let order = [[${search.order}]]
-    let keyword = [[${search.keyword}]];    // search.keyword가 맞는지?
+    let keyword = $("input[name=keyword]").val();
 </script>
 <script src="js/list.js"></script>
-<script src="paging.js"></script>
 </html>
