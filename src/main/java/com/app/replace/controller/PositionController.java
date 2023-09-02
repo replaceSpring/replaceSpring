@@ -26,6 +26,7 @@ public class PositionController {
         model.addAttribute("categories", bigCategoryDAO.selectAll());
 
         log.info(searchService.getList(search).toString());
+        log.info(search.toString());
         return "list";
     }
 
