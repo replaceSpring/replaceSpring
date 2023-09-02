@@ -1973,6 +1973,51 @@
 #profileImg{
     display : none;
 }
-#saveButton:active{
+button:active{
     opacity: 50%;
 }
+#registerContainer{
+    display: none;
+}
+
+#bigCategorySelection{
+    width: 40%;
+}
+#midCategorySelection{
+    width: 40%;
+}
+.categorySelection{
+    display: block;
+}
+input[type='date'] {
+    border: none;
+position: relative;
+width: 80%;
+    padding: 10px;
+background-color: #bbbbbb;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 100%;
+    margin-bottom: 20px;
+}
+   input[type='date']::-webkit-calendar-picker-indicator {
+       position: absolute;
+   left: 0;
+       top: 0;
+       width: 80%;
+       height: 100%;
+       background: transparent;
+   color: transparent;
+   cursor: pointer;
+   }
+
+   input[type='date']::before {
+       content: attr(placeholder);
+   width: 80%;
+       height: 100%;
+   }
+
+   input[type='date']:valid::before {
+       display: none;
+   }

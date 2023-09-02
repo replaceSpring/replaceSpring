@@ -10,5 +10,6 @@ public interface CompanyMapper {
     public Optional<CompanyVO> select(long id);
     public void update(CompanyVO companyVO);
     public void insert(CompanyVO companyVO);
+    public int selectCompanyCount(long id);
 
 }

@@ -8,4 +8,5 @@ import java.util.List;
 @Mapper
 public interface MidCategoryMapper {
     public List<MidCategoryVO> selectById(long id);
+    public List<MidCategoryVO> selectAll();
 }
