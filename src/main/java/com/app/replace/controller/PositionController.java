@@ -20,6 +20,7 @@ public class PositionController {
     public String list(Search search, Model model){
         model.addAttribute("positions", searchService.getList(search));
         log.info(searchService.getList(search).toString());
+        log.info(search.toString());
         return "list";
     }
 
