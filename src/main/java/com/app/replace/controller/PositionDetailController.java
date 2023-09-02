@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Slf4j
@@ -23,12 +24,13 @@ public class PositionDetailController {
     private final PositionDAO positionDAO;
     private final ApplyDAO applyDAO;
 
-    private final long session = 1L;
+//    private final long session = 1L;
+    private final HttpSession session;
 
     @GetMapping("detail")
     public String gotoDetail(@RequestParam("positionId") String positionId, Model model){
         PositionDTO positionDTO = positionDAO.select(Long.parseLong(positionId));
-        MemberVO memberVO = memberDAO.select(session);
+        MemberVO memberVO = memberDAO.select((Long)session.getAttribute("id"));
         positionDTO.setPositionOpenDate(positionDTO.getPositionOpenDate().split(" ")[0].replace("-","/"));
         positionDTO.setPositionDueDate(positionDTO.getPositionDueDate().split(" ")[0].replace("-","/"));
         model.addAttribute("position", positionDTO);

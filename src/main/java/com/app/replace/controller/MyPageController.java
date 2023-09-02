@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.net.ssl.HttpsURLConnection;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -35,26 +37,29 @@ public class MyPageController {
     private final ApplyDAO applyDAO;
     private final CompanyDAO companyDAO;
 
-    private final long session = 1L;
+//    private final long session = 1L;
+
+    private final HttpSession session;
+
 
     @GetMapping("main")
     public String Main(Model model){
-        MemberVO memberVO = memberDAO.select(session);
+        MemberVO memberVO = memberDAO.select((Long)session.getAttribute("id"));
 
         model.addAttribute("categories", bigCategoryDAO.selectAll());
         model.addAttribute("member", memberVO);
 //        model.addAttribute("positions", positionDAO.selectAllWithCompanyName());
         model.addAttribute("midCategories", midCategoryDAO.selectAll());
-        model.addAttribute("positions", applyDAO.selectAll(session));
-//        model.addAttribute("positions", positionDAO.selectFavorites(session));
+        model.addAttribute("positions", applyDAO.selectAll((Long)session.getAttribute("id")));
+//        model.addAttribute("positions", positionDAO.selectFavorites((Long)session.getAttribute("id")));
 
 
-        if (companyDAO.selectCompanyCount(session) > 0){
-            model.addAttribute("company", companyDAO.select(session).get());
+        if (companyDAO.selectCompanyCount((Long)session.getAttribute("id")) > 0){
+            model.addAttribute("company", companyDAO.select((Long)session.getAttribute("id")).get());
         }
 
-        if (positionDAO.selectPositionCountByMemberId(session) > 0){
-            List<PositionDTO> positionDTOList = positionDAO.selectAllByMemberId(session);
+        if (positionDAO.selectPositionCountByMemberId((Long)session.getAttribute("id")) > 0){
+            List<PositionDTO> positionDTOList = positionDAO.selectAllByMemberId((Long)session.getAttribute("id"));
             positionDTOList.forEach((pos)->{
                 pos.setPositionDueDate(pos.getPositionDueDate().split(" ")[0].replace("-","/"));
                 pos.setPositionOpenDate(pos.getPositionOpenDate().split(" ")[0].replace("-","/"));
@@ -67,7 +72,7 @@ public class MyPageController {
 
     @PostMapping("update")
     public RedirectView update(@RequestParam Map<String,Object> map){
-        MemberVO memberVO = memberDAO.select(session);
+        MemberVO memberVO = memberDAO.select((Long)session.getAttribute("id"));
         memberVO.setMemberPhone((String)map.get("phone"));
         memberVO.setMemberNickname((String)map.get("nickname"));
         memberVO.setMemberPassword((String)map.get("password"));
@@ -75,8 +80,8 @@ public class MyPageController {
         memberDAO.update(memberVO);
 
 
-        if (companyDAO.selectCompanyCount(session) >= 1){
-            CompanyVO companyVO = companyDAO.select(session).get();
+        if (companyDAO.selectCompanyCount((Long)session.getAttribute("id")) >= 1){
+            CompanyVO companyVO = companyDAO.select((Long)session.getAttribute("id")).get();
             companyVO.setCompanyVarificationCode((String)map.get("ccode"));
             companyVO.setCompanyName((String)map.get("cname"));
             companyVO.setCompanyAddress((String)map.get("caddress"));
@@ -85,7 +90,7 @@ public class MyPageController {
             log.info("not a company member");
             if ((String)map.get("cname")!=null && (String)map.get("ccode") != null) {
                 CompanyVO companyVO = new CompanyVO();
-                companyVO.setMemberId(session);
+                companyVO.setMemberId((Long)session.getAttribute("id"));
                 companyVO.setCompanyVarificationCode((String)map.get("ccode"));
                 companyVO.setCompanyName((String)map.get("cname"));
                 companyVO.setCompanyAddress((String)map.get("caddress"));
