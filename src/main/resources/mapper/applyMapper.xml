@@ -12,6 +12,27 @@
         WHERE A.MEMBER_ID = #{id}
         ORDER BY A.POSITION_ID
     </select>
-
+    <delete id="deleteByPositionId">
+        DELETE FROM TBL_APPLY
+        WHERE POSITION_ID = #{id}
+    </delete>
+    <delete id="deleteByPositionAndMemberId">
+        DELETE FROM TBL_APPLY
+        WHERE POSITION_ID = #{positionId} AND MEMBER_ID = #{memberId}
+    </delete>
+    <insert id="insert">
+        INSERT INTO TBL_APPLY(ID, MEMBER_ID, POSITION_ID, APPLY_STATUS)
+        VALUES(SEQ_APPLY.NEXTVAL, #{memberId}, #{positionId}, #{applyStatus})
+    </insert>
+    <select id="check" resultType="_int">
+        SELECT COUNT(ID)
+        FROM TBL_APPLY
+        WHERE MEMBER_ID = #{memberId} AND POSITION_ID = #{positionId}
+    </select>
+    <select id="checkByMemberId" resultType="_int">
+        SELECT COUNT(ID)
+        FROM TBL_APPLY
+        WHERE MEMBER_ID = #{id}
+    </select>
 </mapper>
 

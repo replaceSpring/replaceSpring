@@ -26,4 +26,10 @@ public interface PositionMapper {
     //  검색한 자리 목록
     public List<PositionDTO> selectAllBySearch(Search search);
     public List<PositionDTO> selectByBigCategory(long id);
+    public void insert(PositionVO positionVO);
+    public List<PositionDTO> selectAllByMemberId(long id);
+    public int selectPositionCountByMemberId(long id);
+    public void deletePositionById(long id);
+    public List<PositionDTO> selectFavorites(long id);
+
 }
